@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Wrench, Shield, House, Hammer } from 'lucide-react';
@@ -10,27 +11,27 @@ const Repair = () => {
   const repairServices = [
     {
       title: "Emergency Roof Repairs",
-      description: "24/7 emergency response for urgent roof repairs in Eugene. We prevent further damage to your home.",
+      description: "Fast, reliable 24/7 emergency response in Eugene. Our expert team prevents further damage to your property with immediate professional repairs.",
       icon: Shield,
-      features: ["Available 24/7", "Rapid response time", "Storm damage repair"]
+      features: ["24/7 Emergency Response", "Storm Damage Specialists", "Insurance Claim Support"]
     },
     {
-      title: "Leak Detection & Repair",
-      description: "Expert leak detection and repair services using advanced techniques to find and fix any roof leak.",
+      title: "Professional Leak Detection & Repair",
+      description: "State-of-the-art leak detection and permanent repair solutions. We find and fix roof leaks fast to protect your home.",
       icon: House,
-      features: ["Comprehensive inspection", "Advanced leak detection", "Permanent solutions"]
+      features: ["Advanced Leak Detection", "Comprehensive Inspection", "Long-lasting Solutions"]
     },
     {
       title: "Preventive Maintenance",
-      description: "Regular maintenance and minor repairs to extend your roof's lifespan and prevent costly issues.",
+      description: "Proactive maintenance programs to extend your roof's lifespan and prevent costly emergency repairs. Regular inspections save you money.",
       icon: Wrench,
-      features: ["Regular inspections", "Minor repairs", "Extend roof life"]
+      features: ["Scheduled Inspections", "Detailed Reports", "Cost-effective Plans"]
     },
     {
-      title: "Storm Damage Repair",
-      description: "Specialized repair services for wind, hail, and storm damage. Insurance claim assistance available.",
+      title: "Storm Damage Restoration",
+      description: "Expert storm damage repair services in Eugene. We handle wind, hail, and debris damage with professional restoration techniques.",
       icon: Hammer,
-      features: ["Wind damage repair", "Insurance support", "Complete restoration"]
+      features: ["Comprehensive Assessment", "Professional Repairs", "Quality Materials"]
     }
   ];
 
@@ -50,7 +51,7 @@ const Repair = () => {
       }
     },
     "areaServed": "Eugene, Oregon",
-    "description": "Expert roof repair services in Eugene, Oregon. We specialize in leak repair, storm damage restoration, and emergency repairs with professional craftsmanship.",
+    "description": "Expert roof repair services in Eugene, Oregon. Specializing in leak repair, storm damage restoration, and 24/7 emergency repairs with licensed professionals.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Roof Repair Services",
@@ -60,15 +61,15 @@ const Repair = () => {
           "itemOffered": {
             "@type": "Service",
             "name": "Emergency Repairs",
-            "description": "24/7 emergency roof repair services in Eugene"
+            "description": "24/7 emergency roof repair services in Eugene with rapid response times"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Leak Repair",
-            "description": "Professional leak detection and repair in Eugene"
+            "name": "Leak Detection & Repair",
+            "description": "Professional leak detection and permanent repair solutions in Eugene"
           }
         }
       ]
@@ -78,10 +79,10 @@ const Repair = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Expert Roof Repair Services Eugene, OR | Eugene Roofing NW</title>
+        <title>Expert Roof Repair Services Eugene, OR | Same-Day Repairs | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="Professional roof repair services in Eugene, Oregon. We offer leak repair, storm damage restoration, and 24/7 emergency repairs. Licensed & insured experts serving Eugene."
+          content="Professional roof repair in Eugene, OR. 24/7 emergency service, leak repair, storm damage restoration. Licensed & insured local experts with same-day service available."
         />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
@@ -98,12 +99,12 @@ const Repair = () => {
               Expert Roof Repair Services in Eugene
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              From emergency repairs to preventive maintenance, our licensed and insured team 
+              From emergency repairs to preventive maintenance, our licensed and certified team 
               provides fast, reliable roof repair services throughout Eugene. Available 24/7 
-              for all your roofing emergencies.
+              for emergency repairs with same-day service for urgent issues.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="/contact">Get Emergency Repair</Link>
+              <Link to="/contact">Get Emergency Repair Now</Link>
             </Button>
           </div>
         </div>
@@ -112,7 +113,7 @@ const Repair = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Repair Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Professional Repair Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {repairServices.map((service, index) => (
               <Card 
@@ -144,10 +145,10 @@ const Repair = () => {
       {/* Common Problems Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Common Roofing Problems in Eugene</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Common Roofing Issues in Eugene</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Weather-Related Issues</h3>
+              <h3 className="text-xl font-semibold mb-4">Weather-Related Damage</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
@@ -155,28 +156,36 @@ const Repair = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
-                  Heavy rain and water infiltration
+                  Heavy rain infiltration and leaks
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
                   Storm debris impact damage
                 </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-secondary rounded-full" />
+                  Ice dam formation in winter
+                </li>
               </ul>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Age-Related Problems</h3>
+              <h3 className="text-xl font-semibold mb-4">Maintenance Issues</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
-                  Worn or cracked shingles
+                  Aging shingles and materials
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
-                  Deteriorating flashing
+                  Flashing deterioration
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full" />
-                  Sagging roof sections
+                  Gutter system problems
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-secondary rounded-full" />
+                  Ventilation concerns
                 </li>
               </ul>
             </div>
@@ -185,15 +194,15 @@ const Repair = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Repair Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "1", title: "Assessment", description: "Thorough damage evaluation" },
-              { step: "2", title: "Quote", description: "Transparent pricing" },
-              { step: "3", title: "Repair", description: "Expert execution" },
-              { step: "4", title: "Guarantee", description: "Quality assurance" }
+              { step: "1", title: "Inspection", description: "Thorough damage assessment" },
+              { step: "2", title: "Detailed Quote", description: "Clear, upfront pricing" },
+              { step: "3", title: "Expert Repair", description: "Professional execution" },
+              { step: "4", title: "Quality Check", description: "Satisfaction guaranteed" }
             ].map((phase, index) => (
               <div 
                 key={phase.step}
@@ -219,8 +228,8 @@ const Repair = () => {
               Need Emergency Roof Repair in Eugene?
             </h2>
             <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
-              Don't wait until minor damage becomes a major problem. Contact us now for immediate 
-              assistance with your roof repair needs. Available 24/7 for emergencies.
+              Don't let roof damage compromise your home's safety. Contact Eugene Roofing NW now 
+              for immediate assistance. Our expert team is available 24/7 for emergency repairs.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
               <Link to="/contact">Contact Us Now</Link>
