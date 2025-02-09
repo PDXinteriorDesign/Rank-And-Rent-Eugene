@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Award, Clock, Tool } from 'lucide-react';
+import { ShieldCheck, Award, Clock, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 
@@ -10,7 +10,7 @@ const Index = () => {
     {
       title: "Roof Repair",
       description: "Expert repair services for all types of roofs. Fix leaks, damage, and wear.",
-      icon: Tool,
+      icon: Wrench,
       link: "/services/repair"
     },
     {
