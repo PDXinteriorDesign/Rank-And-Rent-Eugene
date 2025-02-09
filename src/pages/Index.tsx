@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Award, Clock, Wrench, Star, Users, BadgeCheck } from 'lucide-react';
@@ -9,20 +8,20 @@ import Header from '@/components/Header';
 const Index = () => {
   const services = [
     {
-      title: "Roof Repair",
-      description: "Expert repair services for all types of roofs. Fix leaks, damage, and wear.",
+      title: "Expert Roof Repair",
+      description: "Professional repair services for leaks, storm damage, and general wear. Available 24/7 for emergencies.",
       icon: Wrench,
       link: "/services/repair"
     },
     {
-      title: "Roof Installation",
-      description: "Professional installation of new roofs with quality materials and craftsmanship.",
+      title: "New Roof Installation",
+      description: "Quality installations using premium materials. Enhance your home's value with our expert craftsmanship.",
       icon: ShieldCheck,
       link: "/services/installation"
     },
     {
       title: "Emergency Services",
-      description: "24/7 emergency roof repair services for unexpected damage and leaks.",
+      description: "Immediate response for unexpected damage. Available 24/7 to protect your home from further damage.",
       icon: Clock,
       link: "/services/emergency"
     }
@@ -30,17 +29,17 @@ const Index = () => {
 
   const testimonials = [
     {
-      text: "They fixed our roof quickly and professionally. Best service in Eugene!",
+      text: "Best roofing contractor in Eugene! They fixed our storm damage quickly and professionally.",
       author: "Sarah Johnson",
       rating: 5
     },
     {
-      text: "Outstanding quality and customer service. Highly recommend!",
+      text: "Outstanding quality and service. Their team installed our new metal roof perfectly.",
       author: "Mike Peterson",
       rating: 5
     },
     {
-      text: "Fast response time for emergency repair. Saved our home from water damage.",
+      text: "Fast emergency response after a major leak. Saved us from extensive water damage.",
       author: "David Wilson",
       rating: 5
     }
@@ -49,9 +48,9 @@ const Index = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    "name": "Eugene Roofing Experts",
-    "image": "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8",
-    "description": "Professional roofing services in Eugene, Oregon. Specializing in roof repair, installation, and emergency services.",
+    "name": "Eugene Roofing NW",
+    "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    "description": "Eugene's trusted roofing experts providing professional roof repair, installation, and 24/7 emergency services. Licensed and insured local roofers serving Eugene, Oregon.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Main Street",
@@ -79,8 +78,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Eugene Roofing Experts | Professional Roof Repair & Installation Services</title>
-        <meta name="description" content="Eugene's trusted roofing experts. Professional roof repair, installation & emergency services. Licensed & insured local roofers serving Eugene, Oregon." />
+        <title>Eugene Roofing NW | Expert Roof Repair & Installation Services in Eugene, OR</title>
+        <meta 
+          name="description" 
+          content="Eugene's top-rated roofing experts. Professional roof repair, installation & 24/7 emergency services. Licensed & insured local roofers serving Eugene, Oregon." 
+        />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
         </script>
@@ -93,18 +95,20 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto animate-fadeIn">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Eugene's Most Trusted Roofing Experts
+              Eugene's Top-Rated Roofing Experts
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Professional roof repair, installation & emergency services in Eugene, Oregon. 
-              Licensed, insured, and committed to quality.
+              For over two decades, Eugene Roofing NW has been your trusted local roofing contractor. 
+              We specialize in expert roof repairs, new installations, and 24/7 emergency services. 
+              Our licensed and insured team delivers superior craftsmanship and exceptional customer service 
+              to protect your biggest investment.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 w-full sm:w-auto">
                 <Link to="/contact">Get Free Estimate</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                <Link to="/services">Our Services</Link>
+                <Link to="/services">Explore Services</Link>
               </Button>
             </div>
           </div>
@@ -168,17 +172,17 @@ const Index = () => {
             <div className="animate-slideUp">
               <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Licensed & Insured</h3>
-              <p className="text-gray-600">Fully licensed and insured for your peace of mind</p>
+              <p className="text-gray-600">Your peace of mind is our priority</p>
             </div>
             <div className="animate-slideUp" style={{ animationDelay: "100ms" }}>
               <BadgeCheck className="w-12 h-12 text-secondary mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Quality Guaranteed</h3>
-              <p className="text-gray-600">10-year workmanship warranty on all services</p>
+              <p className="text-gray-600">10-year workmanship warranty</p>
             </div>
             <div className="animate-slideUp" style={{ animationDelay: "200ms" }}>
               <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">5-Star Rated</h3>
-              <p className="text-gray-600">Over 100+ satisfied customers in Eugene</p>
+              <p className="text-gray-600">Over 100+ satisfied customers</p>
             </div>
           </div>
         </div>
@@ -189,11 +193,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="bg-primary rounded-lg p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Need a Roofing Expert in Eugene?
+              Need Professional Roofing Services in Eugene?
             </h2>
             <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
-              Get a free, no-obligation estimate for your roofing project. 
-              Our team is ready to help you protect your home.
+              Whether it's repairs, installation, or emergency services, our expert team is ready 
+              to help protect your home. Contact us for a free, no-obligation estimate.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
               <Link to="/contact">Get Free Estimate</Link>
@@ -206,4 +210,3 @@ const Index = () => {
 };
 
 export default Index;
-
