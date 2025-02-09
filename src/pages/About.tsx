@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Users, Award, HandShake, Heart } from 'lucide-react';
+import { Users, Award, Handshake, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
