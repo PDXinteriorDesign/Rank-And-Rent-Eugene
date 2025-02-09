@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Building, Wrench, House, Roof } from 'lucide-react';
+import { Building, Wrench, House, HomeIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
@@ -18,7 +18,7 @@ const Installation = () => {
     {
       title: "Roof Replacement",
       description: "Full roof replacement services when repair isn't enough",
-      icon: Roof,
+      icon: HomeIcon,
       features: ["Old roof removal", "Structural inspection", "Complete replacement"]
     },
     {
