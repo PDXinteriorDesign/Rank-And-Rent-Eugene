@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Users, Award, Handshake, Heart } from 'lucide-react';
+import { Users, Award, Heart } from 'lucide-react';
+import { Handshake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
@@ -29,7 +31,7 @@ const About = () => {
     {
       title: "Professional Standards",
       description: "Committed to the highest standards of service and integrity",
-      icon: HandShake,
+      icon: Handshake,
       features: ["Licensed & insured", "Best practices", "Transparent pricing"]
     }
   ];
