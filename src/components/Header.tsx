@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { House, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -36,9 +36,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-lg md:text-2xl font-bold text-primary">
-            <House className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
-            Eugene Roofing NW
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
+              alt="Eugene Roofing NW Logo" 
+              className="h-8 md:h-10"
+            />
           </Link>
           
           {isMobile ? (
