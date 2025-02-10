@@ -19,10 +19,10 @@ const RepairHero = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="/contact">Get Free Inspection</Link>
+              <Link to="/contact-eugene-roofing">Get Free Inspection</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/contact" className="flex items-center gap-2">
+              <Link to="/contact-eugene-roofing" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" /> Call Now
               </Link>
             </Button>

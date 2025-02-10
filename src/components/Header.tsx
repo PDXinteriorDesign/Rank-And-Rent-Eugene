@@ -10,12 +10,12 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   const navigationLinks = [
-    { to: '/services/repair', label: 'Roof Repair' },
-    { to: '/services/installation', label: 'Installation' },
-    { to: '/services/emergency', label: 'Emergency' },
-    { to: '/services/cleaning', label: 'Cleaning' },
-    { to: '/about', label: 'About' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/services/eugene-roof-repair', label: 'Roof Repair' },
+    { to: '/services/eugene-roof-installation', label: 'Installation' },
+    { to: '/services/emergency-roof-repair-eugene', label: 'Emergency' },
+    { to: '/services/roof-cleaning-eugene', label: 'Cleaning' },
+    { to: '/about-eugene-roofing', label: 'About' },
+    { to: '/contact-eugene-roofing', label: 'Contact' },
   ];
 
   const NavigationLinks = () => (
@@ -48,7 +48,7 @@ const Header = () => {
             {isMobile ? (
               <div className="flex items-center gap-4">
                 <Button asChild size="sm">
-                  <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
+                  <Link to="/contact-eugene-roofing" className="bg-secondary hover:bg-secondary/90">
                     Get Estimate
                   </Link>
                 </Button>
@@ -71,7 +71,7 @@ const Header = () => {
                   <NavigationLinks />
                 </nav>
                 <Button asChild>
-                  <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
+                  <Link to="/contact-eugene-roofing" className="bg-secondary hover:bg-secondary/90">
                     Get Free Estimate
                   </Link>
                 </Button>

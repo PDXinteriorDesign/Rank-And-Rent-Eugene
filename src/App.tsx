@@ -23,12 +23,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services/installation" element={<Installation />} />
-          <Route path="/services/repair" element={<Repair />} />
-          <Route path="/services/emergency" element={<Emergency />} />
-          <Route path="/services/cleaning" element={<Cleaning />} />
+          <Route path="/about-eugene-roofing" element={<About />} />
+          <Route path="/contact-eugene-roofing" element={<Contact />} />
+          <Route path="/services/eugene-roof-installation" element={<Installation />} />
+          <Route path="/services/eugene-roof-repair" element={<Repair />} />
+          <Route path="/services/emergency-roof-repair-eugene" element={<Emergency />} />
+          <Route path="/services/roof-cleaning-eugene" element={<Cleaning />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

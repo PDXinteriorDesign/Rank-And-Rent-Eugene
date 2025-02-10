@@ -18,10 +18,10 @@ const RepairCTA = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="/contact">Schedule Inspection</Link>
+              <Link to="/contact-eugene-roofing">Schedule Inspection</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90">
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact-eugene-roofing">Contact Us</Link>
             </Button>
           </div>
         </div>
