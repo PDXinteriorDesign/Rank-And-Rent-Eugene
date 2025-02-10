@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import CleaningHero from './cleaning/CleaningHero';
 import CleaningServices from './cleaning/CleaningServices';
+import MossRemoval from './cleaning/MossRemoval';
 import WhyChooseUs from './cleaning/WhyChooseUs';
 import CleaningCTA from './cleaning/CleaningCTA';
 
@@ -43,6 +44,7 @@ const Cleaning = () => {
       <Header />
       <CleaningHero />
       <CleaningServices />
+      <MossRemoval />
       <WhyChooseUs />
       <CleaningCTA />
     </div>
