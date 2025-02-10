@@ -13,8 +13,8 @@ const Index = () => {
       icon: Wrench,
       link: "/services/eugene-or-roof-repair",
       image: {
-        src: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4",
-        alt: "Professional roof repair services in Eugene, Oregon"
+        src: "https://images.unsplash.com/photo-1632889148799-54339e89c5ab",
+        alt: "Professional residential roof repair services in Eugene, Oregon - shows a well-maintained asphalt shingle roof"
       }
     },
     {
@@ -23,8 +23,8 @@ const Index = () => {
       icon: ShieldCheck,
       link: "/services/eugene-or-roof-installation",
       image: {
-        src: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a",
-        alt: "Expert roof installation in Eugene, Oregon"
+        src: "https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac",
+        alt: "Expert residential roof installation in Eugene, Oregon - featuring a new architectural shingle roof"
       }
     },
     {
@@ -33,8 +33,8 @@ const Index = () => {
       icon: Clock,
       link: "/services/emergency-roof-repair-eugene-or",
       image: {
-        src: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2",
-        alt: "24/7 emergency roof repair services in Eugene"
+        src: "https://images.unsplash.com/photo-1622993295842-4aece0c9769c",
+        alt: "24/7 emergency residential roof repair services in Eugene - showing storm damage repair"
       }
     }
   ];
@@ -61,8 +61,8 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     "name": "Eugene Roofing NW",
-    "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-    "description": "Eugene's trusted roofing experts providing professional roof repair, installation, and 24/7 emergency services. Licensed and insured local roofers serving Eugene, Oregon.",
+    "image": "https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac",
+    "description": "Eugene's trusted residential roofing experts providing professional roof repair, installation, and 24/7 emergency services. Licensed and insured local roofers serving Eugene, Oregon.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Main Street",
@@ -110,20 +110,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Eugene Roofing NW | Expert Roof Repair & Installation Services in Eugene, OR</title>
+        <title>Eugene Roofing NW | Expert Residential Roof Repair & Installation Services in Eugene, OR</title>
         <meta 
           name="description" 
-          content="Eugene's top-rated roofing experts. Professional roof repair, installation & 24/7 emergency services. Licensed & insured local roofers serving Eugene, Oregon." 
+          content="Eugene's top-rated residential roofing experts. Professional roof repair, installation & 24/7 emergency services. Licensed & insured local roofers serving Eugene, Oregon." 
         />
-        <meta property="og:title" content="Eugene Roofing NW | Expert Roofing Services in Eugene, OR" />
-        <meta property="og:description" content="Eugene's trusted roofing experts. Professional roof repair, installation & emergency services. Licensed & insured local roofers serving Eugene, Oregon." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625" />
+        <meta property="og:title" content="Eugene Roofing NW | Expert Residential Roofing Services in Eugene, OR" />
+        <meta property="og:description" content="Eugene's trusted residential roofing experts. Professional roof repair, installation & emergency services. Licensed & insured local roofers serving Eugene, Oregon." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac" />
+        <link rel="canonical" href="https://eugeneroofing.com" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Eugene Roofing NW | Expert Roofing Services" />
+        <meta name="twitter:title" content="Eugene Roofing NW | Expert Residential Roofing Services" />
         <meta name="twitter:description" content="Professional roofing services in Eugene, Oregon. Expert repairs, installations & 24/7 emergency service." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac" />
         <meta name="geo.region" content="US-OR" />
         <meta name="geo.placename" content="Eugene" />
         <meta name="geo.position" content="44.0521;-123.0868" />
@@ -140,7 +141,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto animate-fadeIn">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Eugene's Top-Rated Roofing Experts
+              Eugene's Top-Rated Residential Roofing Experts
             </h1>
             <p className="text-lg text-gray-600 mb-8">
               For over two decades, Eugene Roofing NW has been your trusted local roofing contractor. 
