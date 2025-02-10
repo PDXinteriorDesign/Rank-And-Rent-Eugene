@@ -56,7 +56,48 @@ const Index = () => {
       ],
       "opens": "08:00",
       "closes": "18:00"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Roofing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roof Repair",
+            "description": "Professional repair services for leaks, storm damage, and general wear."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "New Roof Installation",
+            "description": "Quality installations using premium materials."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Roofing Services",
+            "description": "24/7 emergency roofing repair services."
+          }
+        }
+      ]
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://eugeneroofing.com"
+    }]
   };
 
   return (
@@ -81,8 +122,15 @@ const Index = () => {
         <meta name="geo.placename" content="Eugene" />
         <meta name="geo.position" content="44.0521;-123.0868" />
         <meta name="ICBM" content="44.0521, -123.0868" />
+        <meta name="keywords" content="roofing Eugene, roof repair Eugene, emergency roof repair, new roof installation, residential roofing, Eugene Oregon roofer, local roofing contractor" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Eugene Roofing NW" />
+        <meta name="revisit-after" content="7 days" />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
       
