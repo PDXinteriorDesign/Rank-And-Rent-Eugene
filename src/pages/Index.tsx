@@ -11,19 +11,31 @@ const Index = () => {
       title: "Expert Roof Repair",
       description: "Professional repair services for leaks, storm damage, and general wear. Available 24/7 for emergencies.",
       icon: Wrench,
-      link: "/services/repair"
+      link: "/services/eugene-or-roof-repair",
+      image: {
+        src: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4",
+        alt: "Professional roof repair services in Eugene, Oregon"
+      }
     },
     {
       title: "New Roof Installation",
       description: "Quality installations using premium materials. Enhance your home's value with our expert craftsmanship.",
       icon: ShieldCheck,
-      link: "/services/installation"
+      link: "/services/eugene-or-roof-installation",
+      image: {
+        src: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a",
+        alt: "Expert roof installation in Eugene, Oregon"
+      }
     },
     {
       title: "Emergency Services",
       description: "Immediate response for unexpected damage. Available 24/7 to protect your home from further damage.",
       icon: Clock,
-      link: "/services/emergency"
+      link: "/services/emergency-roof-repair-eugene-or",
+      image: {
+        src: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2",
+        alt: "24/7 emergency roof repair services in Eugene"
+      }
     }
   ];
 
@@ -66,12 +78,32 @@ const Index = () => {
     },
     "url": "https://eugeneroofing.com",
     "telephone": "+1-541-555-0123",
-    "areaServed": "Eugene, Oregon",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.0521,
+        "longitude": -123.0868
+      },
+      "geoRadius": "30000"
+    },
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": "87"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
     }
   };
 
@@ -83,6 +115,19 @@ const Index = () => {
           name="description" 
           content="Eugene's top-rated roofing experts. Professional roof repair, installation & 24/7 emergency services. Licensed & insured local roofers serving Eugene, Oregon." 
         />
+        <meta property="og:title" content="Eugene Roofing NW | Expert Roofing Services in Eugene, OR" />
+        <meta property="og:description" content="Eugene's trusted roofing experts. Professional roof repair, installation & emergency services. Licensed & insured local roofers serving Eugene, Oregon." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Eugene Roofing NW | Expert Roofing Services" />
+        <meta name="twitter:description" content="Professional roofing services in Eugene, Oregon. Expert repairs, installations & 24/7 emergency service." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625" />
+        <meta name="geo.region" content="US-OR" />
+        <meta name="geo.placename" content="Eugene" />
+        <meta name="geo.position" content="44.0521;-123.0868" />
+        <meta name="ICBM" content="44.0521, -123.0868" />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
         </script>
@@ -126,6 +171,14 @@ const Index = () => {
                 className="p-6 rounded-lg border border-gray-100 hover:border-secondary/20 transition-all duration-300 animate-slideUp"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                <img 
+                  src={service.image.src} 
+                  alt={service.image.alt}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                  loading={index > 0 ? "lazy" : undefined}
+                  width="400"
+                  height="300"
+                />
                 <service.icon className="w-12 h-12 text-secondary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
