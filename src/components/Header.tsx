@@ -1,13 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
+import EstimateFormModal from './EstimateFormModal';
 
 const Header = () => {
   const isMobile = useIsMobile();
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const navigationLinks = [
     { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
@@ -32,6 +34,11 @@ const Header = () => {
     </>
   );
 
+  const handleEstimateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsFormOpen(true);
+  };
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
@@ -48,7 +55,7 @@ const Header = () => {
             {isMobile ? (
               <div className="flex items-center gap-4">
                 <Button asChild size="sm">
-                  <Link to="/contact-eugene-roofing" className="bg-secondary hover:bg-secondary/90">
+                  <Link onClick={handleEstimateClick} to="#" className="bg-secondary hover:bg-secondary/90">
                     Get Estimate
                   </Link>
                 </Button>
@@ -71,7 +78,7 @@ const Header = () => {
                   <NavigationLinks />
                 </nav>
                 <Button asChild>
-                  <Link to="/contact-eugene-roofing" className="bg-secondary hover:bg-secondary/90">
+                  <Link onClick={handleEstimateClick} to="#" className="bg-secondary hover:bg-secondary/90">
                     Get Free Estimate
                   </Link>
                 </Button>
@@ -81,6 +88,10 @@ const Header = () => {
         </div>
       </header>
       <div className="h-[120px] md:h-[160px]" />
+      <EstimateFormModal 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </>
   );
 };

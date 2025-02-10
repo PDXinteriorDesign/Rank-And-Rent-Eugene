@@ -1,9 +1,17 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import EstimateFormModal from '@/components/EstimateFormModal';
 
 const RepairCTA = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleEstimateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsFormOpen(true);
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -18,14 +26,18 @@ const RepairCTA = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="/contact-eugene-roofing">Schedule Inspection</Link>
+              <Link to="#" onClick={handleEstimateClick}>Schedule Inspection</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90">
-              <Link to="/contact-eugene-roofing">Contact Us</Link>
+              <Link to="#" onClick={handleEstimateClick}>Contact Us</Link>
             </Button>
           </div>
         </div>
       </div>
+      <EstimateFormModal 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </section>
   );
 };

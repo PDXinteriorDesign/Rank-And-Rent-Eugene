@@ -1,10 +1,18 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import EstimateFormModal from '@/components/EstimateFormModal';
 
 const RepairHero = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleEstimateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsFormOpen(true);
+  };
+
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-muted to-white">
       <div className="container mx-auto px-4">
@@ -19,16 +27,20 @@ const RepairHero = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="/contact-eugene-roofing">Get Free Inspection</Link>
+              <Link to="#" onClick={handleEstimateClick}>Get Free Inspection</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/contact-eugene-roofing" className="flex items-center gap-2">
+              <Link to="#" onClick={handleEstimateClick} className="flex items-center gap-2">
                 <Phone className="w-4 h-4" /> Call Now
               </Link>
             </Button>
           </div>
         </div>
       </div>
+      <EstimateFormModal 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </section>
   );
 };

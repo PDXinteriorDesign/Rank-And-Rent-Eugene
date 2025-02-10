@@ -1,9 +1,17 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import EstimateFormModal from '@/components/EstimateFormModal';
 
 const CleaningCTA = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleEstimateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsFormOpen(true);
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -16,10 +24,14 @@ const CleaningCTA = () => {
             and prevent costly repairs. Contact us today for a professional consultation.
           </p>
           <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-            <Link to="/contact">Schedule Free Consultation</Link>
+            <Link to="#" onClick={handleEstimateClick}>Schedule Free Consultation</Link>
           </Button>
         </div>
       </div>
+      <EstimateFormModal 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </section>
   );
 };
