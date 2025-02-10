@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plant, Shield, LineChart, Home } from 'lucide-react';
+import { Sprout, Shield, LineChart, Home } from 'lucide-react';
 
 const benefits = [
   {
@@ -20,7 +20,7 @@ const benefits = [
     description: "Restores your roof's natural color and boosts your home's aesthetic"
   },
   {
-    icon: Plant,
+    icon: Sprout,
     title: "Saves Money",
     description: "Prevents costly repairs and premature roof replacements"
   }
