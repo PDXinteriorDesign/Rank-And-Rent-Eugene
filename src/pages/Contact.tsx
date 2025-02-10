@@ -1,19 +1,12 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { MapPin, Phone, Mail, Clock, MessageSquare } from 'lucide-react';
+import { MapPin, Mail, Clock, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 
 const Contact = () => {
   const contactMethods = [
-    {
-      title: "Phone",
-      value: "(541) 555-0123",
-      icon: Phone,
-      link: "tel:+15415550123"
-    },
     {
       title: "Email",
       value: "info@eugeneroofing.com",
@@ -47,7 +40,6 @@ const Contact = () => {
         "addressRegion": "OR",
         "postalCode": "97401"
       },
-      "telephone": "(541) 555-0123",
       "email": "info@eugeneroofing.com",
       "openingHours": "Mo-Fr 08:00-18:00"
     }

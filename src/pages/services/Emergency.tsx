@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Shield, Wrench, House, Hammer, Clock, Phone } from 'lucide-react';
+import { Shield, Wrench, House, Hammer, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
@@ -112,12 +111,6 @@ const Emergency = () => {
               your home and family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-destructive hover:bg-destructive/90">
-                <a href="tel:541-555-0123" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call Now: (541) 555-0123
-                </a>
-              </Button>
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
                 <Link to="/contact">Request Emergency Service</Link>
               </Button>
@@ -219,12 +212,6 @@ const Emergency = () => {
               and surrounding communities in Lane County, Oregon.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary">
-                <a href="tel:541-555-0123" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call (541) 555-0123
-                </a>
-              </Button>
               <Button asChild size="lg" variant="outline" className="bg-white">
                 <Link to="/contact">Send Emergency Request</Link>
               </Button>

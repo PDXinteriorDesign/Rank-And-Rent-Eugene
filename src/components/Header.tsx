@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -35,11 +35,7 @@ const Header = () => {
             </Link>
           </nav>
           
-          <div className="flex items-center space-x-4">
-            <a href="tel:541-555-0123" className="hidden md:flex items-center space-x-2">
-              <Phone className="w-5 h-5 text-secondary" />
-              <span className="font-semibold">(541) 555-0123</span>
-            </a>
+          <div>
             <Button asChild>
               <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
                 Get Free Estimate
