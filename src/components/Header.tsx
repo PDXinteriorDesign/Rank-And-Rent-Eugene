@@ -1,10 +1,37 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
+import { Home, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
+  const isMobile = useIsMobile();
+
+  const navigationLinks = [
+    { to: '/services/repair', label: 'Roof Repair' },
+    { to: '/services/installation', label: 'Installation' },
+    { to: '/services/emergency', label: 'Emergency' },
+    { to: '/services/cleaning', label: 'Cleaning' },
+    { to: '/about', label: 'About' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
+  const NavigationLinks = () => (
+    <>
+      {navigationLinks.map((link) => (
+        <Link
+          key={link.to}
+          to={link.to}
+          className="text-gray-600 hover:text-primary transition-colors"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </>
+  );
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 py-4">
@@ -14,34 +41,38 @@ const Header = () => {
             Eugene Roofing NW
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/services/repair" className="text-gray-600 hover:text-primary transition-colors">
-              Roof Repair
-            </Link>
-            <Link to="/services/installation" className="text-gray-600 hover:text-primary transition-colors">
-              Installation
-            </Link>
-            <Link to="/services/emergency" className="text-gray-600 hover:text-primary transition-colors">
-              Emergency
-            </Link>
-            <Link to="/services/cleaning" className="text-gray-600 hover:text-primary transition-colors">
-              Cleaning
-            </Link>
-            <Link to="/about" className="text-gray-600 hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-          
-          <div>
-            <Button asChild>
-              <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
-                Get Free Estimate
-              </Link>
-            </Button>
-          </div>
+          {isMobile ? (
+            <div className="flex items-center gap-4">
+              <Button asChild size="sm">
+                <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
+                  Get Estimate
+                </Link>
+              </Button>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <nav className="flex flex-col gap-4 mt-8">
+                    <NavigationLinks />
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            </div>
+          ) : (
+            <>
+              <nav className="flex items-center space-x-8">
+                <NavigationLinks />
+              </nav>
+              <Button asChild>
+                <Link to="/contact" className="bg-secondary hover:bg-secondary/90">
+                  Get Free Estimate
+                </Link>
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </header>
