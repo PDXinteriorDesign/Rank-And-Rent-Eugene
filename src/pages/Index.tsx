@@ -7,6 +7,7 @@ import Services from '@/components/home/Services';
 import Testimonials from '@/components/home/Testimonials';
 import TrustIndicators from '@/components/home/TrustIndicators';
 import HomeCTA from '@/components/home/HomeCTA';
+import FAQ from '@/components/home/FAQ';
 
 const Index = () => {
   const schemaMarkup = {
@@ -139,6 +140,7 @@ const Index = () => {
       <Services />
       <Testimonials />
       <TrustIndicators />
+      <FAQ />
       <HomeCTA />
     </div>
   );
