@@ -10,8 +10,8 @@ const services = [
     icon: Wrench,
     link: "/services/eugene-or-roof-repair",
     image: {
-      src: "https://images.unsplash.com/photo-1632889148799-54339e89c5ab",
-      alt: "Professional residential roof repair services in Eugene, Oregon - shows a well-maintained asphalt shingle roof"
+      src: "/lovable-uploads/5e9bb16f-eef5-4713-b4c8-71245b0d5562.png",
+      alt: "Recently completed residential roof repair in Eugene, Oregon featuring high-quality architectural shingles, brick facade, and craftsman-style dormers"
     }
   },
   {
@@ -20,8 +20,8 @@ const services = [
     icon: ShieldCheck,
     link: "/services/eugene-or-roof-installation",
     image: {
-      src: "https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac",
-      alt: "Expert residential roof installation in Eugene, Oregon - featuring a new architectural shingle roof"
+      src: "/lovable-uploads/9f507841-9578-4498-b919-0385967ccedb.png",
+      alt: "New residential roof installation in progress showing professional roofing underlayment and OSB sheathing with precise installation techniques"
     }
   },
   {
@@ -30,8 +30,8 @@ const services = [
     icon: Clock,
     link: "/services/emergency-roof-repair-eugene-or",
     image: {
-      src: "https://images.unsplash.com/photo-1622993295842-4aece0c9769c",
-      alt: "24/7 emergency residential roof repair services in Eugene - showing storm damage repair"
+      src: "/lovable-uploads/5997350c-7571-42cc-b7c1-6b57b007c504.png",
+      alt: "Close-up detail of premium metal roofing tiles showing professional installation and weather-resistant construction for Eugene homes"
     }
   }
 ];
