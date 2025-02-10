@@ -10,10 +10,10 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   const navigationLinks = [
-    { to: '/services/eugene-roof-repair', label: 'Roof Repair' },
-    { to: '/services/eugene-roof-installation', label: 'Installation' },
-    { to: '/services/emergency-roof-repair-eugene', label: 'Emergency' },
-    { to: '/services/roof-cleaning-eugene', label: 'Cleaning' },
+    { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
+    { to: '/services/eugene-or-roof-installation', label: 'Installation' },
+    { to: '/services/emergency-roof-repair-eugene-or', label: 'Emergency' },
+    { to: '/services/roof-cleaning-eugene-or', label: 'Cleaning' },
     { to: '/about-eugene-roofing', label: 'About' },
     { to: '/contact-eugene-roofing', label: 'Contact' },
   ];
@@ -80,7 +80,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {/* Add spacer div to prevent content from being hidden under fixed header */}
       <div className="h-[120px] md:h-[160px]" />
     </>
   );
