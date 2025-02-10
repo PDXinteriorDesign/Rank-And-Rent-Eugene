@@ -7,6 +7,7 @@ import CleaningServices from './cleaning/CleaningServices';
 import MossRemoval from './cleaning/MossRemoval';
 import WhyChooseUs from './cleaning/WhyChooseUs';
 import CleaningCTA from './cleaning/CleaningCTA';
+import CleaningFAQ from './cleaning/CleaningFAQ';
 
 const Cleaning = () => {
   const schemaMarkup = {
@@ -46,6 +47,7 @@ const Cleaning = () => {
       <CleaningServices />
       <MossRemoval />
       <WhyChooseUs />
+      <CleaningFAQ />
       <CleaningCTA />
     </div>
   );

@@ -7,6 +7,7 @@ import WhyChooseUs from './repair/WhyChooseUs';
 import RepairServices from './repair/RepairServices';
 import WarningSigns from './repair/WarningSigns';
 import RepairCTA from './repair/RepairCTA';
+import RepairFAQ from './repair/RepairFAQ';
 
 const Repair = () => {
   const schemaMarkup = {
@@ -68,6 +69,7 @@ const Repair = () => {
       <WhyChooseUs />
       <RepairServices />
       <WarningSigns />
+      <RepairFAQ />
       <RepairCTA />
     </div>
   );
