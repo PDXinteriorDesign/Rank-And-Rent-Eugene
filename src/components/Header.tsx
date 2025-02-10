@@ -40,7 +40,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
               alt="Eugene Roofing NW Logo" 
-              className="h-8 md:h-10"
+              className="h-12 md:h-16"
             />
           </Link>
           
