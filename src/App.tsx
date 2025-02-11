@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-import Header from "./components/Header";
 
 // Lazy load all pages
 const Index = lazy(() => import("./pages/Index"));
@@ -17,6 +16,7 @@ const Repair = lazy(() => import("./pages/services/Repair"));
 const Emergency = lazy(() => import("./pages/services/Emergency"));
 const Cleaning = lazy(() => import("./pages/services/Cleaning"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Header = lazy(() => import("./components/Header"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,11 +29,11 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
         <TooltipProvider>
-          <Header />
           <Suspense fallback={<Loading />}>
+            <Header />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about-eugene-roofing" element={<About />} />
@@ -48,8 +48,8 @@ const App = () => {
           <Toaster />
           <Sonner />
         </TooltipProvider>
-      </QueryClientProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 };
 
