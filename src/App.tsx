@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route, useLocation, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
 
 // Lazy load all pages
@@ -27,81 +27,80 @@ const queryClient = new QueryClient({
   },
 });
 
-// Create router configuration
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Index />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/about-eugene-roofing",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <About />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/contact-eugene-roofing",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Contact />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/services/eugene-or-roof-installation",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Installation />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/services/eugene-or-roof-repair",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Repair />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/services/emergency-roof-repair-eugene-or",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Emergency />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/services/roof-cleaning-eugene-or",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <Cleaning />
-      </Suspense>
-    ),
-  },
-  {
-    path: "*",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <NotFound />
-      </Suspense>
-    ),
-  },
-]);
-
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <RouterProvider router={router} />
-        <Toaster />
-        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Index />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/about-eugene-roofing"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <About />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/contact-eugene-roofing"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Contact />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/services/eugene-or-roof-installation"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Installation />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/services/eugene-or-roof-repair"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Repair />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/services/emergency-roof-repair-eugene-or"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Emergency />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/services/roof-cleaning-eugene-or"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Cleaning />
+                </Suspense>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <NotFound />
+                </Suspense>
+              }
+            />
+          </Routes>
+          <Toaster />
+          <Sonner />
+        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
