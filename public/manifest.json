@@ -1,13 +1,8 @@
 
 {
-  "short_name": "Eugene Roofing",
   "name": "Eugene Roofing Experts",
+  "short_name": "Eugene Roofing",
   "description": "Professional roofing services in Eugene, Oregon",
-  "theme_color": "#0f172a",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
   "icons": [
     {
       "src": "/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png",
