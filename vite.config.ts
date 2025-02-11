@@ -19,18 +19,25 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    sourcemap: true, // Enable source maps for debugging
+    sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined // Disable manual chunk splitting for now
-      },
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-tooltip', '@radix-ui/react-toast']
+        }
+      }
     },
-    minify: mode === 'production', // Only minify in production
+    minify: mode === 'production',
     terserOptions: {
       compress: {
-        drop_console: false, // Keep console logs for debugging
+        drop_console: false,
         drop_debugger: false
-      },
+      }
     }
   },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: []
+  }
 }));

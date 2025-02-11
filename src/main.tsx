@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.tsx';
 import './index.css';
 
+window.React = React; // Ensure React is available globally
+
 const mount = () => {
   console.log('Mounting application...');
   const container = document.getElementById('root');
@@ -32,7 +34,6 @@ const mount = () => {
   }
 };
 
-// Ensure proper initialization order
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', mount);
 } else {
