@@ -17,6 +17,7 @@ const Emergency = lazy(() => import("./pages/services/Emergency"));
 const Cleaning = lazy(() => import("./pages/services/Cleaning"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Create QueryClient instance outside of component
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -26,25 +27,27 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about-eugene-roofing" element={<About />} />
-          <Route path="/contact-eugene-roofing" element={<Contact />} />
-          <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
-          <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
-          <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
-          <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-      <Toaster />
-      <Sonner />
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about-eugene-roofing" element={<About />} />
+            <Route path="/contact-eugene-roofing" element={<Contact />} />
+            <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
+            <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
+            <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
+            <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+        <Sonner />
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
