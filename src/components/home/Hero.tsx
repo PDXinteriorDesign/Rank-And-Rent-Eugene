@@ -23,7 +23,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 w-full sm:w-auto"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/contact-eugene-roofing')}
             >
               Get Free Estimate
             </Button>
@@ -31,7 +31,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto"
-              onClick={() => navigate('/services')}
+              onClick={() => navigate('/services/eugene-or-roof-installation')}
             >
               Explore Services
             </Button>
