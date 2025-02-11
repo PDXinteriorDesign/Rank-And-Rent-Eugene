@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
 
 // Lazy load all pages
@@ -28,24 +28,22 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <TooltipProvider>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about-eugene-roofing" element={<About />} />
-            <Route path="/contact-eugene-roofing" element={<Contact />} />
-            <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
-            <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
-            <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
-            <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <Toaster />
-        <Sonner />
-      </TooltipProvider>
-    </BrowserRouter>
+    <TooltipProvider>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about-eugene-roofing" element={<About />} />
+          <Route path="/contact-eugene-roofing" element={<Contact />} />
+          <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
+          <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
+          <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
+          <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+      <Toaster />
+      <Sonner />
+    </TooltipProvider>
   </QueryClientProvider>
 );
 
