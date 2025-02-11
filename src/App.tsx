@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
 import Header from "./components/Header";
 
@@ -31,9 +31,9 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <BrowserRouter>
+        <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="min-h-screen">
+          <main className="flex-1">
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Index />} />
@@ -49,7 +49,7 @@ const App = () => {
           </main>
           <Toaster />
           <Sonner />
-        </BrowserRouter>
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );
