@@ -1,32 +1,9 @@
 
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Ensure DOM is fully loaded before mounting
-const mount = () => {
-  const container = document.getElementById('root');
-  
-  if (!container) {
-    throw new Error('Failed to find the root element');
-  }
-
-  const root = createRoot(container);
-
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-};
-
-// Ensure proper initialization order
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mount);
-} else {
-  mount();
-}
+createRoot(document.getElementById("root")!).render(<App />);
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {

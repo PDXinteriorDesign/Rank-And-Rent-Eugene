@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -10,7 +10,6 @@ import EstimateFormModal from './EstimateFormModal';
 const Header = () => {
   const isMobile = useIsMobile();
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const location = useLocation();
 
   const navigationLinks = [
     { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
