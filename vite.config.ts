@@ -19,33 +19,18 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    sourcemap: true, // Enable source maps for debugging
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            return 'vendor';
-          }
-          if (id.includes('components/ui')) {
-            return 'ui-components';
-          }
-        },
+        manualChunks: undefined // Disable manual chunk splitting for now
       },
     },
-    cssCodeSplit: true,
-    minify: 'terser',
+    minify: mode === 'production', // Only minify in production
     terserOptions: {
       compress: {
-        drop_console: true,
-        drop_debugger: true,
+        drop_console: false, // Keep console logs for debugging
+        drop_debugger: false
       },
-    },
-    assetsInlineLimit: 4096,
-    assets: {
-      types: ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'],
-      quality: 80
     }
   },
 }));

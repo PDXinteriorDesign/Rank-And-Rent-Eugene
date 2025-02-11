@@ -6,21 +6,30 @@ import App from './App.tsx';
 import './index.css';
 
 const mount = () => {
+  console.log('Mounting application...');
   const container = document.getElementById('root');
   
   if (!container) {
+    console.error('Failed to find the root element');
     throw new Error('Failed to find the root element');
   }
 
   const root = createRoot(container);
 
-  root.render(
-    <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
-  );
+  try {
+    console.log('Rendering application...');
+    root.render(
+      <React.StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
+    );
+    console.log('Application rendered successfully');
+  } catch (error) {
+    console.error('Error rendering application:', error);
+    throw error;
+  }
 };
 
 // Ensure proper initialization order
@@ -29,4 +38,3 @@ if (document.readyState === 'loading') {
 } else {
   mount();
 }
-
