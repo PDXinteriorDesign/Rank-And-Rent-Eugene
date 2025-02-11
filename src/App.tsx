@@ -27,10 +27,10 @@ const queryClient = new QueryClient({
 });
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <TooltipProvider>
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about-eugene-roofing" element={<About />} />
@@ -41,12 +41,12 @@ const App = () => (
             <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Toaster />
-          <Sonner />
-        </TooltipProvider>
-      </Suspense>
-    </BrowserRouter>
-  </QueryClientProvider>
+        </Suspense>
+        <Toaster />
+        <Sonner />
+      </TooltipProvider>
+    </QueryClientProvider>
+  </BrowserRouter>
 );
 
 export default App;
