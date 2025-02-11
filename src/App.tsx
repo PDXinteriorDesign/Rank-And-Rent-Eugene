@@ -29,80 +29,26 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Index />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/about-eugene-roofing"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <About />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/contact-eugene-roofing"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Contact />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/services/eugene-or-roof-installation"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Installation />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/services/eugene-or-roof-repair"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Repair />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/services/emergency-roof-repair-eugene-or"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Emergency />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/services/roof-cleaning-eugene-or"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Cleaning />
-                </Suspense>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <NotFound />
-                </Suspense>
-              }
-            />
-          </Routes>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about-eugene-roofing" element={<About />} />
+              <Route path="/contact-eugene-roofing" element={<Contact />} />
+              <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
+              <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
+              <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
+              <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
           <Toaster />
           <Sonner />
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </BrowserRouter>
   );
 };
 
