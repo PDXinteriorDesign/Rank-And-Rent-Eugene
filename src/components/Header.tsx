@@ -49,7 +49,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-24 md:h-32"
+                className="h-16 md:h-24" // Reduced from h-24 md:h-32
               />
             </Link>
             
@@ -88,7 +88,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[120px] md:h-[160px]" />
+      <div className="h-[80px] md:h-[120px]" /> {/* Reduced from h-[120px] md:h-[160px] */}
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
