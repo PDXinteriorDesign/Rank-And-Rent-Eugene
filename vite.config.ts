@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { VitePWA } from 'vite-plugin-pwa';
+import imagemin from 'vite-plugin-imagemin';
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -18,6 +19,25 @@ export default defineConfig(({ mode }) => ({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}']
       }
+    }),
+    imagemin({
+      gifsicle: {
+        optimizationLevel: 7,
+        interlaced: false,
+      },
+      optipng: {
+        optimizationLevel: 7,
+      },
+      mozjpeg: {
+        quality: 80,
+      },
+      pngquant: {
+        quality: [0.8, 0.9],
+        speed: 4,
+      },
+      webp: {
+        quality: 80,
+      },
     }),
   ].filter(Boolean),
   resolve: {
@@ -42,11 +62,5 @@ export default defineConfig(({ mode }) => ({
         drop_debugger: true,
       },
     },
-    assetsInlineLimit: 4096,
-    // Built-in image optimization
-    assets: {
-      types: ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'],
-      quality: 80
-    }
   },
 }));
