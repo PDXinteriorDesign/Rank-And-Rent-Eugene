@@ -27,8 +27,8 @@ const queryClient = new QueryClient({
 });
 
 const App = () => (
-  <BrowserRouter>
-    <QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
       <TooltipProvider>
         <Suspense fallback={<Loading />}>
           <Routes>
@@ -45,8 +45,8 @@ const App = () => (
         <Toaster />
         <Sonner />
       </TooltipProvider>
-    </QueryClientProvider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </QueryClientProvider>
 );
 
 export default App;
