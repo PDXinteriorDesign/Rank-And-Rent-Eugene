@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
+import Header from "./components/Header";
 
 // Lazy load all pages
 const Index = lazy(() => import("./pages/Index"));
@@ -17,7 +18,6 @@ const Emergency = lazy(() => import("./pages/services/Emergency"));
 const Cleaning = lazy(() => import("./pages/services/Cleaning"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Create QueryClient instance outside of component
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -27,28 +27,23 @@ const queryClient = new QueryClient({
   },
 });
 
-const AppRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/about-eugene-roofing" element={<About />} />
-      <Route path="/contact-eugene-roofing" element={<Contact />} />
-      <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
-      <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
-      <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
-      <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-};
-
 const App = () => {
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
+          <Header />
           <Suspense fallback={<Loading />}>
-            <AppRoutes />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about-eugene-roofing" element={<About />} />
+              <Route path="/contact-eugene-roofing" element={<Contact />} />
+              <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
+              <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
+              <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
+              <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </Suspense>
           <Toaster />
           <Sonner />
