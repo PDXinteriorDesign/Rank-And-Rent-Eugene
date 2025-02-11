@@ -15,6 +15,23 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' && componentTagger(),
     VitePWA({
       registerType: 'autoUpdate',
+      manifest: {
+        short_name: "Eugene Roofing",
+        name: "Eugene Roofing Experts",
+        description: "Professional roofing services in Eugene, Oregon",
+        theme_color: "#0f172a",
+        background_color: "#ffffff",
+        display: "standalone",
+        scope: "/",
+        start_url: "/",
+        icons: [
+          {
+            src: "favicon.ico",
+            sizes: "64x64 32x32 24x24 16x16",
+            type: "image/x-icon"
+          }
+        ]
+      },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}']
       }
