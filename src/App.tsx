@@ -17,14 +17,19 @@ const Emergency = lazy(() => import("./pages/services/Emergency"));
 const Cleaning = lazy(() => import("./pages/services/Cleaning"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+    <BrowserRouter>
+      <TooltipProvider>
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -37,8 +42,10 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
-    </TooltipProvider>
+        <Toaster />
+        <Sonner />
+      </TooltipProvider>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
