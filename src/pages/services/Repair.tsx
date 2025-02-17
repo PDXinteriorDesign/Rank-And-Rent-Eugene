@@ -86,7 +86,6 @@ const Repair = () => {
               <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
               <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
               <li><a href="#warning-signs" className="text-gray-600 hover:text-primary transition-colors">Warning Signs</a></li>
-              <li><a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a></li>
               <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
