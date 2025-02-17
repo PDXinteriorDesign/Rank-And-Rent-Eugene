@@ -6,6 +6,7 @@ import RepairHero from './repair/RepairHero';
 import WhyChooseUs from './repair/WhyChooseUs';
 import RepairServices from './repair/RepairServices';
 import WarningSigns from './repair/WarningSigns';
+import RepairContent from './repair/RepairContent';
 import RepairCTA from './repair/RepairCTA';
 import RepairFAQ from './repair/RepairFAQ';
 
@@ -54,10 +55,10 @@ const Repair = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Roof Repair in Eugene, Oregon – Reliable, Fast, and Affordable Services | Eugene Roofing NW</title>
+        <title>Expert Roof Repair in Eugene, Oregon – Trusted Roofing Contractors | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="Expert roof repair in Eugene, OR. Specializing in leak detection, storm damage repair, and emergency services. Local specialists with years of experience. Free estimates!"
+          content="Professional roof repair in Eugene, OR. Specializing in emergency repairs, leak detection, and storm damage restoration. OSHA-certified contractors, free inspections. Call now!"
         />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
@@ -68,6 +69,7 @@ const Repair = () => {
       <RepairHero />
       <WhyChooseUs />
       <RepairServices />
+      <RepairContent />
       <WarningSigns />
       <RepairFAQ />
       <RepairCTA />
