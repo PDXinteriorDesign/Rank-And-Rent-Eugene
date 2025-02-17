@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const InstallationWhyChooseUs = () => {
   return (
-    <section id="why-choose" className="py-16 bg-white">
+    <section id="why-choose" className="py-16 bg-white scroll-mt-32">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
         <div className="grid md:grid-cols-3 gap-8">

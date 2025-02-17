@@ -81,7 +81,7 @@ const Installation = () => {
           </div>
         </nav>
 
-        <section id="overview" className="py-16 bg-white">
+        <section id="overview" className="py-16 bg-white scroll-mt-32">
           <RepairContent />
         </section>
 
@@ -89,7 +89,7 @@ const Installation = () => {
         <InstallationWhyChooseUs />
         <InstallationMaterials />
         
-        <section id="faq" className="py-16 bg-muted/30 max-w-5xl mx-auto">
+        <section id="faq" className="py-16 bg-muted/30 max-w-5xl mx-auto scroll-mt-32">
           <InstallationFAQ />
         </section>
 
