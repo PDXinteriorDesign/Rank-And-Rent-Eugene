@@ -1,32 +1,48 @@
 
 import React from 'react';
-import { House, HomeIcon, Leaf, Wrench } from 'lucide-react';
+import { House, Home, Leaf, Wrench } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const installationServices = [
   {
-    title: "New Roof Construction",
-    description: "Expert installation for new homes and buildings with premium materials",
+    title: "New Construction Installation",
+    description: "Expert installation for new homes using premium materials rated for Eugene's climate patterns",
     icon: House,
-    features: ["Premium materials", "Expert installation", "Warranty coverage"]
+    features: [
+      "Comprehensive weather protection",
+      "Energy-efficient designs",
+      "50-year material warranties"
+    ]
   },
   {
-    title: "Roof Replacement",
-    description: "Efficient removal of old roofing and seamless new installations",
-    icon: HomeIcon,
-    features: ["Old roof removal", "Structural inspection", "Complete replacement"]
+    title: "Complete Roof Replacement",
+    description: "Professional removal and replacement with minimal disruption to your daily routine",
+    icon: Home,
+    features: [
+      "Thorough old roof removal",
+      "Structural integrity check",
+      "Enhanced ventilation systems"
+    ]
   },
   {
-    title: "Energy-Efficient Roofing",
-    description: "Options that reduce energy costs and improve insulation",
+    title: "Energy-Efficient Solutions",
+    description: "Modern roofing systems that reduce energy costs and improve home comfort",
     icon: Leaf,
-    features: ["Lower utility bills", "Improved insulation", "Eco-friendly options"]
+    features: [
+      "Energy Star certified materials",
+      "Solar-ready installation",
+      "Advanced insulation options"
+    ]
   },
   {
-    title: "Custom Solutions",
-    description: "Tailored designs to match your home's style and architecture",
+    title: "Custom Installations",
+    description: "Tailored solutions for Eugene's diverse architectural styles",
     icon: Wrench,
-    features: ["Custom designs", "Multiple material options", "Architectural compatibility"]
+    features: [
+      "Historic home expertise",
+      "Modern design options",
+      "Complex roof solutions"
+    ]
   }
 ];
 
