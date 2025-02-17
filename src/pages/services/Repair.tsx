@@ -102,7 +102,7 @@ const Repair = () => {
         <div id="warning-signs" className="bg-muted/30 py-16">
           <WarningSigns />
         </div>
-        <div id="testimonials" className="bg-white py-16 max-w-5xl mx-auto">
+        <div id="faq" className="bg-white py-16 max-w-5xl mx-auto">
           <RepairFAQ />
         </div>
         <RepairCTA />
