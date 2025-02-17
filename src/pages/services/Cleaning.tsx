@@ -13,7 +13,7 @@ const Cleaning = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Professional Roof Cleaning and Treatment Services in Eugene",
+    "name": "Professional Moss & Roof Cleaning in Eugene, OR",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Roofing NW",
@@ -26,26 +26,26 @@ const Cleaning = () => {
       }
     },
     "areaServed": "Eugene, Oregon",
-    "description": "Expert roof cleaning and treatment services in Eugene, Oregon. Specializing in moss removal, preventative treatments, and comprehensive roof maintenance.",
+    "description": "Expert moss and roof cleaning services in Eugene, OR. We safely remove moss, algae, and debris using gentle, damage-free methods to protect and extend your roof's lifespan. Professional maintenance to prevent leaks and structural damage.",
   };
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Roof Cleaning & Treatment Services in Eugene, OR | Expert Maintenance</title>
+        <title>Professional Moss & Roof Cleaning in Eugene, OR | Gentle, Effective Solutions</title>
         <meta 
           name="description" 
-          content="Professional roof cleaning and treatment services in Eugene. Expert moss removal, preventative treatments, and comprehensive maintenance. Schedule your service today!"
+          content="Eugene's trusted roof cleaning experts. We safely remove moss, algae & debris to extend your roof's life. Gentle, damage-free methods that protect shingles & enhance curb appeal. Free estimates!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Roof Cleaning & Treatment Services in Eugene, OR | Expert Maintenance" />
-        <meta property="og:description" content="Professional roof cleaning and treatment services in Eugene. Expert moss removal, preventative treatments, and maintenance." />
+        <meta property="og:title" content="Professional Moss & Roof Cleaning in Eugene, OR | Gentle, Effective Solutions" />
+        <meta property="og:description" content="Expert moss and roof cleaning in Eugene. Safe removal of moss, algae & debris. Protect your roof & enhance curb appeal with our gentle cleaning methods." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://eugeneroofing.com/services/roof-cleaning-eugene-or" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Roof Cleaning & Treatment Services in Eugene, OR | Expert Maintenance" />
-        <meta name="twitter:description" content="Professional roof cleaning and treatment services in Eugene. Expert moss removal and maintenance." />
-        <meta name="keywords" content="roof cleaning Eugene, moss removal Eugene, roof maintenance Eugene OR, roof treatment Eugene, professional roof cleaners Eugene" />
+        <meta name="twitter:title" content="Professional Moss & Roof Cleaning in Eugene, OR | Gentle, Effective Solutions" />
+        <meta name="twitter:description" content="Expert moss and roof cleaning in Eugene. Safe removal of moss, algae & debris using gentle methods." />
+        <meta name="keywords" content="moss removal Eugene, roof cleaning Eugene, algae removal Eugene OR, gentle roof cleaning, professional roof maintenance Eugene, moss treatment Eugene" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Eugene Roofing NW" />
         <link rel="canonical" href="https://eugeneroofing.com/services/roof-cleaning-eugene-or" />
@@ -67,16 +67,16 @@ const Cleaning = () => {
             </ul>
           </div>
         </nav>
-        <div id="services" className="bg-white py-16">
+        <div id="services" className="bg-white py-16 scroll-mt-32">
           <CleaningServices />
         </div>
-        <div id="moss-removal" className="bg-muted/30 py-16">
+        <div id="moss-removal" className="bg-muted/30 py-16 scroll-mt-32">
           <MossRemoval />
         </div>
-        <div id="why-choose" className="bg-white py-16">
+        <div id="why-choose" className="bg-white py-16 scroll-mt-32">
           <WhyChooseUs />
         </div>
-        <div id="faq" className="bg-muted/30 py-16 max-w-5xl mx-auto">
+        <div id="faq" className="bg-muted/30 py-16 max-w-5xl mx-auto scroll-mt-32">
           <CleaningFAQ />
         </div>
         <CleaningCTA />
