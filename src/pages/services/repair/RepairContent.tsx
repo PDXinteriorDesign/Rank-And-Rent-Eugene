@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, ClipboardEdit } from 'lucide-react';
+import { Check, MapPin, ClipboardEdit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -50,6 +50,10 @@ const RepairContent = () => {
           <p className="text-gray-700 leading-relaxed mb-6">
             When it comes to roof installation in Eugene, OR, you need a roofing company that delivers durability, reliability, and superior craftsmanship. Your roof is your home's first line of defense against the Pacific Northwest's unpredictable weather—rain, wind, and occasional snow. That's why choosing the right roofing materials and expert contractors is critical to ensuring long-term protection and energy efficiency.
           </p>
+          <div className="flex items-center gap-2 justify-center text-gray-600">
+            <MapPin className="w-5 h-5 text-primary" />
+            <span>Serving Eugene, Springfield, and surrounding Oregon communities</span>
+          </div>
         </section>
 
         {/* Benefits */}
