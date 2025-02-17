@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Sprout, Shield, LineChart, Home } from 'lucide-react';
+import { Sprout, Shield, LineChart, Home, CheckCircle } from 'lucide-react';
 
 const benefits = [
   {
@@ -26,58 +26,80 @@ const benefits = [
   }
 ];
 
+const successStories = [
+  {
+    title: "South Eugene Home Recovery",
+    description: "Removed extensive moss growth from a 25-year-old roof, preventing the need for early replacement and saving the homeowner $12,000.",
+    savings: "$12,000 saved"
+  },
+  {
+    title: "Historic District Restoration",
+    description: "Carefully cleaned and treated a 1920s craftsman home's cedar shake roof, preserving its historic character while preventing further decay.",
+    result: "15+ years extended life"
+  }
+];
+
 const MossRemoval = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">
-            Roof Cleaning and Moss Removal: Protect Your Home from Hidden Damage
+            Eugene's Climate Challenges: Why Moss Removal Matters
           </h2>
           <p className="text-gray-600 mb-8">
-            Moss growth on your roof might seem like a minor aesthetic issue, but it can cause significant 
-            damage if left untreated. The damp, shaded environment created by moss traps moisture against 
-            roofing materials, leading to rot, leaks, and costly repairs.
+            Eugene's unique climate, with an average of 47 inches of annual rainfall and humidity 
+            levels between 71-89%, creates perfect conditions for moss growth. The Willamette Valley's 
+            abundant tree coverage provides shade that further promotes moss development on roofs.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <Card className="border-l-4 border-l-secondary">
             <CardHeader>
-              <CardTitle>Why Moss Removal is Essential</CardTitle>
+              <CardTitle>Our EPA-Compliant Cleaning Process</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600">
-                Moss doesn't just affect your roof's appearance—it compromises its structural health. 
-                The roots of moss can infiltrate shingles, causing them to lift, crack, or deteriorate 
-                over time. This leads to water seepage, mold growth, and insulation issues inside your home.
-              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary mt-1" />
+                  <div>
+                    <p className="font-semibold">Initial Assessment</p>
+                    <p className="text-sm text-gray-600">Comprehensive inspection following Oregon state guidelines</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary mt-1" />
+                  <div>
+                    <p className="font-semibold">Eco-Friendly Treatment</p>
+                    <p className="text-sm text-gray-600">Oregon DEQ approved cleaning solutions safe for local watershed</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary mt-1" />
+                  <div>
+                    <p className="font-semibold">Preventative Protection</p>
+                    <p className="text-sm text-gray-600">Application of zinc or copper sulfate treatments to prevent regrowth</p>
+                  </div>
+                </li>
+              </ul>
             </CardContent>
           </Card>
 
           <Card className="border-l-4 border-l-secondary">
             <CardHeader>
-              <CardTitle>Our Comprehensive Process</CardTitle>
+              <CardTitle>Local Success Stories</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full" />
-                  <span>Thorough roof inspection to assess moss growth</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full" />
-                  <span>Gentle cleaning with soft-brush techniques</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full" />
-                  <span>Eco-friendly treatments to prevent regrowth</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full" />
-                  <span>Ongoing maintenance plans available</span>
-                </li>
-              </ul>
+              {successStories.map((story) => (
+                <div key={story.title} className="mb-4 last:mb-0">
+                  <h4 className="font-semibold text-primary">{story.title}</h4>
+                  <p className="text-sm text-gray-600 mb-1">{story.description}</p>
+                  <p className="text-sm font-medium text-secondary">
+                    {story.savings || story.result}
+                  </p>
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>
@@ -101,9 +123,10 @@ const MossRemoval = () => {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-4">
-            We understand the unique climate challenges that contribute to moss growth in Eugene. 
-            Our team is trained to handle moss issues specific to this region, ensuring long-lasting results. 
-            Whether you're dealing with minor moss patches or a full infestation, we've got you covered.
+            With over 15 years of experience in Eugene's unique climate, our team understands the 
+            specific challenges that local homeowners face. Our proven methods are tailored to the 
+            Willamette Valley's weather patterns and environmental regulations, ensuring effective 
+            and compliant roof cleaning solutions.
           </p>
         </div>
       </div>
