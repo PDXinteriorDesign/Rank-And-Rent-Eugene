@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Shield, Users, MapPin, Award, Clock, Tool, Leaf, BadgeCheck } from 'lucide-react';
+import { Shield, Users, MapPin, Award, Clock, Wrench, Leaf, BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const features = [
@@ -55,7 +54,7 @@ const features = [
     ]
   },
   {
-    icon: Tool,
+    icon: Wrench,
     title: "Advanced Equipment",
     description: "Using state-of-the-art cleaning equipment designed for Oregon's diverse roof types.",
     points: [
