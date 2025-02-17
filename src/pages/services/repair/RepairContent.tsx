@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, MapPin, ClipboardEdit, Shield, Clock, Tool, ChartBar } from 'lucide-react';
+import { Check, MapPin, ClipboardEdit, Shield, Clock, Wrench, ChartBar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +54,7 @@ const RepairContent = () => {
       description: "Average repair lifespan"
     },
     {
-      icon: Tool,
+      icon: Wrench,
       stat: "5,000+",
       description: "Repairs completed in Eugene"
     },
