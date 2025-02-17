@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import InstallationFAQ from './installation/InstallationFAQ';
+import RepairContent from './repair/RepairContent';
 
 const Installation = () => {
   const schemaMarkup = {
@@ -147,16 +148,23 @@ const Installation = () => {
         <nav aria-label="Page sections" className="sticky top-20 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-100 hidden md:block">
           <div className="container mx-auto px-4">
             <ul className="flex space-x-8 py-4 text-sm">
+              <li><a href="#overview" className="text-gray-600 hover:text-primary transition-colors">Overview</a></li>
               <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
               <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
               <li><a href="#materials" className="text-gray-600 hover:text-primary transition-colors">Materials</a></li>
+              <li><a href="#process" className="text-gray-600 hover:text-primary transition-colors">Process</a></li>
               <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
         </nav>
 
+        {/* Overview Section */}
+        <section id="overview" className="py-16 bg-white">
+          <RepairContent />
+        </section>
+
         {/* Services Grid */}
-        <section id="services" className="py-16 bg-white">
+        <section id="services" className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our Installation Services</h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -182,30 +190,6 @@ const Installation = () => {
                     </ul>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section id="why-choose" className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us for Your Roof Installation</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: "Local Knowledge", description: "Understanding Eugene's weather patterns" },
-                { title: "Quality Materials", description: "Premium shingles and roofing materials" },
-                { title: "Skilled Craftsmanship", description: "Certified and experienced installers" },
-                { title: "Transparent Pricing", description: "Free consultations and detailed estimates" }
-              ].map((item, index) => (
-                <div 
-                  key={item.title}
-                  className="text-center p-6 bg-white rounded-lg shadow-sm animate-slideUp"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
               ))}
             </div>
           </div>
@@ -242,36 +226,13 @@ const Installation = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Benefits of Professional Roof Installation</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                "Enhanced curb appeal and property value",
-                "Better energy efficiency and lower bills",
-                "Long-lasting weather protection",
-                "Manufacturer-backed warranties"
-              ].map((benefit, index) => (
-                <div 
-                  key={benefit}
-                  className="p-6 bg-white rounded-lg shadow-sm text-center animate-slideUp"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <p className="text-gray-800">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
-        <section id="faq" className="py-16 bg-white max-w-5xl mx-auto">
+        <section id="faq" className="py-16 bg-muted/30 max-w-5xl mx-auto">
           <InstallationFAQ />
         </section>
 
         {/* CTA Section */}
-        <section className="py-16">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="bg-primary rounded-lg p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
