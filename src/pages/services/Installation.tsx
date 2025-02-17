@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Building, Wrench, House, HomeIcon, Leaf } from 'lucide-react';
@@ -152,7 +153,6 @@ const Installation = () => {
               <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
               <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
               <li><a href="#materials" className="text-gray-600 hover:text-primary transition-colors">Materials</a></li>
-              <li><a href="#process" className="text-gray-600 hover:text-primary transition-colors">Process</a></li>
               <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
