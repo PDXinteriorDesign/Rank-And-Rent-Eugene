@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Phone, MapPin, ClipboardEdit } from 'lucide-react';
+import { Check, ClipboardEdit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -103,30 +103,11 @@ const RepairContent = () => {
             We understand that a new roof installation in Eugene is a significant investment. That's why we offer flexible roofing financing options to help homeowners get the best roofing system within their budget.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button asChild>
-              <Link to="/contact" className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> Contact Us
-              </Link>
-            </Button>
             <Button asChild variant="secondary">
               <Link to="/contact" className="flex items-center gap-2">
                 <ClipboardEdit className="w-4 h-4" /> Get Free Quote
               </Link>
             </Button>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="max-w-4xl mx-auto text-center">
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-            <div className="flex items-center gap-2 justify-center">
-              <Phone className="w-5 h-5 text-primary" />
-              <span className="text-gray-700">(541) 555-0123</span>
-            </div>
-            <div className="flex items-center gap-2 justify-center">
-              <MapPin className="w-5 h-5 text-primary" />
-              <span className="text-gray-700">Serving Eugene, Springfield, and surrounding Oregon communities</span>
-            </div>
           </div>
         </section>
       </div>
