@@ -65,6 +65,12 @@ const Repair = () => {
         <meta property="og:description" content="Professional roof repair in Eugene, OR. Specializing in emergency repairs, leak detection, and storm damage restoration." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://eugeneroofing.com/services/eugene-or-roof-repair" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Roof Repair in Eugene, Oregon – Trusted Roofing Contractors" />
+        <meta name="twitter:description" content="Professional roof repair in Eugene, OR. Specializing in emergency repairs, leak detection, and storm damage restoration." />
+        <meta name="keywords" content="roof repair Eugene, Eugene roofing contractors, roof leak repair, emergency roof repair, Eugene OR roofing, professional roofers Eugene" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Eugene Roofing NW" />
         <link rel="canonical" href="https://eugeneroofing.com/services/eugene-or-roof-repair" />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
@@ -72,7 +78,7 @@ const Repair = () => {
       </Helmet>
 
       <Header />
-      <main id="main-content" role="main">
+      <main id="main-content" role="main" className="space-y-20">
         <RepairHero />
         <nav aria-label="Page sections" className="sticky top-20 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-100 hidden md:block">
           <div className="container mx-auto px-4">
@@ -85,17 +91,19 @@ const Repair = () => {
             </ul>
           </div>
         </nav>
-        <div id="services">
+        <div id="services" className="bg-white py-16">
           <RepairServices />
         </div>
-        <div id="why-choose">
+        <div id="why-choose" className="bg-muted/30 py-16">
           <WhyChooseUs />
         </div>
-        <RepairContent />
-        <div id="warning-signs">
+        <div className="bg-white py-16">
+          <RepairContent />
+        </div>
+        <div id="warning-signs" className="bg-muted/30 py-16">
           <WarningSigns />
         </div>
-        <div id="testimonials">
+        <div id="testimonials" className="bg-white py-16 max-w-5xl mx-auto">
           <RepairFAQ />
         </div>
         <RepairCTA />
