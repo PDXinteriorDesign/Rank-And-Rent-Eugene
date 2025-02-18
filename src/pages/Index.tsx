@@ -12,6 +12,7 @@ import Introduction from '@/components/home/Introduction';
 import Benefits from '@/components/home/Benefits';
 import ClimateInfo from '@/components/home/ClimateInfo';
 import InspectionCTA from '@/components/home/InspectionCTA';
+import EstimateForm from '@/components/home/EstimateForm';
 import { getSchemaMarkup, getBreadcrumbSchema } from '@/components/home/SeoSchema';
 
 const Index: React.FC = () => {
@@ -59,6 +60,19 @@ const Index: React.FC = () => {
           <Benefits />
           <ClimateInfo />
           <InspectionCTA />
+        </section>
+
+        {/* Estimate Form Section */}
+        <section className="py-16 bg-muted/10 rounded-lg mt-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Get Your Free Estimate Today</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Fill out the form below and we'll get back to you within 24 hours with a detailed estimate for your roofing project.
+              </p>
+            </div>
+            <EstimateForm />
+          </div>
         </section>
       </div>
       <Services />
