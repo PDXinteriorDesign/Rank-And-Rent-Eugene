@@ -8,101 +8,13 @@ import Testimonials from '@/components/home/Testimonials';
 import TrustIndicators from '@/components/home/TrustIndicators';
 import HomeCTA from '@/components/home/HomeCTA';
 import FAQ from '@/components/home/FAQ';
-import { Check, Droplet, Phone } from 'lucide-react';
+import Introduction from '@/components/home/Introduction';
+import Benefits from '@/components/home/Benefits';
+import ClimateInfo from '@/components/home/ClimateInfo';
+import InspectionCTA from '@/components/home/InspectionCTA';
+import { getSchemaMarkup, getBreadcrumbSchema } from '@/components/home/SeoSchema';
 
 const Index: React.FC = () => {
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "RoofingContractor",
-    "name": "Eugene Roofing NW",
-    "image": "https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac",
-    "description": "Eugene's trusted roofing experts specializing in residential & commercial roofing. Professional repairs, installations & moss removal with 24/7 emergency service. Licensed & insured local roofers serving Eugene, Oregon.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main Street",
-      "addressLocality": "Eugene",
-      "addressRegion": "OR",
-      "postalCode": "97401",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 44.0521,
-      "longitude": -123.0868
-    },
-    "url": "https://eugeneroofing.com",
-    "telephone": "+1-541-555-0123",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 44.0521,
-        "longitude": -123.0868
-      },
-      "geoRadius": "30000"
-    },
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "87"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "07:00",
-      "closes": "19:00"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Roofing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Roof Repair",
-            "description": "Expert repair services for leaks, storm damage, and moss removal in Eugene's wet climate."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "New Roof Installation",
-            "description": "Premium roof installations using weather-resistant materials designed for Oregon weather."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Emergency Roofing Services",
-            "description": "24/7 emergency roofing repair services in Eugene and surrounding areas."
-          }
-        }
-      ]
-    }
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://eugeneroofing.com"
-    }]
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -132,10 +44,10 @@ const Index: React.FC = () => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="Eugene Roofing NW" />
         <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
+          {JSON.stringify(getSchemaMarkup())}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
+          {JSON.stringify(getBreadcrumbSchema())}
         </script>
       </Helmet>
       
@@ -143,69 +55,10 @@ const Index: React.FC = () => {
       <Hero />
       <div className="container mx-auto px-4 py-12">
         <section className="max-w-4xl mx-auto prose prose-lg">
-          <h1 className="text-4xl font-bold text-center mb-8">Eugene Roofing Experts – Your Trusted Local Roofing Contractors</h1>
-          
-          <p className="lead text-lg text-gray-700">
-            When it comes to roofing in Eugene, OR, quality, durability, and expert craftsmanship matter. At Eugene Roofing NW, we specialize in providing top-tier roofing solutions designed to withstand the Pacific Northwest's challenging weather conditions.
-          </p>
-
-          <h2 className="text-3xl font-bold mt-12">The #1 Choice for Roofing in Eugene, OR</h2>
-          <p>
-            We take pride in being the best roofing company in Eugene, OR, offering superior service and high-quality materials from industry-leading manufacturers. Our experienced Eugene roofers provide expert craftsmanship with a focus on energy efficiency, durability, and aesthetic appeal.
-          </p>
-
-          <section className="mt-16 bg-muted/20 p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-              <span role="img" aria-label="house">🏠</span> Why Homeowners Choose Eugene Roofing NW
-            </h2>
-            <div className="grid gap-4">
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>Licensed, Bonded & Insured</strong> – Peace of mind knowing you're working with certified professionals.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>Locally Owned & Operated</strong> – Proudly serving Eugene, Springfield, and surrounding communities.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>No-Obligation Free Roof Inspections</strong> – Get expert recommendations without any pressure.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>Flexible Roofing Financing Options</strong> – Affordable payment plans tailored to your budget.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>Premium Workmanship & Warranty Protection</strong> – We back our work with industry-leading warranties.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-primary mt-1" />
-                <p className="m-0"><strong>Customer-Centric Approach</strong> – Transparent pricing, honest assessments, and no pushy sales tactics.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="mt-16">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-              <span role="img" aria-label="globe">🌍</span> Eugene's Climate & Your Roof – What You Need to Know
-            </h2>
-            <div className="flex items-start gap-4 mb-8">
-              <Droplet className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-              <p className="m-0">
-                Eugene's heavy rainfall and frequent moisture exposure make proper roofing maintenance crucial. Choosing weather-resistant roofing materials and regular moss removal can prevent long-term damage. Our team specializes in climate-adapted roofing solutions to keep your home safe year-round.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-16 bg-primary/5 p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-              <Phone className="w-8 h-8" /> Get Your Free Roof Inspection & Estimate Today!
-            </h2>
-            <p className="text-lg">
-              Your roof is your home's first line of defense against harsh Oregon weather. Whether you need roof installation in Eugene, OR, emergency repairs, or moss cleaning, trust Eugene Roofing NW to deliver exceptional service and lasting results.
-            </p>
-          </section>
+          <Introduction />
+          <Benefits />
+          <ClimateInfo />
+          <InspectionCTA />
         </section>
       </div>
       <Services />
