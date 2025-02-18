@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
@@ -9,7 +10,7 @@ import HomeCTA from '@/components/home/HomeCTA';
 import FAQ from '@/components/home/FAQ';
 import { Check, Droplet, Phone } from 'lucide-react';
 
-const Index = () => {
+const Index: React.FC = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
