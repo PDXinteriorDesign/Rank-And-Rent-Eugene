@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
@@ -11,7 +10,6 @@ import FAQ from '@/components/home/FAQ';
 import { Check, Droplet, Phone } from 'lucide-react';
 
 const Index = () => {
-  // Updated schema markup for better local SEO
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
@@ -130,7 +128,6 @@ const Index = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Eugene Roofing NW" />
         <meta name="revisit-after" content="7 days" />
-        {/* Voice search optimization */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="Eugene Roofing NW" />
         <script type="application/ld+json">
@@ -148,15 +145,14 @@ const Index = () => {
           <h1 className="text-4xl font-bold text-center mb-8">Eugene Roofing Experts – Your Trusted Local Roofing Contractors</h1>
           
           <p className="lead text-lg text-gray-700">
-            When it comes to <strong>roofing in Eugene, OR</strong>, quality, durability, and expert craftsmanship matter. At <strong>Eugene Roofing NW</strong>, we specialize in providing top-tier roofing solutions designed to withstand the Pacific Northwest's challenging weather conditions.
+            When it comes to roofing in Eugene, OR, quality, durability, and expert craftsmanship matter. At Eugene Roofing NW, we specialize in providing top-tier roofing solutions designed to withstand the Pacific Northwest's challenging weather conditions.
           </p>
 
           <h2 className="text-3xl font-bold mt-12">The #1 Choice for Roofing in Eugene, OR</h2>
           <p>
-            We take pride in being the <strong>best roofing company in Eugene, OR</strong>, offering superior service and <strong>high-quality materials</strong> from industry-leading manufacturers. Our experienced <strong>Eugene roofers</strong> provide expert craftsmanship with a focus on <strong>energy efficiency, durability, and aesthetic appeal</strong>.
+            We take pride in being the best roofing company in Eugene, OR, offering superior service and high-quality materials from industry-leading manufacturers. Our experienced Eugene roofers provide expert craftsmanship with a focus on energy efficiency, durability, and aesthetic appeal.
           </p>
 
-          {/* New SEO Content Sections */}
           <section className="mt-16 bg-muted/20 p-8 rounded-lg">
             <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
               <span role="img" aria-label="house">🏠</span> Why Homeowners Choose Eugene Roofing NW
@@ -196,7 +192,7 @@ const Index = () => {
             <div className="flex items-start gap-4 mb-8">
               <Droplet className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
               <p className="m-0">
-                Eugene's <strong>heavy rainfall and frequent moisture exposure</strong> make proper roofing maintenance crucial. Choosing <strong>weather-resistant roofing materials</strong> and <strong>regular moss removal</strong> can prevent long-term damage. Our team specializes in <strong>climate-adapted roofing solutions</strong> to keep your home safe year-round.
+                Eugene's heavy rainfall and frequent moisture exposure make proper roofing maintenance crucial. Choosing weather-resistant roofing materials and regular moss removal can prevent long-term damage. Our team specializes in climate-adapted roofing solutions to keep your home safe year-round.
               </p>
             </div>
           </section>
@@ -206,7 +202,7 @@ const Index = () => {
               <Phone className="w-8 h-8" /> Get Your Free Roof Inspection & Estimate Today!
             </h2>
             <p className="text-lg">
-              Your roof is your home's first line of defense against harsh Oregon weather. Whether you need <strong>roof installation in Eugene, OR</strong>, emergency repairs, or moss cleaning, trust <strong>Eugene Roofing NW</strong> to deliver <strong>exceptional service and lasting results</strong>.
+              Your roof is your home's first line of defense against harsh Oregon weather. Whether you need roof installation in Eugene, OR, emergency repairs, or moss cleaning, trust Eugene Roofing NW to deliver exceptional service and lasting results.
             </p>
           </section>
         </section>
