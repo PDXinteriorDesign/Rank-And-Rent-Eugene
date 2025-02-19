@@ -1,3 +1,4 @@
+
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -35,12 +36,9 @@ const App = () => {
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">
-            <Routes>
-              {/* Index route loaded directly */}
-              <Route path="/" element={<Index />} />
-              
-              {/* Other routes wrapped in Suspense */}
-              <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loading />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
                 <Route path="/about-eugene-roofing" element={<About />} />
                 <Route path="/contact-eugene-roofing" element={<Contact />} />
                 <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
@@ -48,8 +46,8 @@ const App = () => {
                 <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
                 <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
                 <Route path="*" element={<NotFound />} />
-              </Suspense>
-            </Routes>
+              </Routes>
+            </Suspense>
           </main>
           <Toaster />
           <Sonner />
