@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import formData from 'form-data';
-import Mailgun from 'mailgun.js';
+import * as Mailgun from 'mailgun.js';
 
 const MAILGUN_API_KEY = import.meta.env.VITE_MAILGUN_API_KEY;
 const MAILGUN_DOMAIN = import.meta.env.VITE_MAILGUN_DOMAIN;
 
-const mailgun = new Mailgun(formData);
+const mailgun = new Mailgun.default(formData);
 const mg = mailgun.client({ username: 'api', key: MAILGUN_API_KEY });
 
 const EstimateForm: React.FC = () => {
