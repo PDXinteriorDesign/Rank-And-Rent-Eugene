@@ -92,3 +92,20 @@ export const getBreadcrumbSchema = () => ({
     "item": "https://eugeneroofing.com"
   }]
 });
+
+const SeoSchema: React.FC = () => {
+  React.useEffect(() => {
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.text = JSON.stringify([getSchemaMarkup(), getBreadcrumbSchema()]);
+    document.head.appendChild(schemaScript);
+
+    return () => {
+      document.head.removeChild(schemaScript);
+    };
+  }, []);
+
+  return null;
+};
+
+export default SeoSchema;
