@@ -9,7 +9,6 @@ import HomeCTA from '@/components/home/HomeCTA';
 import FAQ from '@/components/home/FAQ';
 import Testimonials from '@/components/home/Testimonials';
 import TrustIndicators from '@/components/home/TrustIndicators';
-import InspectionCTA from '@/components/home/InspectionCTA';
 import SeoSchema from '@/components/home/SeoSchema';
 
 const Index = () => {
@@ -24,7 +23,6 @@ const Index = () => {
       <FAQ />
       <Testimonials />
       <TrustIndicators />
-      <InspectionCTA />
       <SeoSchema />
     </div>
   );
