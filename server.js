@@ -47,7 +47,7 @@ app.post('/send-email', (req, res) => {
   `;
 
   const data = {
-    from: `Eugene Roofing Website <no-reply@${process.env.MAILGUN_DOMAIN}>`,
+    from: `Eugene Roofing Website <no-reply@${process.env.VITE_MAILGUN_DOMAIN}>`,
     to: 'eugeneroofingnw@gmail.com', // Replace with your recipient email
     subject: 'New Roofing Estimate Request',
     text: messageBody,
