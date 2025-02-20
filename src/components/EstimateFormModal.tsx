@@ -64,16 +64,34 @@ const EstimateFormModal = ({ isOpen, onClose }: EstimateFormModalProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here we'll add the email service integration later
-    console.log('Form submitted:', formData);
+    try {
+      const response = await fetch('/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Request Submitted Successfully",
-      description: "Thank you for your submission. We'll be in touch soon!",
-    });
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
-    onClose();
-    navigate('/');
+      toast({
+        title: "Request Submitted Successfully",
+        description: "Thank you for your submission. We'll be in touch soon!",
+      });
+
+      onClose();
+      navigate('/');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was an error submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
