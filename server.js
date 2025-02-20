@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 
 const mg = mailgun({
-  apiKey: process.env.MAILGUN_API_KEY,
-  domain: process.env.MAILGUN_DOMAIN,
+  apiKey: process.env.VITE_MAILGUN_API_KEY,
+  domain: process.env.VITE_MAILGUN_DOMAIN,
 });
 
 app.post('/send-email', (req, res) => {
