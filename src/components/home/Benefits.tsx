@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, Clock, Award, Tool } from 'lucide-react';
+import { Shield, Clock, Award, Wrench } from 'lucide-react';
 
 const Benefits = () => {
   const benefits = [
@@ -20,7 +20,7 @@ const Benefits = () => {
       description: "Consistently rated as one of Eugene's best roofing companies, with over 200 five-star reviews from satisfied local customers."
     },
     {
-      icon: Tool,
+      icon: Wrench,
       title: "Local Expertise",
       description: "Specialized knowledge of Eugene's climate challenges and building codes, ensuring your roof meets all local requirements and weather demands."
     }
