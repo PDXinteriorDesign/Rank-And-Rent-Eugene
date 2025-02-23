@@ -43,13 +43,13 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-16 md:h-24" // Reduced from h-24 md:h-32
+                className="h-12 md:h-16" 
               />
             </Link>
             
@@ -88,7 +88,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[80px] md:h-[120px]" /> {/* Reduced from h-[120px] md:h-[160px] */}
+      <div className="h-[60px] md:h-[80px]" /> {/* Reduced spacing here */}
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}

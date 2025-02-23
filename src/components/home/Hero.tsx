@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="pt-32 pb-20 bg-no-repeat bg-cover bg-center relative"
+      className="pt-16 pb-20 bg-no-repeat bg-cover bg-center relative" // Reduced top padding here
       style={{ 
         backgroundImage: 'url("/lovable-uploads/c5babf64-7fbb-4ba8-809c-ea3d00fe5786.png")',
       }}
