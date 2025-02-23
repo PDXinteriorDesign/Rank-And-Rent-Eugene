@@ -19,10 +19,10 @@ const Index = () => {
       <ClimateInfo />
       <Services />
       <Benefits />
+      <TrustIndicators />
       <HomeCTA />
       <FAQ />
       <Testimonials />
-      <TrustIndicators />
       <SeoSchema />
     </div>
   );
