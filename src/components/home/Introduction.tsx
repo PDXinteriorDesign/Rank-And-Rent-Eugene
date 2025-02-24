@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Star, Shield, Award, Tool } from 'lucide-react';
+import { Star, Shield, Award, Wrench } from 'lucide-react';
 
 const Introduction: React.FC = () => {
   return (
