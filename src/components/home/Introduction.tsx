@@ -37,7 +37,7 @@ const Introduction: React.FC = () => {
           </div>
           
           <div className="text-center">
-            <Tool className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <Wrench className="w-12 h-12 text-secondary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Quality Materials</h3>
             <p className="text-gray-600">Premium Malarkey & GAF roofing products</p>
           </div>
