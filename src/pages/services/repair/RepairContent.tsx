@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Clock, CheckCircle, Calendar, Tool } from 'lucide-react';
+import { Clock, CheckCircle, Calendar, Wrench } from 'lucide-react';
 
 const RepairContent = () => {
   return (
@@ -37,7 +36,7 @@ const RepairContent = () => {
                   desc: "Work around your schedule with minimal disruption"
                 },
                 {
-                  icon: Tool,
+                  icon: Wrench,
                   title: "Quality Materials",
                   desc: "Premium materials backed by manufacturer warranties"
                 }
