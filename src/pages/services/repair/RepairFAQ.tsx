@@ -31,9 +31,25 @@ const faqItems = [
 ];
 
 const RepairFAQ = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
         <h2 className="text-3xl font-bold text-center mb-12">Common Roof Repair Questions in Eugene</h2>
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible>

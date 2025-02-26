@@ -1,86 +1,106 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Wrench, Clock, Home } from 'lucide-react';
+import { Clock, CheckCircle, Calendar, Tool } from 'lucide-react';
 
 const RepairContent = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Professional Roof Repair Services in Eugene, Oregon
-          </h2>
+          <h2 className="text-3xl font-bold mb-8">Expert Roof Repair Services in Eugene, Oregon</h2>
           
           <div className="prose max-w-none mb-12">
-            <p className="text-lg leading-relaxed mb-6">
-              At Eugene Roofing NW, we understand that a damaged roof can cause significant stress and potential damage to your home. Our expert team specializes in comprehensive roof repair services, addressing everything from minor leaks to major storm damage throughout Eugene, Springfield, and Lane County.
+            <p className="text-lg text-gray-700 mb-6">
+              With over two decades of experience serving Eugene homeowners, our certified roofing experts 
+              specialize in comprehensive roof repair services designed to protect your home from Oregon's 
+              challenging weather conditions. From minor leak repairs to major storm damage restoration, 
+              we deliver lasting solutions backed by industry-leading warranties.
             </p>
-
-            <h3 className="text-2xl font-semibold mb-4">
-              Expert Roof Repair in Eugene's Unique Climate
-            </h3>
-            <p className="mb-6">
-              Eugene's climate presents unique challenges for roofs, with frequent rain, occasional wind storms, and seasonal temperature variations. Our local expertise ensures repairs that stand up to Oregon's weather patterns, using materials and techniques specifically chosen for our region's conditions.
-            </p>
-
+            
+            <h3 className="text-2xl font-semibold mb-4">Why Choose Our Roof Repair Services?</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card>
-                <CardContent className="pt-6">
-                  <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-secondary" />
-                    Quality Guarantee
-                  </h4>
-                  <ul className="space-y-2">
-                    <li>Licensed and insured contractors</li>
-                    <li>Warranty-backed repairs</li>
-                    <li>Premium materials used</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardContent className="pt-6">
-                  <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-secondary" />
-                    Fast Response Times
-                  </h4>
-                  <ul className="space-y-2">
-                    <li>24/7 emergency service</li>
-                    <li>Same-day inspections</li>
-                    <li>Quick repair scheduling</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              {[
+                {
+                  icon: Clock,
+                  title: "Fast Response Times",
+                  desc: "24/7 emergency repair service available for Eugene residents"
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Certified Expertise",
+                  desc: "GAF and CertainTeed certified contractors"
+                },
+                {
+                  icon: Calendar,
+                  title: "Flexible Scheduling",
+                  desc: "Work around your schedule with minimal disruption"
+                },
+                {
+                  icon: Tool,
+                  title: "Quality Materials",
+                  desc: "Premium materials backed by manufacturer warranties"
+                }
+              ].map((item, index) => (
+                <Card key={index} className="border-none shadow-sm">
+                  <CardContent className="flex items-start gap-4 p-6">
+                    <item.icon className="w-8 h-8 text-secondary shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-2">{item.title}</h4>
+                      <p className="text-gray-600">{item.desc}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
 
-            <h3 className="text-2xl font-semibold mb-4">
-              Comprehensive Repair Solutions
-            </h3>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3">
-                <Wrench className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <strong>Leak Repair & Prevention</strong>
-                  <p>Expert detection and repair of roof leaks, including preventative measures to protect against future water damage.</p>
-                </div>
+            <h3 className="text-2xl font-semibold mb-4">Our Repair Process</h3>
+            <ol className="list-decimal pl-6 space-y-4 mb-8">
+              <li className="text-gray-700">
+                <span className="font-semibold">Thorough Inspection:</span> Complete assessment of your roof's condition
               </li>
-              <li className="flex items-start gap-3">
-                <Home className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <strong>Storm Damage Repair</strong>
-                  <p>Comprehensive repair services for wind, hail, and storm-related damage, including emergency temporary repairs when needed.</p>
-                </div>
+              <li className="text-gray-700">
+                <span className="font-semibold">Detailed Report:</span> Documentation of all issues with photo evidence
               </li>
-            </ul>
+              <li className="text-gray-700">
+                <span className="font-semibold">Written Estimate:</span> Clear pricing with no hidden fees
+              </li>
+              <li className="text-gray-700">
+                <span className="font-semibold">Professional Repair:</span> Expert repairs using premium materials
+              </li>
+              <li className="text-gray-700">
+                <span className="font-semibold">Final Inspection:</span> Quality assurance check of all repairs
+              </li>
+            </ol>
 
-            <div className="bg-muted p-6 rounded-lg">
-              <h4 className="text-xl font-semibold mb-4">
-                Serving Eugene & Surrounding Areas
-              </h4>
-              <p>
-                We provide expert roof repair services throughout Eugene, including Downtown, South Eugene, West Eugene, and neighboring communities like Springfield, Junction City, and Cottage Grove. Our local knowledge ensures repairs that meet both regional building codes and weather requirements.
-              </p>
+            <div className="bg-muted/30 p-6 rounded-lg mb-8">
+              <h3 className="text-2xl font-semibold mb-4">Common Roof Repairs in Eugene</h3>
+              <ul className="grid md:grid-cols-2 gap-4">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Shingle replacement</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Leak repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Storm damage repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Flashing repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Gutter repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
+                  <span>Ventilation improvement</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
