@@ -4,21 +4,21 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// Import the Index page directly to avoid lazy loading issues with the main route
+// Import pages
 import Index from "./pages/Index";
-
-// Lazy load other pages
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Installation = lazy(() => import("./pages/services/Installation"));
 const Repair = lazy(() => import("./pages/services/Repair"));
 const Emergency = lazy(() => import("./pages/services/Emergency"));
 const Cleaning = lazy(() => import("./pages/services/Cleaning"));
+const Replacement = lazy(() => import("./pages/services/Replacement"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -35,7 +35,6 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen flex flex-col">
-          <Header />
           <main className="flex-1">
             <Suspense fallback={<Loading />}>
               <Routes>
@@ -46,6 +45,9 @@ const App = () => {
                 <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
                 <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
                 <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
+                <Route path="/services/roof-replacement-eugene-or" element={<Replacement />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
