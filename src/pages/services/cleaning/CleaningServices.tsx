@@ -1,7 +1,7 @@
 
 import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Brush, Droplet, Search, Wrench } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const cleaningServices = [
   {
@@ -42,20 +42,22 @@ const CleaningServices = () => {
               className="border border-gray-100 hover:border-secondary/20 transition-all duration-300 animate-slideUp"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardHeader className="flex flex-row items-center gap-4">
-                <service.icon className="w-8 h-8 text-secondary" />
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-secondary rounded-full" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <service.icon className="w-8 h-8 text-secondary shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center gap-2">
+                          <span className="w-2 h-2 bg-secondary rounded-full" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
