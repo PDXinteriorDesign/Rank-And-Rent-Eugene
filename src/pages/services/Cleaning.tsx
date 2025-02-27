@@ -8,6 +8,7 @@ import MossRemoval from './cleaning/MossRemoval';
 import WhyChooseUs from './cleaning/WhyChooseUs';
 import CleaningCTA from './cleaning/CleaningCTA';
 import CleaningFAQ from './cleaning/CleaningFAQ';
+import PricingCalculator from './cleaning/PricingCalculator';
 
 const Cleaning = () => {
   const schemaMarkup = {
@@ -26,7 +27,7 @@ const Cleaning = () => {
       }
     },
     "areaServed": "Eugene, Oregon",
-    "description": "Expert moss and roof cleaning services in Eugene, OR. We safely remove moss, algae, and debris using gentle, damage-free methods to protect and extend your roof's lifespan. Professional maintenance to prevent leaks and structural damage.",
+    "description": "Expert moss and roof cleaning services in Eugene, OR. We safely remove moss, algae, and debris using gentle, damage-free methods to protect and extend your roof's lifespan.",
   };
 
   return (
@@ -61,6 +62,7 @@ const Cleaning = () => {
           <div className="container mx-auto px-4">
             <ul className="flex space-x-8 py-4 text-sm">
               <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
+              <li><a href="#calculator" className="text-gray-600 hover:text-primary transition-colors">Cost Calculator</a></li>
               <li><a href="#moss-removal" className="text-gray-600 hover:text-primary transition-colors">Moss Removal</a></li>
               <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
               <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
@@ -69,6 +71,9 @@ const Cleaning = () => {
         </nav>
         <div id="services" className="bg-white py-16 scroll-mt-32">
           <CleaningServices />
+        </div>
+        <div id="calculator" className="bg-white py-16 scroll-mt-32">
+          <PricingCalculator />
         </div>
         <div id="moss-removal" className="bg-muted/30 py-16 scroll-mt-32">
           <MossRemoval />
