@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Sun, Cloud, Leaf, Snow } from 'lucide-react';
+import { Sun, Cloud, Leaf, CloudSnow } from 'lucide-react';
 
 const SeasonalSchedule = () => {
   const seasons = [
@@ -40,7 +40,7 @@ const SeasonalSchedule = () => {
     },
     {
       name: "Winter",
-      icon: Snow,
+      icon: CloudSnow,
       tasks: [
         "Storm damage inspection",
         "Emergency repairs",
