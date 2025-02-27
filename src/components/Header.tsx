@@ -17,6 +17,8 @@ const Header = () => {
     { to: '/services/eugene-or-roof-installation', label: 'Installation' },
     { to: '/services/emergency-roof-repair-eugene-or', label: 'Emergency' },
     { to: '/services/roof-cleaning-eugene-or', label: 'Cleaning' },
+    { to: '/services/roof-replacement-eugene-or', label: 'Replacement' },
+    { to: '/blog', label: 'Blog' },
     { to: '/about-eugene-roofing', label: 'About' },
     { to: '/contact-eugene-roofing', label: 'Contact' },
   ];
@@ -27,7 +29,9 @@ const Header = () => {
         <Link
           key={link.to}
           to={link.to}
-          className="text-gray-600 hover:text-primary transition-colors"
+          className={`text-gray-600 hover:text-primary transition-colors ${
+            location.pathname === link.to ? 'text-primary font-semibold' : ''
+          }`}
         >
           {link.label}
         </Link>
@@ -74,8 +78,8 @@ const Header = () => {
                 </Sheet>
               </div>
             ) : (
-              <>
-                <nav className="flex items-center space-x-8">
+              <div className="flex items-center gap-8">
+                <nav className="flex items-center space-x-6">
                   <NavigationLinks />
                 </nav>
                 <Button asChild>
@@ -83,12 +87,12 @@ const Header = () => {
                     Get Free Estimate
                   </Link>
                 </Button>
-              </>
+              </div>
             )}
           </div>
         </div>
       </header>
-      <div className="h-[60px] md:h-[80px]" /> {/* Reduced spacing here */}
+      <div className="h-[60px] md:h-[80px]" />
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}

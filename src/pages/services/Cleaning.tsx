@@ -9,6 +9,7 @@ import WhyChooseUs from './cleaning/WhyChooseUs';
 import CleaningCTA from './cleaning/CleaningCTA';
 import CleaningFAQ from './cleaning/CleaningFAQ';
 import PricingCalculator from './cleaning/PricingCalculator';
+import SeasonalSchedule from './cleaning/SeasonalSchedule';
 
 const Cleaning = () => {
   const schemaMarkup = {
@@ -63,6 +64,7 @@ const Cleaning = () => {
             <ul className="flex space-x-8 py-4 text-sm">
               <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
               <li><a href="#calculator" className="text-gray-600 hover:text-primary transition-colors">Cost Calculator</a></li>
+              <li><a href="#seasonal" className="text-gray-600 hover:text-primary transition-colors">Seasonal Schedule</a></li>
               <li><a href="#moss-removal" className="text-gray-600 hover:text-primary transition-colors">Moss Removal</a></li>
               <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
               <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
@@ -75,13 +77,16 @@ const Cleaning = () => {
         <div id="calculator" className="bg-white py-16 scroll-mt-32">
           <PricingCalculator />
         </div>
-        <div id="moss-removal" className="bg-muted/30 py-16 scroll-mt-32">
+        <div id="seasonal" className="bg-muted/30 py-16 scroll-mt-32">
+          <SeasonalSchedule />
+        </div>
+        <div id="moss-removal" className="bg-white py-16 scroll-mt-32">
           <MossRemoval />
         </div>
-        <div id="why-choose" className="bg-white py-16 scroll-mt-32">
+        <div id="why-choose" className="bg-muted/30 py-16 scroll-mt-32">
           <WhyChooseUs />
         </div>
-        <div id="faq" className="bg-muted/30 py-16 max-w-5xl mx-auto scroll-mt-32">
+        <div id="faq" className="bg-white py-16 max-w-5xl mx-auto scroll-mt-32">
           <CleaningFAQ />
         </div>
         <CleaningCTA />
