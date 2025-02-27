@@ -46,8 +46,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div className="container mx-auto px-4 py-2">
+      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-[100]">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img 
@@ -70,8 +70,8 @@ const Header = () => {
                       <Menu className="h-6 w-6" />
                     </Button>
                   </SheetTrigger>
-                  <SheetContent>
-                    <nav className="flex flex-col gap-4 mt-8">
+                  <SheetContent className="w-[300px]">
+                    <nav className="flex flex-col gap-6 mt-8">
                       <NavigationLinks />
                     </nav>
                   </SheetContent>
@@ -79,7 +79,7 @@ const Header = () => {
               </div>
             ) : (
               <div className="flex items-center gap-8">
-                <nav className="flex items-center space-x-6">
+                <nav className="flex items-center gap-8">
                   <NavigationLinks />
                 </nav>
                 <Button asChild>
@@ -92,7 +92,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[60px] md:h-[80px]" />
+      <div className="h-[72px] md:h-[88px]" />
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
