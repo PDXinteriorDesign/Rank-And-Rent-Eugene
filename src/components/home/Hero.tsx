@@ -9,13 +9,13 @@ const Hero = () => {
 
   return (
     <section 
-      className="pb-20 bg-no-repeat bg-cover bg-center relative"
+      className="min-h-[600px] bg-no-repeat bg-cover bg-center relative -mt-[72px] md:-mt-[88px]"
       style={{ 
         backgroundImage: 'url("/lovable-uploads/c5babf64-7fbb-4ba8-809c-ea3d00fe5786.png")',
       }}
     >
       <div className="absolute inset-0 bg-black/50" />
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto px-4 relative h-full flex items-center py-20">
         <div className="text-center max-w-3xl mx-auto animate-fadeIn">
           <div className="flex items-center justify-center gap-2 text-white mb-4">
             <Star className="w-5 h-5 text-yellow-400" />
