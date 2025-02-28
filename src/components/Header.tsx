@@ -44,7 +44,7 @@ const Header = () => {
       <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
         Services <ChevronDown className="h-4 w-4" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-white">
+      <DropdownMenuContent className="w-56 bg-white mt-1" sideOffset={5}>
         <div className="p-2">
           <div className="mb-2">
             <span className="px-2 text-sm font-semibold text-gray-500">Repair</span>
