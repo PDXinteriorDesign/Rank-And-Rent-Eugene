@@ -41,10 +41,10 @@ const Header = () => {
 
   const ServiceDropdown = () => (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
+      <DropdownMenuTrigger className="flex items-center gap-1 text-white hover:text-white/80 transition-colors">
         Services <ChevronDown className="h-4 w-4" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-white mt-2" sideOffset={8}>
+      <DropdownMenuContent className="w-56 bg-white mt-2 z-[9999]" sideOffset={8}>
         <div className="p-2">
           <div className="mb-2">
             <span className="px-2 text-sm font-semibold text-gray-500">Repair</span>
@@ -121,8 +121,8 @@ const Header = () => {
         <Link
           key={link.to}
           to={link.to}
-          className={`text-gray-600 hover:text-primary transition-colors ${
-            location.pathname === link.to ? 'text-primary font-semibold' : ''
+          className={`text-white hover:text-white/80 transition-colors ${
+            location.pathname === link.to ? 'font-semibold' : ''
           }`}
         >
           {link.label}
@@ -138,7 +138,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-[9999]">
+      <header className="fixed top-0 left-0 right-0 bg-black/20 backdrop-blur-sm z-[100]">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
@@ -158,7 +158,7 @@ const Header = () => {
                 </Button>
                 <Sheet>
                   <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon">
+                    <Button variant="ghost" size="icon" className="text-white">
                       <Menu className="h-6 w-6" />
                     </Button>
                   </SheetTrigger>
@@ -194,3 +194,4 @@ const Header = () => {
 };
 
 export default Header;
+
