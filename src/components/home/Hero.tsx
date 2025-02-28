@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="min-h-[600px] bg-no-repeat bg-cover bg-center relative -mt-[72px] md:-mt-[88px]"
+      className="min-h-[600px] bg-no-repeat bg-cover bg-center relative -mt-[64px] md:-mt-[80px]"
       style={{ 
         backgroundImage: 'url("/lovable-uploads/c5babf64-7fbb-4ba8-809c-ea3d00fe5786.png")',
       }}
@@ -66,3 +66,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
