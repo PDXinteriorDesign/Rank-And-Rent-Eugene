@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/home/Hero';
@@ -15,17 +16,18 @@ const Index = () => {
   return (
     <div className="space-y-16 pb-16">
       <Helmet>
-        <title>Trusted Roofing Contractor Eugene OR | Eugene Roofing NW</title>
+        <title>Best Roofing Contractors in Eugene, OR | Quality You Can Trust</title>
         <meta 
           name="description" 
-          content="Eugene's most trusted roofing contractor with 20+ years of experience. Expert residential & commercial roofing services, repairs, and installations. GAF & CertainTeed certified. Free estimates!" 
+          content="Eugene's top-rated roofing company offering expert roof repair, replacement, and maintenance. Professional roofing services by certified experts. Get a free estimate today!" 
         />
         <link rel="canonical" href="https://www.eugeneroofingnw.com/" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Trusted Roofing Contractor Eugene OR | Eugene Roofing NW" />
-        <meta property="og:description" content="Eugene's most trusted roofing contractor. Professional roofing services, repairs & installations by certified experts. Free estimates!" />
+        <meta property="og:title" content="Best Roofing Contractors in Eugene, OR | Quality You Can Trust" />
+        <meta property="og:description" content="Eugene's top-rated roofing company offering expert roof repair, replacement, and maintenance. Get a free estimate today!" />
         <meta property="og:url" content="https://www.eugeneroofingnw.com/" />
         <meta property="og:type" content="website" />
+        <meta name="keywords" content="roofing contractor Eugene OR, roof repair Eugene, roof replacement Eugene, roofing companies Eugene OR, Eugene roofing contractors" />
       </Helmet>
       <Hero />
       <Introduction />

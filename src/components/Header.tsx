@@ -19,23 +19,25 @@ const Header = () => {
 
   const serviceCategories = {
     repair: [
-      { to: '/services/eugene-or-roof-repair', label: 'General Repair' },
+      { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
       { to: '/services/emergency-roof-repair-eugene-or', label: 'Emergency Repair' },
+      { to: '/services/roof-inspection-eugene-or', label: 'Roof Inspection' },
     ],
     installation: [
       { to: '/services/eugene-or-roof-installation', label: 'New Installation' },
-      { to: '/services/roof-replacement-eugene-or', label: 'Replacement' },
+      { to: '/services/roof-replacement-eugene-or', label: 'Roof Replacement' },
+      { to: '/services/metal-roofing-eugene-or', label: 'Metal Roofing' },
     ],
     maintenance: [
-      { to: '/services/roof-cleaning-eugene-or', label: 'Cleaning' },
-      { to: '/services/roof-inspection-eugene-or', label: 'Inspection' },
+      { to: '/services/roof-cleaning-eugene-or', label: 'Roof Cleaning' },
+      { to: '/services/preventative-maintenance-eugene-or', label: 'Maintenance' },
     ],
   };
 
   const otherLinks = [
-    { to: '/blog', label: 'Blog' },
-    { to: '/about-eugene-roofing', label: 'About' },
-    { to: '/contact-eugene-roofing', label: 'Contact' },
+    { to: '/about-eugene-oregon-roofing', label: 'About Us' },
+    { to: '/blog', label: 'Roofing Tips' },
+    { to: '/contact-eugene-oregon-roofing', label: 'Contact' },
   ];
 
   const ServiceDropdown = () => (
@@ -140,11 +142,13 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 bg-black/40 backdrop-blur-sm z-[100]">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" aria-label="Eugene Roofing NW Home">
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-12 md:h-16" 
+                className="h-12 md:h-16"
+                width="180"
+                height="64" 
               />
             </Link>
             
