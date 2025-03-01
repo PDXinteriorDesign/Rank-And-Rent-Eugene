@@ -1,4 +1,3 @@
-
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -7,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 // Import pages
 import Index from "./pages/Index";
@@ -35,6 +35,7 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen flex flex-col">
+          <Header />
           <main className="flex-1">
             <Suspense fallback={<Loading />}>
               <Routes>

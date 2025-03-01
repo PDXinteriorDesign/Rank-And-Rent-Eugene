@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Header from '@/components/Header';
 import Hero from '@/components/home/Hero';
 import Introduction from '@/components/home/Introduction';
 import ClimateInfo from '@/components/home/ClimateInfo';
@@ -29,7 +27,6 @@ const Index = () => {
         <meta property="og:url" content="https://www.eugeneroofingnw.com/" />
         <meta property="og:type" content="website" />
       </Helmet>
-      <Header />
       <Hero />
       <Introduction />
       <ClimateInfo />
