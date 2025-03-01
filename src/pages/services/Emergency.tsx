@@ -7,6 +7,31 @@ import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 
 const Emergency = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Emergency Roofing Services Eugene OR",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Roofing NW",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Eugene",
+        "addressRegion": "OR",
+        "postalCode": "97401",
+        "addressCountry": "US"
+      }
+    },
+    "serviceType": "Emergency Roof Repair",
+    "areaServed": {
+      "@type": "City",
+      "name": "Eugene",
+      "addressRegion": "OR"
+    },
+    "description": "24/7 emergency roofing services in Eugene, OR. Immediate response for storm damage, leaks, and urgent repairs. Professional solutions when you need them most."
+  };
+
   const emergencyServices = [
     {
       title: "Storm Damage",
@@ -42,57 +67,23 @@ const Emergency = () => {
     "Sudden increase in energy bills due to air leaks"
   ];
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Emergency Roofing Services in Eugene",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Eugene Roofing Experts",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Main Street",
-        "addressLocality": "Eugene",
-        "addressRegion": "OR",
-        "postalCode": "97401"
-      }
-    },
-    "areaServed": "Eugene, Oregon",
-    "description": "24/7 emergency roofing services in Eugene, Oregon. Immediate response for storm damage, leaks, and urgent repairs. Available day and night.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Emergency Roofing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "24/7 Emergency Response",
-            "description": "Immediate emergency roofing assistance"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Storm Damage Repair",
-            "description": "Emergency storm damage repair services"
-          }
-        }
-      ]
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>24/7 Emergency Roof Repair Eugene, OR | Fast & Reliable Service</title>
+        <title>24/7 Emergency Roof Repair Eugene OR | Immediate Response</title>
         <meta 
           name="description" 
-          content="24/7 emergency roof repair in Eugene, OR. Immediate response for storm damage, leaks & structural issues. Licensed professionals available day and night!"
+          content="24/7 emergency roof repair in Eugene, OR. Immediate response for storm damage, leaks & structural issues. Licensed experts available day & night. Call now!" 
         />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/emergency-roof-repair-eugene-oregon" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="24/7 Emergency Roof Repair Eugene OR | Immediate Response" />
+        <meta property="og:description" content="Emergency roof repair services in Eugene, OR. Available 24/7 for storm damage, leaks & urgent repairs. Licensed contractors ready to help!" />
+        <meta property="og:url" content="https://www.eugeneroofingnw.com/emergency-roof-repair-eugene-oregon" />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content="emergency roof repair Eugene OR, 24/7 roofing service Eugene, urgent roof repair, storm damage repair Eugene, emergency roofer near me" />
         <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
+          {JSON.stringify(schema)}
         </script>
       </Helmet>
 
@@ -103,16 +94,19 @@ const Emergency = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto animate-fadeIn">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              24/7 Emergency Roof Repair in Eugene, OR
+              24/7 Emergency Roof Repair in Eugene, Oregon
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              When a roofing emergency strikes, time is critical. Whether it's storm damage, unexpected leaks, 
-              or structural issues, our emergency roof repair services in Eugene are available 24/7 to protect 
-              your home and family.
+              When disaster strikes, every minute counts. Our emergency roofing team is available 
+              24/7 to protect your home from storm damage, sudden leaks, and structural issues. 
+              Trust Eugene's most reliable emergency roofing service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
+              <Button asChild size="lg" className="bg-destructive hover:bg-destructive/90">
                 <Link to="/contact">Request Emergency Service</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link to="/contact">Schedule Free Inspection</Link>
               </Button>
             </div>
           </div>
