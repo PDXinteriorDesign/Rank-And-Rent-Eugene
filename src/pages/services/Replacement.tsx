@@ -47,6 +47,7 @@ const Replacement = () => {
         <meta property="og:description" content="Expert roof replacement services in Eugene. Premium materials & professional installation by certified contractors. Free estimates!" />
         <meta property="og:url" content="https://www.eugeneroofingnw.com/services/roof-replacement-eugene-or" />
         <meta property="og:type" content="website" />
+        <meta name="keywords" content="roof replacement Eugene OR, new roof installation Eugene, roofing contractors Eugene, roof installation cost Eugene" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>

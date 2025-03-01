@@ -32,23 +32,24 @@ const Repair = () => {
       "name": "Eugene",
       "addressRegion": "OR"
     },
-    "description": "Expert roof repair services in Eugene, Oregon. We fix leaks, storm damage, and provide emergency repairs with guaranteed workmanship."
+    "description": "Professional roof repair in Eugene, OR. Fast, reliable, and affordable solutions for all your roofing needs. Contact Eugene Roofing NW today!"
   };
 
   return (
     <div className="space-y-16">
       <Helmet>
-        <title>Roof Repair Eugene OR | Expert Leak & Damage Repair | Eugene Roofing NW</title>
+        <title>Expert Roof Repair in Eugene, OR | Fast & Affordable Services</title>
         <meta 
           name="description" 
-          content="Professional roof repair in Eugene, OR. Emergency leak repair, storm damage restoration & shingle replacement. Licensed & insured experts. Free estimates!" 
+          content="Need roof repair in Eugene, OR? We fix leaks, missing shingles, and storm damage. Fast, reliable service from certified experts. Free inspection today!" 
         />
-        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/roof-repair-eugene-or" />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/eugene-or-roof-repair" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Roof Repair Eugene OR | Expert Leak & Damage Repair" />
+        <meta property="og:title" content="Expert Roof Repair in Eugene, OR | Fast & Affordable Services" />
         <meta property="og:description" content="Professional roof repair services in Eugene. Emergency repairs, leak fixing & storm damage restoration by certified experts. Free estimates!" />
-        <meta property="og:url" content="https://www.eugeneroofingnw.com/services/roof-repair-eugene-or" />
+        <meta property="og:url" content="https://www.eugeneroofingnw.com/services/eugene-or-roof-repair" />
         <meta property="og:type" content="website" />
+        <meta name="keywords" content="roof repair Eugene OR, roof leak repair Eugene, emergency roof repair, roofing contractors Eugene, affordable roof repair" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
