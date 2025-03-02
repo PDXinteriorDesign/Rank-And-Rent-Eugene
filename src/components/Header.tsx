@@ -21,16 +21,13 @@ const Header = () => {
     repair: [
       { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
       { to: '/services/emergency-roof-repair-eugene-or', label: 'Emergency Repair' },
-      { to: '/services/roof-inspection-eugene-or', label: 'Roof Inspection' },
     ],
     installation: [
       { to: '/services/eugene-or-roof-installation', label: 'New Installation' },
       { to: '/services/roof-replacement-eugene-or', label: 'Roof Replacement' },
-      { to: '/services/metal-roofing-eugene-or', label: 'Metal Roofing' },
     ],
     maintenance: [
       { to: '/services/roof-cleaning-eugene-or', label: 'Roof Cleaning' },
-      { to: '/services/preventative-maintenance-eugene-or', label: 'Maintenance' },
     ],
   };
 
@@ -146,9 +143,9 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-auto w-[180px] md:w-[220px]"
-                width="220"
-                height="64"
+                className="h-auto w-[140px] md:w-[160px]"
+                width="160"
+                height="48"
                 style={{ objectFit: 'contain' }}
               />
             </Link>
