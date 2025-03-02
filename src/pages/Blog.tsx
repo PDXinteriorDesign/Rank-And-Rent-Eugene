@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -8,6 +7,36 @@ import { Calendar, Clock, User } from 'lucide-react';
 const blogPosts = [
   {
     id: 1,
+    title: "Professional Roof Inspection Guide",
+    excerpt: "Learn about the importance of regular roof inspections, what inspectors look for, and how often you should schedule inspections in Eugene's climate.",
+    date: "2024-03-18",
+    readTime: "6 min read",
+    author: "John Smith",
+    category: "Maintenance",
+    slug: "professional-roof-inspection-guide"
+  },
+  {
+    id: 2,
+    title: "Metal Roofing: Benefits and Considerations",
+    excerpt: "Discover the advantages of metal roofing, different types available, and whether it's the right choice for your Eugene home.",
+    date: "2024-03-16",
+    readTime: "7 min read",
+    author: "Sarah Johnson",
+    category: "Materials",
+    slug: "metal-roofing-benefits-considerations"
+  },
+  {
+    id: 3,
+    title: "Essential Roof Maintenance Tips",
+    excerpt: "Your comprehensive guide to year-round roof maintenance, including seasonal care tips and preventive measures.",
+    date: "2024-03-14",
+    readTime: "8 min read",
+    author: "Mike Wilson",
+    category: "Maintenance",
+    slug: "essential-roof-maintenance-tips"
+  },
+  {
+    id: 4,
     title: "How Often Should You Clean Your Roof in Eugene?",
     excerpt: "Learn about the optimal roof cleaning schedule for Eugene's climate and how to protect your roof from moss and algae growth.",
     date: "2024-03-14",
@@ -17,7 +46,7 @@ const blogPosts = [
     slug: "how-often-clean-roof-eugene"
   },
   {
-    id: 2,
+    id: 5,
     title: "Signs You Need a Roof Replacement in Oregon",
     excerpt: "Discover the key indicators that it's time to replace your roof, from age-related wear to storm damage symptoms.",
     date: "2024-03-12",
@@ -27,7 +56,7 @@ const blogPosts = [
     slug: "signs-need-roof-replacement-oregon"
   },
   {
-    id: 3,
+    id: 6,
     title: "Best Roofing Materials for Eugene's Climate",
     excerpt: "Compare different roofing materials and find out which ones perform best in Eugene's wet weather conditions.",
     date: "2024-03-10",
