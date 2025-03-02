@@ -1,32 +1,56 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brush, Droplet, Search, Wrench } from 'lucide-react';
+import { Brush, Droplet, Search, Wrench, Shield, Leaf } from 'lucide-react';
 
 const cleaningServices = [
   {
-    title: "Roof Cleaning & Inspection",
-    description: "Regular roof cleaning and inspection are vital for identifying potential issues early and maintaining roof health. We conduct thorough inspections and cleaning to remove dirt and debris.",
+    title: "Professional Roof Inspection & Cleaning",
+    description: "Our comprehensive inspection and cleaning service identifies potential issues early while ensuring your roof stays in pristine condition. We use specialized equipment and eco-friendly cleaning solutions.",
     icon: Search,
-    features: ["Detailed Inspection", "Debris Removal", "Early Issue Detection"]
+    features: [
+      "Detailed Visual Inspection",
+      "Gutter System Check",
+      "Debris Removal",
+      "Surface Cleaning",
+      "Photo Documentation"
+    ]
   },
   {
-    title: "Moss Treatment",
-    description: "Our roof cleaning and moss treatment service safely removes existing moss and applies eco-friendly treatments to prevent future growth, extending your roof's lifespan.",
+    title: "Advanced Moss Treatment",
+    description: "Our specialized moss treatment service combines immediate removal with long-term prevention. We use EPA-approved solutions that are tough on moss but gentle on your roof and the environment.",
     icon: Brush,
-    features: ["Safe Removal", "Preventative Treatment", "Eco-friendly Solutions"]
+    features: [
+      "Eco-friendly Solutions",
+      "Root Elimination",
+      "Preventative Treatment",
+      "pH-balanced Products",
+      "Surface Protection"
+    ]
   },
   {
-    title: "Cleaning & Repair",
-    description: "Comprehensive service that combines thorough cleaning with necessary repairs, addressing issues like damaged shingles or leaks promptly and efficiently.",
+    title: "Comprehensive Maintenance",
+    description: "Regular maintenance prevents costly repairs and extends your roof's lifespan. Our service includes cleaning, minor repairs, and preventative treatments to keep your roof in optimal condition.",
     icon: Wrench,
-    features: ["Combined Service", "Immediate Repairs", "Quality Materials"]
+    features: [
+      "Seasonal Inspections",
+      "Minor Repairs",
+      "Preventative Care",
+      "Performance Reports",
+      "Weather Protection"
+    ]
   },
   {
-    title: "Gutter Maintenance",
-    description: "Ensure proper water drainage with our complete gutter cleaning and repair service, preventing water damage and maintaining your roof's structural integrity.",
+    title: "Complete Gutter Care",
+    description: "Our professional gutter maintenance service ensures proper water drainage and prevents water damage. We clean, repair, and optimize your gutter system for maximum performance.",
     icon: Droplet,
-    features: ["Debris Removal", "Gutter Repairs", "Flow Testing"]
+    features: [
+      "Deep Cleaning",
+      "Flow Testing",
+      "Downspout Clearing",
+      "Guard Installation",
+      "Leak Prevention"
+    ]
   }
 ];
 
