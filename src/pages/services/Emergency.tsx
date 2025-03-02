@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import EmergencyHero from './emergency/EmergencyHero';
 import EmergencyFeatures from './emergency/EmergencyFeatures';
 import EmergencyServices from './emergency/EmergencyServices';
+import EmergencyProcess from './emergency/EmergencyProcess';
 import EmergencyCTA from './emergency/EmergencyCTA';
 
 const Emergency = () => {
@@ -53,10 +55,13 @@ const Emergency = () => {
       </Helmet>
 
       <Header />
-      <EmergencyHero />
-      <EmergencyFeatures />
-      <EmergencyServices />
-      <EmergencyCTA />
+      <main className="space-y-0">
+        <EmergencyHero />
+        <EmergencyFeatures />
+        <EmergencyProcess />
+        <EmergencyServices />
+        <EmergencyCTA />
+      </main>
     </div>
   );
 };
