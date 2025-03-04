@@ -5,6 +5,8 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import BlogPostMeta from '@/components/blog/BlogPostMeta';
 import BlogContent from '@/components/blog/BlogContent';
+import TableOfContents from '@/components/blog/TableOfContents';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 import { blogPosts } from '@/data/blogPosts';
 
 const BlogPost = () => {
@@ -15,15 +17,37 @@ const BlogPost = () => {
     return null;
   }
 
+  // Generate meta description based on post content
+  const metaDescription = `${post.excerpt.slice(0, 155)}... Learn more about ${post.title.toLowerCase()} from Eugene's trusted roofing experts.`;
+
   return (
     <div className="min-h-screen bg-white pt-32">
       <Helmet>
         <title>{post.title} | Eugene Roofing NW Blog</title>
-        <meta 
-          name="description" 
-          content="Learn about roofing maintenance, repairs, and best practices for Eugene homeowners." 
-        />
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={`https://www.eugeneroofingnw.com/roofing-tips/${slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": metaDescription,
+            "author": {
+              "@type": "Person",
+              "name": post.author
+            },
+            "datePublished": post.date,
+            "image": post.image || "https://eugeneroofingnw.com/og-image.png",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Eugene Roofing NW",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://eugeneroofingnw.com/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -39,7 +63,9 @@ const BlogPost = () => {
             readTime={post.readTime}
             author={post.author}
           />
+          <TableOfContents content={post.content} />
           <BlogContent content={post.content} />
+          <RelatedPosts currentSlug={slug as string} category={post.category} />
         </article>
       </div>
     </div>

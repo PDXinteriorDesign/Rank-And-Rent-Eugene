@@ -10,10 +10,15 @@ const BlogContent = ({ content }: BlogContentProps) => {
   const formatContent = (content: string) => {
     const sections = content.split('\n\n');
     return sections.map((section, index) => {
-      // Handle headings
+      // Handle headings with IDs for table of contents
       if (section.endsWith('?') || section.endsWith(':')) {
+        const headingId = section.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         return (
-          <h2 key={index} className="text-2xl font-semibold mt-8 mb-4 flex items-center gap-2">
+          <h2 
+            id={headingId}
+            key={index} 
+            className="text-2xl font-semibold mt-8 mb-4 flex items-center gap-2 scroll-mt-24"
+          >
             <Heading2 className="w-5 h-5" />
             {section}
           </h2>
