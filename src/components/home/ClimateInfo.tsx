@@ -27,23 +27,30 @@ const ClimateInfo: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30" aria-labelledby="climate-title">
+    <section 
+      className="py-16 bg-muted/30" 
+      aria-labelledby="climate-title"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 id="climate-title" className="text-3xl font-bold text-center mb-8">
-            Eugene's Climate & Your Roof
+          <h2 
+            id="climate-title" 
+            className="text-3xl font-bold text-center mb-8"
+          >
+            Understanding Eugene's Climate Impact on Your Roof
           </h2>
           <p className="text-lg text-gray-700 text-center mb-12">
             Our local climate presents unique challenges for roofing. We specialize in solutions 
             designed specifically for Eugene's weather patterns.
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6" role="list">
             {climateFactors.map((factor) => (
               <div 
                 key={factor.title}
                 className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm"
+                role="listitem"
               >
-                <div className="bg-primary/10 p-3 rounded-lg">
+                <div className="bg-primary/10 p-3 rounded-lg" aria-hidden="true">
                   <factor.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>

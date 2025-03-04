@@ -36,12 +36,17 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 id="faq-title" className="text-3xl font-bold text-center mb-8">
-            Common Roofing Questions
+            Frequently Asked Questions About Roofing in Eugene
           </h2>
           <p className="text-lg text-gray-700 text-center mb-8">
-            Get answers to frequently asked questions about roofing services in Eugene, Oregon.
+            Get answers to commonly asked questions about roofing services in Eugene, Oregon.
           </p>
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="w-full space-y-4"
+            aria-label="Roofing FAQ accordion"
+          >
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
