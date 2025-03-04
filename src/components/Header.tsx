@@ -19,15 +19,15 @@ const Header = () => {
 
   const serviceCategories = {
     repair: [
-      { to: '/services/roof-repair-eugene', label: 'Roof Repair' },
-      { to: '/services/emergency-roof-repair-eugene', label: 'Emergency Repair' },
+      { to: '/services/roof-repair-eugene-oregon', label: 'Roof Repair' },
+      { to: '/services/emergency-roof-repair-eugene-oregon', label: 'Emergency Repair' },
     ],
     installation: [
-      { to: '/services/roof-installation-eugene', label: 'New Installation' },
-      { to: '/services/roof-replacement-eugene', label: 'Roof Replacement' },
+      { to: '/services/roof-installation-eugene-oregon', label: 'New Installation' },
+      { to: '/services/roof-replacement-eugene-oregon', label: 'Roof Replacement' },
     ],
     maintenance: [
-      { to: '/services/roof-cleaning-eugene', label: 'Roof Cleaning' },
+      { to: '/services/roof-cleaning-eugene-oregon', label: 'Roof Cleaning' },
     ],
   };
 
