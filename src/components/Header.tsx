@@ -143,9 +143,9 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-auto w-[140px] md:w-[160px]"
-                width="160"
-                height="48"
+                className="h-auto w-[70px] md:w-[80px]"
+                width="80"
+                height="24"
                 style={{ objectFit: 'contain' }}
               />
             </Link>

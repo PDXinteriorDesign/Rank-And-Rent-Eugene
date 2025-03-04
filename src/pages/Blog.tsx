@@ -37,33 +37,33 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "How Often Should You Clean Your Roof in Eugene?",
-    excerpt: "Learn about the optimal roof cleaning schedule for Eugene's climate and how to protect your roof from moss and algae growth.",
-    date: "2024-03-14",
-    readTime: "5 min read",
+    title: "Understanding Roof Inspections in Eugene",
+    excerpt: "Everything you need to know about professional roof inspections, from what to expect to how to prepare.",
+    date: "2024-03-12",
+    readTime: "6 min read",
     author: "John Smith",
     category: "Maintenance",
-    slug: "how-often-clean-roof-eugene"
+    slug: "understanding-roof-inspections-eugene"
   },
   {
     id: 5,
-    title: "Signs You Need a Roof Replacement in Oregon",
-    excerpt: "Discover the key indicators that it's time to replace your roof, from age-related wear to storm damage symptoms.",
-    date: "2024-03-12",
+    title: "Metal Roofing Installation Process",
+    excerpt: "A detailed look at metal roofing installation, materials, and what to expect during the process.",
+    date: "2024-03-10",
     readTime: "7 min read",
     author: "Sarah Johnson",
-    category: "Replacement",
-    slug: "signs-need-roof-replacement-oregon"
+    category: "Installation",
+    slug: "metal-roofing-installation-process"
   },
   {
     id: 6,
-    title: "Best Roofing Materials for Eugene's Climate",
-    excerpt: "Compare different roofing materials and find out which ones perform best in Eugene's wet weather conditions.",
-    date: "2024-03-10",
-    readTime: "6 min read",
+    title: "Preventative Maintenance Guide",
+    excerpt: "Learn about essential preventative maintenance practices to extend your roof's lifespan and prevent costly repairs.",
+    date: "2024-03-08",
+    readTime: "5 min read",
     author: "Mike Wilson",
-    category: "Materials",
-    slug: "best-roofing-materials-eugene-climate"
+    category: "Maintenance",
+    slug: "preventative-maintenance-guide"
   }
 ];
 
