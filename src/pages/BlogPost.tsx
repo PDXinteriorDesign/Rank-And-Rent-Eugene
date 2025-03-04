@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useParams } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { Calendar, Clock, User, ArrowLeft, Heading2, ListCheck } from 'lucide-react';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -230,27 +230,69 @@ If you're due for a roof inspection or need help with maintenance, contact a tru
 
   const post = posts[slug as keyof typeof posts];
 
+  // Function to format the content with proper structure
+  const formatContent = (content: string) => {
+    const sections = content.split('\n\n');
+    return sections.map((section, index) => {
+      // Check if the section is a heading
+      if (section.endsWith('?') || section.endsWith(':')) {
+        return (
+          <h2 key={index} className="text-2xl font-semibold mt-8 mb-4 flex items-center gap-2">
+            <Heading2 className="w-5 h-5" />
+            {section}
+          </h2>
+        );
+      }
+      
+      // Check if the section contains list items
+      if (section.includes('\n')) {
+        const lines = section.split('\n').filter(line => line.trim());
+        if (lines.every(line => line.includes(':'))) {
+          return (
+            <div key={index} className="my-6">
+              <ul className="space-y-3">
+                {lines.map((line, lineIndex) => (
+                  <li key={lineIndex} className="flex items-start gap-2">
+                    <ListCheck className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+      }
+      
+      // Regular paragraphs
+      return (
+        <p key={index} className="text-gray-700 leading-relaxed mb-6">
+          {section}
+        </p>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen bg-white pt-32">
       <Helmet>
         <title>{post.title} | Eugene Roofing NW Blog</title>
         <meta 
           name="description" 
-          content="Learn about the optimal roof cleaning schedule for Eugene's climate and how to protect your roof from moss and algae growth." 
+          content={post.excerpt || "Learn about roofing maintenance, repairs, and best practices for Eugene homeowners."} 
         />
-        <link rel="canonical" href={`https://www.eugeneroofingnw.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://www.eugeneroofingnw.com/roofing-tips/${slug}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
-        <Link to="/blog" className="inline-flex items-center text-gray-600 hover:text-primary mb-8">
+        <Link to="/roofing-tips" className="inline-flex items-center text-gray-600 hover:text-primary mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Blog
         </Link>
 
-        <article>
+        <article className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
           
-          <div className="flex items-center gap-6 text-gray-500 mb-8">
+          <div className="flex items-center gap-6 text-gray-500 mb-8 border-b border-gray-200 pb-6">
             <span className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {post.date}
@@ -265,12 +307,8 @@ If you're due for a roof inspection or need help with maintenance, contact a tru
             </span>
           </div>
 
-          <div className="prose max-w-none">
-            {post.content.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="mb-4">
-                {paragraph}
-              </p>
-            ))}
+          <div className="mt-8">
+            {formatContent(post.content)}
           </div>
         </article>
       </div>
