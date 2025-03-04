@@ -38,29 +38,33 @@ const Repair = () => {
   return (
     <div className="space-y-16">
       <Helmet>
-        <title>Expert Roof Repair in Eugene, OR | Fast & Affordable Services</title>
+        <title>Professional Roof Repair in Eugene, OR | Licensed & Insured | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="Need roof repair in Eugene, OR? We fix leaks, missing shingles, and storm damage. Fast, reliable service from certified experts. Free inspection today!" 
+          content="Expert roof repair in Eugene by licensed contractors. 24/7 emergency service, leak repairs, storm damage restoration. 20+ years experience. Free estimates!" 
         />
-        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/eugene-or-roof-repair" />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/roof-repair-eugene-oregon" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert Roof Repair in Eugene, OR | Fast & Affordable Services" />
-        <meta property="og:description" content="Professional roof repair services in Eugene. Emergency repairs, leak fixing & storm damage restoration by certified experts. Free estimates!" />
-        <meta property="og:url" content="https://www.eugeneroofingnw.com/services/eugene-or-roof-repair" />
+        <meta property="og:title" content="Professional Roof Repair in Eugene, OR | Licensed & Insured" />
+        <meta property="og:description" content="Expert roof repair by Eugene's trusted contractors. Emergency repairs, leak fixing & storm damage restoration. Free estimates!" />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content="roof repair Eugene OR, roof leak repair Eugene, emergency roof repair, roofing contractors Eugene, affordable roof repair" />
+        <meta property="og:image" content="/lovable-uploads/c5babf64-7fbb-4ba8-809c-ea3d00fe5786.png" />
+        <meta property="og:image:alt" content="Professional roofer repairing shingles on a residential roof in Eugene, Oregon" />
+        <meta name="keywords" content="roof repair Eugene OR, emergency roof repair, roof leak repair, storm damage repair, roofing contractor Eugene" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
       </Helmet>
-      <RepairHero />
-      <RepairServices />
-      <WarningSigns />
-      <WhyChooseUs />
-      <RepairContent />
-      <RepairFAQ />
-      <RepairCTA />
+      
+      <main className="space-y-16">
+        <RepairHero />
+        <RepairServices />
+        <WarningSigns />
+        <RepairContent />
+        <WhyChooseUs />
+        <RepairFAQ />
+        <RepairCTA />
+      </main>
     </div>
   );
 };

@@ -36,27 +36,31 @@ const Replacement = () => {
   return (
     <div className="space-y-16">
       <Helmet>
-        <title>Roof Replacement Eugene OR | New Roof Installation | Eugene Roofing NW</title>
+        <title>Professional Roof Replacement Eugene OR | Premium Materials | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="Expert roof replacement in Eugene, OR. Premium materials, professional installation & lifetime warranties. Licensed & insured contractors. Free estimates!" 
+          content="Expert roof replacement in Eugene by certified contractors. Premium materials, professional installation & lifetime warranties. GAF certified. Free consultation!" 
         />
-        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/roof-replacement-eugene-or" />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/roof-replacement-eugene-oregon" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Roof Replacement Eugene OR | New Roof Installation" />
-        <meta property="og:description" content="Expert roof replacement services in Eugene. Premium materials & professional installation by certified contractors. Free estimates!" />
-        <meta property="og:url" content="https://www.eugeneroofingnw.com/services/roof-replacement-eugene-or" />
+        <meta property="og:title" content="Professional Roof Replacement Eugene OR | Premium Materials" />
+        <meta property="og:description" content="Expert roof replacement in Eugene. Premium materials & professional installation by certified contractors. Lifetime warranty!" />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content="roof replacement Eugene OR, new roof installation Eugene, roofing contractors Eugene, roof installation cost Eugene" />
+        <meta property="og:image" content="/lovable-uploads/5e9bb16f-eef5-4713-b4c8-71245b0d5562.png" />
+        <meta property="og:image:alt" content="Professional roofing team performing complete roof replacement on Eugene home" />
+        <meta name="keywords" content="roof replacement Eugene OR, complete roof replacement, roofing contractor Eugene, new roof installation" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
       </Helmet>
-      <ReplacementHero />
-      <ReplacementContent />
-      <ReplacementServices />
-      <ReplacementFAQ />
-      <ReplacementCTA />
+
+      <main className="space-y-16">
+        <ReplacementHero />
+        <ReplacementContent />
+        <ReplacementServices />
+        <ReplacementFAQ />
+        <ReplacementCTA />
+      </main>
     </div>
   );
 };

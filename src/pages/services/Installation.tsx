@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
@@ -55,44 +54,30 @@ const Installation = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Professional Roof Installation Eugene, OR | Expert Installation Services</title>
+        <title>Expert Roof Installation Eugene OR | New Construction & Replacement | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="Expert roof installation services in Eugene, Oregon. New construction, replacement & energy-efficient roofing solutions. Local expertise, quality materials, free estimates!"
+          content="Professional roof installation in Eugene by certified experts. New construction, re-roofing & energy-efficient solutions. Premium materials, lifetime warranty. Free consultation!" 
         />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/roof-installation-eugene-oregon" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Expert Roof Installation Eugene OR | New Construction & Replacement" />
+        <meta property="og:description" content="Professional roof installation in Eugene. New construction, re-roofing & premium materials. Licensed contractors, lifetime warranty!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/lovable-uploads/9f507841-9578-4498-b919-0385967ccedb.png" />
+        <meta property="og:image:alt" content="Professional roofing team installing new shingles on a residential property in Eugene" />
+        <meta name="keywords" content="roof installation Eugene OR, new roof construction, re-roofing service Eugene, roofing contractor" />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
         </script>
       </Helmet>
 
-      <Header />
       <main id="main-content" role="main" className="space-y-20">
         <InstallationHero />
-        
-        <nav aria-label="Page sections" className="sticky top-20 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-100 hidden md:block">
-          <div className="container mx-auto px-4">
-            <ul className="flex space-x-8 py-4 text-sm">
-              <li><a href="#overview" className="text-gray-600 hover:text-primary transition-colors">Overview</a></li>
-              <li><a href="#services" className="text-gray-600 hover:text-primary transition-colors">Our Services</a></li>
-              <li><a href="#why-choose" className="text-gray-600 hover:text-primary transition-colors">Why Choose Us</a></li>
-              <li><a href="#materials" className="text-gray-600 hover:text-primary transition-colors">Materials</a></li>
-              <li><a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-        </nav>
-
-        <section id="overview" className="py-16 bg-white scroll-mt-32">
-          <RepairContent />
-        </section>
-
         <InstallationServices />
         <InstallationWhyChooseUs />
         <InstallationMaterials />
-        
-        <section id="faq" className="py-16 bg-muted/30 max-w-5xl mx-auto scroll-mt-32">
-          <InstallationFAQ />
-        </section>
-
+        <InstallationFAQ />
         <InstallationCTA />
       </main>
     </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
@@ -37,25 +36,26 @@ const Emergency = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>24/7 Emergency Roof Repair Eugene OR | Immediate Response</title>
+        <title>24/7 Emergency Roof Repair Eugene OR | Immediate Response | Eugene Roofing NW</title>
         <meta 
           name="description" 
-          content="24/7 emergency roof repair in Eugene, OR. Immediate response for storm damage, leaks & structural issues. Licensed experts available day & night. Call now!" 
+          content="24/7 emergency roof repair in Eugene. Immediate response for storm damage, leaks & structural issues. Licensed experts available day & night. Call now!" 
         />
-        <link rel="canonical" href="https://www.eugeneroofingnw.com/emergency-roof-repair-eugene-oregon" />
+        <link rel="canonical" href="https://www.eugeneroofingnw.com/services/emergency-roof-repair-eugene-oregon" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="24/7 Emergency Roof Repair Eugene OR | Immediate Response" />
-        <meta property="og:description" content="Emergency roof repair services in Eugene, OR. Available 24/7 for storm damage, leaks & urgent repairs. Licensed contractors ready to help!" />
-        <meta property="og:url" content="https://www.eugeneroofingnw.com/emergency-roof-repair-eugene-oregon" />
+        <meta property="og:description" content="Emergency roof repair services in Eugene. Available 24/7 for storm damage, leaks & urgent repairs. Licensed experts ready now!" />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content="emergency roof repair Eugene OR, 24/7 roofing service Eugene, urgent roof repair, storm damage repair Eugene, emergency roofer near me" />
+        <meta property="og:image" content="/lovable-uploads/5997350c-7571-42cc-b7c1-6b57b007c504.png" />
+        <meta property="og:image:alt" content="Emergency roof repair team responding to storm damage in Eugene, Oregon" />
+        <meta name="keywords" content="emergency roof repair Eugene, 24/7 roofing service, storm damage repair, emergency roofer Eugene OR" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
       </Helmet>
 
       <Header />
-      <main className="space-y-0">
+      <main className="space-y-16">
         <EmergencyHero />
         <EmergencyFeatures />
         <EmergencyProcess />
