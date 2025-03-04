@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '@/data/blogPosts';
+import { BlogPost } from '@/types/blog';
 
 interface RelatedPostsProps {
   currentSlug: string;
