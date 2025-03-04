@@ -61,12 +61,22 @@ const Services = () => {
               <p className="text-gray-600 mb-4">{service.description}</p>
               <Link 
                 to={service.link}
-                className="text-secondary hover:text-secondary/80 font-medium inline-flex items-center"
+                className="text-secondary hover:text-secondary/80 font-medium inline-flex items-center gap-2"
+                aria-label={`Learn more about ${service.title.toLowerCase()}`}
               >
-                Learn More →
+                Learn More 
+                <span aria-hidden="true">→</span>
               </Link>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary/90 transition-colors"
+          >
+            Get Your Free Estimate Today
+          </Link>
         </div>
       </div>
     </section>

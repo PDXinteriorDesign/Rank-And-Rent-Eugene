@@ -18,11 +18,13 @@ const Footer = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                (541) 555-0123
+                <a href="tel:5415550123" className="hover:text-secondary transition-colors">(541) 555-0123</a>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                info@eugeneroofingnw.com
+                <a href="mailto:info@eugeneroofingnw.com" className="hover:text-secondary transition-colors">
+                  info@eugeneroofingnw.com
+                </a>
               </p>
             </div>
           </div>
@@ -33,22 +35,54 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/services/roof-repair-eugene" className="hover:text-secondary transition-colors">
-                  Roof Repair
+                  Roof Repair Services
                 </Link>
               </li>
               <li>
                 <Link to="/services/roof-installation-eugene" className="hover:text-secondary transition-colors">
-                  Roof Installation
+                  New Roof Installation
                 </Link>
               </li>
               <li>
                 <Link to="/services/emergency-roof-repair-eugene" className="hover:text-secondary transition-colors">
-                  Emergency Services
+                  24/7 Emergency Services
                 </Link>
               </li>
               <li>
                 <Link to="/services/roof-cleaning-eugene" className="hover:text-secondary transition-colors">
-                  Roof Cleaning
+                  Professional Roof Cleaning
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/roof-replacement-eugene" className="hover:text-secondary transition-colors">
+                  Complete Roof Replacement
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/roofing-tips" className="hover:text-secondary transition-colors">
+                  Roofing Tips
+                </Link>
+              </li>
+              <li>
+                <Link to="/roofing-tips/professional-roof-inspection-guide" className="hover:text-secondary transition-colors">
+                  Inspection Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/roofing-tips/metal-roofing-benefits-considerations" className="hover:text-secondary transition-colors">
+                  Metal Roofing Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/roofing-tips/essential-roof-maintenance-tips" className="hover:text-secondary transition-colors">
+                  Maintenance Tips
                 </Link>
               </li>
             </ul>
@@ -56,7 +90,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-secondary transition-colors">
@@ -73,17 +107,10 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Hours */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Hours</h3>
-            <ul className="space-y-2">
+              <li className="text-secondary mt-4">24/7 Emergency Service Available</li>
               <li>Monday - Friday: 7am - 6pm</li>
               <li>Saturday: 8am - 4pm</li>
               <li>Sunday: Closed</li>
-              <li className="text-secondary mt-4">24/7 Emergency Service Available</li>
             </ul>
           </div>
         </div>
