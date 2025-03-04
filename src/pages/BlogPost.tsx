@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import BlogPostMeta from '@/components/blog/BlogPostMeta';
 import BlogContent from '@/components/blog/BlogContent';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPosts } from '@/data/blog-posts';
 
 const BlogPost = () => {
   const { slug } = useParams();
