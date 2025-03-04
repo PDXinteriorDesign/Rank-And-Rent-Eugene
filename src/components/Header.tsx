@@ -185,7 +185,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[52px] md:h-[68px]" />
+      <div className="h-[56px] md:h-[72px]" />
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
