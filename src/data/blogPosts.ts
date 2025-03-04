@@ -1,10 +1,12 @@
-
 export type BlogPost = {
   title: string;
   content: string;
   date: string;
   readTime: string;
   author: string;
+  excerpt: string;
+  category: string;
+  image?: string;
 };
 
 export type BlogPosts = {
@@ -42,7 +44,10 @@ The Benefits of Regular Inspections
 Don't wait for a leak to appear—schedule a professional roof inspection today and keep your Eugene home in top shape!`,
     date: "2024-03-18",
     readTime: "6 min read",
-    author: "John Smith"
+    author: "John Smith",
+    excerpt: "Your roof is your home's first line of defense against Eugene's unpredictable weather.",
+    category: "Roof Inspections",
+    image: "professional-roof-inspection-guide.jpg"
   },
   'metal-roofing-benefits-considerations': {
     title: "Is Metal Roofing the Right Choice for Your Eugene Home?",
@@ -65,7 +70,10 @@ Is Metal Roofing Right for You?
 If you're looking for a long-term, low-maintenance roofing solution that can handle Eugene's weather, metal roofing is worth considering. Contact a local roofing expert to discuss your options and get a personalized recommendation.`,
     date: "2024-03-16",
     readTime: "7 min read",
-    author: "Sarah Johnson"
+    author: "Sarah Johnson",
+    excerpt: "Metal roofing is becoming an increasingly popular choice for homeowners in Eugene.",
+    category: "Roofing",
+    image: "metal-roofing-benefits-considerations.jpg"
   },
   'essential-roof-maintenance-tips': {
     title: "Top Roof Maintenance Tips to Protect Your Eugene Home",
@@ -90,7 +98,10 @@ While DIY maintenance is helpful, some tasks require expert attention. If you no
 By following these tips, you can keep your roof in excellent condition and avoid costly repairs down the road.`,
     date: "2024-03-14",
     readTime: "8 min read",
-    author: "Mike Wilson"
+    author: "Mike Wilson",
+    excerpt: "Your roof is one of the most important parts of your home.",
+    category: "Roof Maintenance",
+    image: "essential-roof-maintenance-tips.jpg"
   },
   'understanding-roof-inspections-eugene': {
     title: "What to Expect During a Roof Inspection in Eugene",
@@ -118,7 +129,10 @@ How to Prepare for an Inspection
 A professional roof inspection is a small investment that can save you thousands in repairs. Schedule yours today and keep your Eugene home in top condition!`,
     date: "2024-03-12",
     readTime: "6 min read",
-    author: "John Smith"
+    author: "John Smith",
+    excerpt: "If you've never had a professional roof inspection, you might be wondering what it entails.",
+    category: "Roof Inspections",
+    image: "understanding-roof-inspections-eugene.jpg"
   },
   'metal-roofing-installation-process': {
     title: "What to Expect During a Metal Roofing Installation",
@@ -144,7 +158,10 @@ While DIY might seem tempting, professional installation ensures:
 If you're ready to upgrade to a metal roof, contact a trusted Eugene roofing company to get started.`,
     date: "2024-03-10",
     readTime: "7 min read",
-    author: "Sarah Johnson"
+    author: "Sarah Johnson",
+    excerpt: "Thinking about installing a metal roof? Here's what you need to know about the process.",
+    category: "Roofing",
+    image: "metal-roofing-installation-process.jpg"
   },
   'preventative-maintenance-guide': {
     title: "How to Extend Your Roof's Lifespan with Preventative Maintenance",
@@ -193,7 +210,9 @@ Preventative maintenance is a small investment that pays off in the long run. By
 If you're due for a roof inspection or need help with maintenance, contact a trusted Eugene roofing professional today. Your roof—and your wallet—will thank you!`,
     date: "2024-03-08",
     readTime: "5 min read",
-    author: "Mike Wilson"
+    author: "Mike Wilson",
+    excerpt: "Your roof is a significant investment, and with proper care, it can protect your home for decades.",
+    category: "Roof Maintenance",
+    image: "preventative-maintenance-guide.jpg"
   }
 };
-
