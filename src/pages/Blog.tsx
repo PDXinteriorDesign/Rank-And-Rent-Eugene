@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -103,7 +102,7 @@ const Blog = () => {
                 </div>
                 <h2 className="text-xl font-semibold mb-3">
                   <Link 
-                    to={`/blog/${post.slug}`}
+                    to={`/roofing-tips/${post.slug}`}
                     className="hover:text-primary transition-colors"
                   >
                     {post.title}
