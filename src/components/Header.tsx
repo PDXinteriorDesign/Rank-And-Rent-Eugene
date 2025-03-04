@@ -137,14 +137,14 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-black/40 backdrop-blur-sm z-[100]">
-        <div className="container mx-auto px-4 py-1">
+        <div className="container mx-auto px-4 py-0.5">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" aria-label="Eugene Roofing NW Home">
               <img 
                 src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
                 alt="Eugene Roofing NW Logo" 
-                className="h-auto w-[70px] md:w-[80px]"
-                width="80"
+                className="h-auto w-[65px] md:w-[75px]"
+                width="75"
                 height="24"
                 style={{ objectFit: 'contain' }}
               />
@@ -185,7 +185,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[56px] md:h-[72px]" />
+      <div className="h-[52px] md:h-[68px]" />
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
