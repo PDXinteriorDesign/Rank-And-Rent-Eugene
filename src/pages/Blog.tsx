@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -7,8 +8,8 @@ import { Calendar, Clock, User } from 'lucide-react';
 const blogPosts = [
   {
     id: 1,
-    title: "Professional Roof Inspection Guide",
-    excerpt: "Learn about the importance of regular roof inspections, what inspectors look for, and how often you should schedule inspections in Eugene's climate.",
+    title: "Why Regular Roof Inspections Are Essential for Eugene Homeowners",
+    excerpt: "Your roof is your home's first line of defense against Eugene's unpredictable weather. From heavy rainfall to strong winds, your roof takes a beating year-round. That's why regular professional roof inspections are crucial.",
     date: "2024-03-18",
     readTime: "6 min read",
     author: "John Smith",
@@ -17,8 +18,8 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Metal Roofing: Benefits and Considerations",
-    excerpt: "Discover the advantages of metal roofing, different types available, and whether it's the right choice for your Eugene home.",
+    title: "Is Metal Roofing the Right Choice for Your Eugene Home?",
+    excerpt: "Metal roofing is becoming an increasingly popular choice for homeowners in Eugene, and for good reason. It's durable, energy-efficient, and built to withstand the Pacific Northwest's unique climate.",
     date: "2024-03-16",
     readTime: "7 min read",
     author: "Sarah Johnson",
@@ -27,8 +28,8 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Essential Roof Maintenance Tips",
-    excerpt: "Your comprehensive guide to year-round roof maintenance, including seasonal care tips and preventive measures.",
+    title: "Top Roof Maintenance Tips to Protect Your Eugene Home",
+    excerpt: "Your roof is one of the most important parts of your home, and regular maintenance is key to keeping it in great shape. Learn essential tips to help protect your roof and extend its lifespan.",
     date: "2024-03-14",
     readTime: "8 min read",
     author: "Mike Wilson",
@@ -37,8 +38,8 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "Understanding Roof Inspections in Eugene",
-    excerpt: "Everything you need to know about professional roof inspections, from what to expect to how to prepare.",
+    title: "What to Expect During a Roof Inspection in Eugene",
+    excerpt: "If you've never had a professional roof inspection, you might be wondering what it entails. Here's a breakdown of what to expect and why it's so important for your Eugene home.",
     date: "2024-03-12",
     readTime: "6 min read",
     author: "John Smith",
@@ -47,8 +48,8 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "Metal Roofing Installation Process",
-    excerpt: "A detailed look at metal roofing installation, materials, and what to expect during the process.",
+    title: "What to Expect During a Metal Roofing Installation",
+    excerpt: "Thinking about installing a metal roof? Here's what you need to know about the process, from start to finish, including preparation, installation steps, and why professional installation matters.",
     date: "2024-03-10",
     readTime: "7 min read",
     author: "Sarah Johnson",
@@ -57,8 +58,8 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: "Preventative Maintenance Guide",
-    excerpt: "Learn about essential preventative maintenance practices to extend your roof's lifespan and prevent costly repairs.",
+    title: "How to Extend Your Roof's Lifespan",
+    excerpt: "Your roof is a significant investment, and with proper care, it can protect your home for decades. Learn essential preventative maintenance tips to avoid costly repairs and ensure your roof stays in top condition.",
     date: "2024-03-08",
     readTime: "5 min read",
     author: "Mike Wilson",
