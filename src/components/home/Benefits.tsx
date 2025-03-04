@@ -27,9 +27,9 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" aria-labelledby="benefits-title">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 id="benefits-title" className="text-3xl font-bold text-center mb-12">
           Why Choose Eugene Roofing NW?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
