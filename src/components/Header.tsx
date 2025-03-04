@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, ChevronDown } from 'lucide-react';
@@ -19,22 +20,22 @@ const Header = () => {
 
   const serviceCategories = {
     repair: [
-      { to: '/services/eugene-or-roof-repair', label: 'Roof Repair' },
-      { to: '/services/emergency-roof-repair-eugene-or', label: 'Emergency Repair' },
+      { to: '/services/roof-repair-eugene', label: 'Roof Repair' },
+      { to: '/services/emergency-roof-repair-eugene', label: 'Emergency Repair' },
     ],
     installation: [
-      { to: '/services/eugene-or-roof-installation', label: 'New Installation' },
-      { to: '/services/roof-replacement-eugene-or', label: 'Roof Replacement' },
+      { to: '/services/roof-installation-eugene', label: 'New Installation' },
+      { to: '/services/roof-replacement-eugene', label: 'Roof Replacement' },
     ],
     maintenance: [
-      { to: '/services/roof-cleaning-eugene-or', label: 'Roof Cleaning' },
+      { to: '/services/roof-cleaning-eugene', label: 'Roof Cleaning' },
     ],
   };
 
   const otherLinks = [
-    { to: '/about-eugene-oregon-roofing', label: 'About Us' },
-    { to: '/blog', label: 'Roofing Tips' },
-    { to: '/contact-eugene-oregon-roofing', label: 'Contact' },
+    { to: '/about', label: 'About Us' },
+    { to: '/roofing-tips', label: 'Roofing Tips' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   const ServiceDropdown = () => (

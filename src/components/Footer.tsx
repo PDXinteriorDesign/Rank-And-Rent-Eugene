@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Home } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -32,22 +32,22 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/eugene-or-roof-repair" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-repair-eugene" className="hover:text-secondary transition-colors">
                   Roof Repair
                 </Link>
               </li>
               <li>
-                <Link to="/services/eugene-or-roof-installation" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-installation-eugene" className="hover:text-secondary transition-colors">
                   Roof Installation
                 </Link>
               </li>
               <li>
-                <Link to="/services/emergency-roof-repair-eugene-or" className="hover:text-secondary transition-colors">
+                <Link to="/services/emergency-roof-repair-eugene" className="hover:text-secondary transition-colors">
                   Emergency Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/roof-cleaning-eugene-or" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-cleaning-eugene" className="hover:text-secondary transition-colors">
                   Roof Cleaning
                 </Link>
               </li>
@@ -64,12 +64,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about-eugene-roofing" className="hover:text-secondary transition-colors">
+                <Link to="/about" className="hover:text-secondary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact-eugene-roofing" className="hover:text-secondary transition-colors">
+                <Link to="/contact" className="hover:text-secondary transition-colors">
                   Contact
                 </Link>
               </li>

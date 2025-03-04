@@ -1,3 +1,4 @@
+
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -40,15 +41,15 @@ const App = () => {
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/about-eugene-roofing" element={<About />} />
-                <Route path="/contact-eugene-roofing" element={<Contact />} />
-                <Route path="/services/eugene-or-roof-installation" element={<Installation />} />
-                <Route path="/services/eugene-or-roof-repair" element={<Repair />} />
-                <Route path="/services/emergency-roof-repair-eugene-or" element={<Emergency />} />
-                <Route path="/services/roof-cleaning-eugene-or" element={<Cleaning />} />
-                <Route path="/services/roof-replacement-eugene-or" element={<Replacement />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/services/roof-installation-eugene" element={<Installation />} />
+                <Route path="/services/roof-repair-eugene" element={<Repair />} />
+                <Route path="/services/emergency-roof-repair-eugene" element={<Emergency />} />
+                <Route path="/services/roof-cleaning-eugene" element={<Cleaning />} />
+                <Route path="/services/roof-replacement-eugene" element={<Replacement />} />
+                <Route path="/roofing-tips" element={<Blog />} />
+                <Route path="/roofing-tips/:slug" element={<BlogPost />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
