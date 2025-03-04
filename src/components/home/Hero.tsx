@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -20,12 +21,15 @@ const Hero = () => {
             <Star className="w-5 h-5 text-yellow-400" />
             <span className="text-sm font-medium">#1 Rated Roofing Contractor in Eugene, Oregon</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Eugene's Premier Residential & Commercial Roofing Experts
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Expert Roofing Services in Eugene, Oregon
           </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+            Your Trusted Local Roofing Contractor Since 2003
+          </h2>
           <p className="text-lg text-gray-100 mb-8">
-            Trusted by over 1,000+ Eugene homeowners for expert roof repairs, installations, and maintenance. 
-            GAF & CertainTeed certified contractors with 20+ years of local experience.
+            Specializing in expert roof repairs, installations, and maintenance. 
+            GAF & CertainTeed certified contractors with over 20 years of experience serving Eugene homeowners.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="flex items-center justify-center gap-2 text-white">

@@ -38,9 +38,12 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20">
+    <section className="py-20" aria-labelledby="services-title">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Roofing Services</h2>
+        <h2 id="services-title" className="text-3xl font-bold text-center mb-4">Professional Roofing Services in Eugene</h2>
+        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          Discover our comprehensive range of roofing solutions tailored to Eugene's unique climate and your specific needs.
+        </p>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
@@ -71,6 +74,7 @@ const Services = () => {
           ))}
         </div>
         <div className="text-center mt-12">
+          <h3 className="text-2xl font-semibold mb-6">Ready to Get Started?</h3>
           <Link 
             to="/contact" 
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary/90 transition-colors"
