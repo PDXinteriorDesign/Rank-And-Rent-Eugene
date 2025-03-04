@@ -61,7 +61,7 @@ const PricingCalculator = () => {
                     <SelectTrigger id="size">
                       <SelectValue placeholder="Select roof size" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white border shadow-md">
                       <SelectItem value="small">Small (Up to 1,500 sq ft)</SelectItem>
                       <SelectItem value="medium">Medium (1,500-2,500 sq ft)</SelectItem>
                       <SelectItem value="large">Large (2,500-3,500 sq ft)</SelectItem>
@@ -76,7 +76,7 @@ const PricingCalculator = () => {
                     <SelectTrigger id="type">
                       <SelectValue placeholder="Select roof type" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white border shadow-md">
                       <SelectItem value="asphalt">Asphalt Shingles</SelectItem>
                       <SelectItem value="metal">Metal Roof</SelectItem>
                       <SelectItem value="tile">Tile Roof</SelectItem>
@@ -91,7 +91,7 @@ const PricingCalculator = () => {
                     <SelectTrigger id="moss">
                       <SelectValue placeholder="Select moss level" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white border shadow-md">
                       <SelectItem value="light">Light (Visible but minimal)</SelectItem>
                       <SelectItem value="moderate">Moderate (Noticeable patches)</SelectItem>
                       <SelectItem value="heavy">Heavy (Significant coverage)</SelectItem>
