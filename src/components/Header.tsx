@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, ChevronDown } from 'lucide-react';
@@ -138,7 +137,7 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-black/40 backdrop-blur-sm z-[100]">
-        <div className="container mx-auto px-4 py-2">
+        <div className="container mx-auto px-4 py-1">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center" aria-label="Eugene Roofing NW Home">
               <img 
@@ -186,7 +185,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[64px] md:h-[80px]" />
+      <div className="h-[56px] md:h-[72px]" />
       <EstimateFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}

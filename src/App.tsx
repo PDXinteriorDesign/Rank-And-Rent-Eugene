@@ -43,11 +43,11 @@ const App = () => {
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/services/roof-installation-eugene" element={<Installation />} />
-                <Route path="/services/roof-repair-eugene" element={<Repair />} />
-                <Route path="/services/emergency-roof-repair-eugene" element={<Emergency />} />
-                <Route path="/services/roof-cleaning-eugene" element={<Cleaning />} />
-                <Route path="/services/roof-replacement-eugene" element={<Replacement />} />
+                <Route path="/services/roof-installation-eugene-oregon" element={<Installation />} />
+                <Route path="/services/roof-repair-eugene-oregon" element={<Repair />} />
+                <Route path="/services/emergency-roof-repair-eugene-oregon" element={<Emergency />} />
+                <Route path="/services/roof-cleaning-eugene-oregon" element={<Cleaning />} />
+                <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
                 <Route path="/roofing-tips" element={<Blog />} />
                 <Route path="/roofing-tips/:slug" element={<BlogPost />} />
                 <Route path="*" element={<NotFound />} />
