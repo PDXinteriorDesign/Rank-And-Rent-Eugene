@@ -31,29 +31,38 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted" aria-labelledby="testimonials-title">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Eugene Customers Say</h2>
+        <h2 id="testimonials-title" className="text-3xl font-bold text-center mb-4">
+          What Our Eugene Customers Say
+        </h2>
+        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Read trusted reviews from homeowners across Eugene and Lane County.
+        </p>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <article 
               key={testimonial.author}
               className="bg-white p-6 rounded-lg shadow-sm animate-slideUp relative"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <Quote className="w-8 h-8 text-secondary/20 absolute top-4 right-4" />
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-4" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
-              <div className="border-t pt-4">
-                <p className="font-semibold">{testimonial.author}</p>
-                <p className="text-sm text-gray-500">{testimonial.location}</p>
-                <p className="text-sm text-gray-500">{testimonial.service}</p>
-              </div>
-            </div>
+              <blockquote>
+                <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                <footer className="border-t pt-4">
+                  <cite className="not-italic">
+                    <p className="font-semibold">{testimonial.author}</p>
+                    <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    <p className="text-sm text-gray-500">{testimonial.service}</p>
+                  </cite>
+                </footer>
+              </blockquote>
+            </article>
           ))}
         </div>
 
