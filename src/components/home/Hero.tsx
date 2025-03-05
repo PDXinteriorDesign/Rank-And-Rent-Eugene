@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Shield, Clock, MapPin, Star, Trophy, Building } from 'lucide-react';
+import HubspotForm from '@/components/HubspotForm';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -46,13 +46,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-secondary hover:bg-secondary/90 w-full sm:w-auto"
-              onClick={() => navigate('/contact-eugene-roofing')}
-            >
-              Get Free Estimate Today
-            </Button>
+            <div className="w-full sm:w-auto">
+              <HubspotForm
+                portalId="241947693"
+                formId="901bfc23-c204-4af1-bf61-d8c9db934a94"
+              />
+            </div>
             <Button 
               size="lg" 
               variant="outline" 
