@@ -1,16 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import HubspotFormModal from '../HubspotFormModal';
 
 const HomeCTA = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const handleEstimateClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsFormOpen(true);
-  };
-
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -25,16 +17,12 @@ const HomeCTA = () => {
           <Button 
             size="lg" 
             className="bg-secondary hover:bg-secondary/90"
-            onClick={handleEstimateClick}
+            onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
           >
             Get Free Estimate
           </Button>
         </div>
       </div>
-      <HubspotFormModal 
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </section>
   );
 };

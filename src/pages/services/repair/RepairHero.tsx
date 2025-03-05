@@ -1,18 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import EstimateFormModal from '@/components/EstimateFormModal';
 
 const RepairHero = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const handleEstimateClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsFormOpen(true);
-  };
-
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-muted to-white">
       <div className="container mx-auto px-4">
@@ -26,21 +17,24 @@ const RepairHero = () => {
             and provide tailored solutions to ensure your roof withstands the test of time.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="#" onClick={handleEstimateClick}>Get Free Inspection</Link>
+            <Button 
+              size="lg" 
+              className="bg-secondary hover:bg-secondary/90"
+              onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+            >
+              Get Free Inspection
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="#" onClick={handleEstimateClick} className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> Call Now
-              </Link>
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+              className="flex items-center gap-2"
+            >
+              <Phone className="w-4 h-4" /> Call Now
             </Button>
           </div>
         </div>
       </div>
-      <EstimateFormModal 
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </section>
   );
 };
