@@ -10,11 +10,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useIsMobile } from '@/hooks/use-mobile';
-import EstimateFormModal from './EstimateFormModal';
 
 const Header = () => {
   const isMobile = useIsMobile();
-  const [isFormOpen, setIsFormOpen] = useState(false);
   const location = useLocation();
 
   const serviceCategories = {
@@ -129,11 +127,6 @@ const Header = () => {
     </>
   );
 
-  const handleEstimateClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsFormOpen(true);
-  };
-
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-black/40 backdrop-blur-sm z-[100]">
@@ -153,9 +146,14 @@ const Header = () => {
             {isMobile ? (
               <div className="flex items-center gap-4">
                 <Button asChild size="sm">
-                  <Link onClick={handleEstimateClick} to="#" className="bg-secondary hover:bg-secondary/90">
+                  <a 
+                    href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19" 
+                    className="bg-secondary hover:bg-secondary/90"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Get Estimate
-                  </Link>
+                  </a>
                 </Button>
                 <Sheet>
                   <SheetTrigger asChild>
@@ -176,9 +174,14 @@ const Header = () => {
                   <NavigationLinks />
                 </nav>
                 <Button asChild>
-                  <Link onClick={handleEstimateClick} to="#" className="bg-secondary hover:bg-secondary/90">
+                  <a 
+                    href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19" 
+                    className="bg-secondary hover:bg-secondary/90"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Get Free Estimate
-                  </Link>
+                  </a>
                 </Button>
               </div>
             )}
@@ -186,10 +189,6 @@ const Header = () => {
         </div>
       </header>
       <div className="h-[64px] md:h-[80px]" />
-      <EstimateFormModal 
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </>
   );
 };
