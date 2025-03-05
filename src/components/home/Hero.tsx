@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Shield, Clock, MapPin, Star, Trophy } from 'lucide-react';
-import EstimateFormModal from '@/components/EstimateFormModal';
+import HubspotFormModal from '@/components/HubspotFormModal';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <EstimateFormModal 
+      <HubspotFormModal 
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
       />
