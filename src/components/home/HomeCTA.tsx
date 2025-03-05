@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -17,9 +16,15 @@ const HomeCTA = () => {
           <Button 
             size="lg" 
             className="bg-secondary hover:bg-secondary/90"
-            onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+            asChild
           >
-            Get Free Estimate
+            <a 
+              href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Free Estimate
+            </a>
           </Button>
         </div>
       </div>

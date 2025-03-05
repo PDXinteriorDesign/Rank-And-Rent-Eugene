@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,17 +19,30 @@ const RepairHero = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90"
-              onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+              asChild
             >
-              Get Free Inspection
+              <a 
+                href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Free Inspection
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
               className="flex items-center gap-2"
+              asChild
             >
-              <Phone className="w-4 h-4" /> Call Now
+              <a 
+                href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Phone className="w-4 h-4" /> Call Now
+              </a>
             </Button>
           </div>
         </div>

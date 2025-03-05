@@ -17,9 +17,15 @@ const CleaningCTA = () => {
           <Button 
             size="lg" 
             className="bg-secondary hover:bg-secondary/90"
-            onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+            asChild
           >
-            Schedule Free Consultation
+            <a 
+              href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Free Consultation
+            </a>
           </Button>
         </div>
       </div>

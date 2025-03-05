@@ -16,7 +16,13 @@ const InstallationCTA = () => {
             Our team is ready to help you protect your home with quality roofing solutions.
           </p>
           <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-            <Link to="/contact">Schedule Free Consultation</Link>
+            <a 
+              href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Free Consultation
+            </a>
           </Button>
         </div>
       </div>

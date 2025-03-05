@@ -48,9 +48,15 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 w-full sm:w-auto"
-              onClick={() => window.location.href = 'https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19'}
+              asChild
             >
-              Get Free Estimate Today
+              <a 
+                href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Free Estimate Today
+              </a>
             </Button>
             <Button 
               size="lg" 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -26,10 +25,22 @@ const RepairCTA = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
-              <Link to="#" onClick={handleEstimateClick}>Schedule Inspection</Link>
+              <a 
+                href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule Inspection
+              </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90">
-              <Link to="#" onClick={handleEstimateClick}>Contact Us</Link>
+              <a 
+                href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Us
+              </a>
             </Button>
           </div>
         </div>
