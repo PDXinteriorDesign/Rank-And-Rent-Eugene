@@ -1,16 +1,12 @@
+
 import React, { useState } from 'react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from '@/components/ui/button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Label } from '@/components/ui/label';
+import FormInputField from './estimate/FormInputField';
+import ProjectTypeSelect from './estimate/ProjectTypeSelect';
+import AddressFields from './estimate/AddressFields';
 
 interface EstimateFormModalProps {
   isOpen: boolean;
@@ -63,7 +59,6 @@ const EstimateFormModal = ({ isOpen, onClose }: EstimateFormModalProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     try {
       const response = await fetch('/send-email', {
         method: 'POST',
@@ -101,129 +96,63 @@ const EstimateFormModal = ({ isOpen, onClose }: EstimateFormModalProps) => {
           <h2 className="text-2xl font-bold mb-6">Get a Free Estimate</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="firstName">First Name *</Label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  required
-                  className="w-full p-2 border rounded-md"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="lastName">Last Name *</Label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  required
-                  className="w-full p-2 border rounded-md"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="email">Email *</Label>
-              <input
-                id="email"
-                name="email"
-                type="email"
+              <FormInputField
+                id="firstName"
+                name="firstName"
+                label="First Name"
                 required
-                className="w-full p-2 border rounded-md"
-                value={formData.email}
+                value={formData.firstName}
                 onChange={handleChange}
               />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="phone">Phone *</Label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
+              <FormInputField
+                id="lastName"
+                name="lastName"
+                label="Last Name"
                 required
-                className="w-full p-2 border rounded-md"
-                value={formData.phone}
+                value={formData.lastName}
                 onChange={handleChange}
               />
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="projectType">Project Type *</Label>
-              <Select
-                value={formData.projectType}
-                onValueChange={handleSelectChange}
-              >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select project type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="residential">Residential</SelectItem>
-                  <SelectItem value="commercial">Commercial</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+            <FormInputField
+              id="email"
+              name="email"
+              type="email"
+              label="Email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
 
-            <div className="space-y-2">
-              <Label htmlFor="projectDetails">Project Details</Label>
-              <textarea
-                id="projectDetails"
-                name="projectDetails"
-                rows={4}
-                className="w-full p-2 border rounded-md"
-                value={formData.projectDetails}
-                onChange={handleChange}
-                placeholder="Tell us about your project..."
-              />
-            </div>
+            <FormInputField
+              id="phone"
+              name="phone"
+              type="tel"
+              label="Phone"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+            />
 
-            <div className="space-y-2">
-              <Label htmlFor="streetAddress">Street Address</Label>
-              <input
-                id="streetAddress"
-                name="streetAddress"
-                className="w-full p-2 border rounded-md"
-                value={formData.streetAddress}
-                onChange={handleChange}
-              />
-            </div>
+            <ProjectTypeSelect
+              value={formData.projectType}
+              onChange={handleSelectChange}
+            />
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="city">City</Label>
-                <input
-                  id="city"
-                  name="city"
-                  className="w-full p-2 border rounded-md"
-                  value={formData.city}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="state">State/Province</Label>
-                <input
-                  id="state"
-                  name="state"
-                  className="w-full p-2 border rounded-md"
-                  value={formData.state}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
+            <FormInputField
+              id="projectDetails"
+              name="projectDetails"
+              label="Project Details"
+              value={formData.projectDetails}
+              onChange={handleChange}
+              isTextArea
+              placeholder="Tell us about your project..."
+            />
 
-            <div className="space-y-2">
-              <Label htmlFor="zipCode">Postal / Zip Code</Label>
-              <input
-                id="zipCode"
-                name="zipCode"
-                className="w-full p-2 border rounded-md"
-                value={formData.zipCode}
-                onChange={handleChange}
-              />
-            </div>
+            <AddressFields
+              formData={formData}
+              onChange={handleChange}
+            />
 
             <div className="flex justify-end space-x-4">
               <Button type="button" variant="outline" onClick={onClose}>
