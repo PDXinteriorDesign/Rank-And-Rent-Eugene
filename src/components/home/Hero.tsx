@@ -1,11 +1,17 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Shield, Clock, MapPin, Star, Trophy, Building } from 'lucide-react';
+import HubspotFormModal from '../HubspotFormModal';
 
 const Hero = () => {
   const navigate = useNavigate();
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleEstimateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsFormOpen(true);
+  };
 
   return (
     <section 
@@ -49,7 +55,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 w-full sm:w-auto"
-              onClick={() => navigate('/contact-eugene-roofing')}
+              onClick={handleEstimateClick}
             >
               Get Free Estimate Today
             </Button>
@@ -64,6 +70,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <HubspotFormModal 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </section>
   );
 };
