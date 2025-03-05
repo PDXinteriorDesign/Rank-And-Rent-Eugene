@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Shield, Clock, MapPin, Star, Trophy, Building } from 'lucide-react';
-import HubspotFormModal from '../HubspotFormModal';
+import HubspotFormModal from '@/components/HubspotFormModal';
 
 const Hero = () => {
   const navigate = useNavigate();
