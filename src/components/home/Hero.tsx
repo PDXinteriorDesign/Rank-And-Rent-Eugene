@@ -63,7 +63,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white"
-              onClick={() => navigate('/services/eugene-or-roof-installation')}
+              onClick={() => navigate('/services/roof-installation-eugene-oregon')}
             >
               View Roofing Services
             </Button>
