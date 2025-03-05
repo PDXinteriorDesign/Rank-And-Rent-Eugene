@@ -31,8 +31,14 @@ const HubspotFormModal = ({ isOpen, onClose }: HubspotFormModalProps) => {
     const loadForm = () => {
       if (isOpen && window.hbspt) {
         try {
+          // Clear any existing forms first
+          const container = document.getElementById('hubspotFormContainer');
+          if (container) {
+            container.innerHTML = '';
+          }
+
           window.hbspt.forms.create({
-            region: "na2",
+            region: "na1",
             portalId: "241947693",
             formId: "901bfc23-c204-4af1-bf61-d8c9db934a94",
             target: "#hubspotFormContainer",
@@ -64,11 +70,15 @@ const HubspotFormModal = ({ isOpen, onClose }: HubspotFormModalProps) => {
       
       if (!existingScript) {
         scriptElement = document.createElement('script');
-        scriptElement.src = 'https://js-na2.hsforms.net/forms/embed/v2.js';
+        scriptElement.src = 'https://js.hsforms.net/forms/embed/v2.js';
         scriptElement.async = true;
         scriptElement.defer = true;
         
-        scriptElement.addEventListener('load', loadForm);
+        scriptElement.addEventListener('load', () => {
+          // Add a small delay to ensure HubSpot script is fully initialized
+          setTimeout(loadForm, 100);
+        });
+        
         scriptElement.addEventListener('error', () => {
           setError('Failed to load form. Please try again.');
           setIsLoading(false);
@@ -76,18 +86,14 @@ const HubspotFormModal = ({ isOpen, onClose }: HubspotFormModalProps) => {
         
         document.body.appendChild(scriptElement);
       } else {
-        // If script exists, try to load form directly
-        loadForm();
+        // If script exists, try to load form directly with a small delay
+        setTimeout(loadForm, 100);
       }
     }
 
     return () => {
       if (scriptElement) {
-        scriptElement.removeEventListener('load', loadForm);
-        // Only remove the script if we're closing the modal
-        if (!isOpen) {
-          scriptElement.remove();
-        }
+        scriptElement.remove();
       }
       // Clear the form container when modal closes
       if (!isOpen) {
