@@ -27,66 +27,80 @@ const HubspotFormModal = ({ isOpen, onClose }: HubspotFormModalProps) => {
 
   useEffect(() => {
     let scriptElement: HTMLScriptElement | null = null;
+    let attempts = 0;
+    const maxAttempts = 3;
     
     const loadForm = () => {
-      if (isOpen && window.hbspt) {
-        try {
-          // Clear any existing forms first
-          const container = document.getElementById('hubspotFormContainer');
-          if (container) {
-            container.innerHTML = '';
-          }
+      if (!window.hbspt && attempts < maxAttempts) {
+        attempts++;
+        setTimeout(loadForm, 500);
+        return;
+      }
 
-          window.hbspt.forms.create({
-            region: "na1",
-            portalId: "241947693",
-            formId: "901bfc23-c204-4af1-bf61-d8c9db934a94",
-            target: "#hubspotFormContainer",
-            onFormReady: () => {
-              setIsLoading(false);
-              setError(null);
-            },
-            onFormSubmitted: () => {
-              setTimeout(() => {
-                onClose();
-                navigate('/');
-              }, 1500);
-            }
-          });
-        } catch (err) {
-          setError('Failed to load form. Please try again.');
-          setIsLoading(false);
-          console.error('HubSpot form creation error:', err);
+      if (!window.hbspt) {
+        setError('Failed to initialize form. Please refresh the page.');
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        const container = document.getElementById('hubspotFormContainer');
+        if (container) {
+          container.innerHTML = '';
         }
+
+        window.hbspt.forms.create({
+          target: '#hubspotFormContainer',
+          region: "na1",
+          portalId: "241947693",
+          formId: "901bfc23-c204-4af1-bf61-d8c9db934a94",
+          onFormSubmitted: () => {
+            setTimeout(() => {
+              onClose();
+              navigate('/');
+            }, 1500);
+          },
+          onFormReady: () => {
+            setIsLoading(false);
+            setError(null);
+          },
+          onFormError: (error: any) => {
+            console.error('Form error:', error);
+            setError('There was an error loading the form. Please try again.');
+            setIsLoading(false);
+          }
+        });
+      } catch (err) {
+        console.error('HubSpot form creation error:', err);
+        setError('Failed to load form. Please try again.');
+        setIsLoading(false);
       }
     };
 
     if (isOpen) {
       setIsLoading(true);
       setError(null);
-      
-      // Check if script already exists
+      attempts = 0;
+
       const existingScript = document.querySelector('script[src*="hsforms"]');
       
       if (!existingScript) {
         scriptElement = document.createElement('script');
-        scriptElement.src = 'https://js.hsforms.net/forms/embed/v2.js';
+        scriptElement.src = 'https://js.hsforms.net/forms/v2.js';
         scriptElement.async = true;
         scriptElement.defer = true;
         
         scriptElement.addEventListener('load', () => {
-          // Add a small delay to ensure HubSpot script is fully initialized
           setTimeout(loadForm, 100);
         });
         
         scriptElement.addEventListener('error', () => {
-          setError('Failed to load form. Please try again.');
+          setError('Failed to load form resources. Please try again.');
           setIsLoading(false);
         });
         
         document.body.appendChild(scriptElement);
       } else {
-        // If script exists, try to load form directly with a small delay
         setTimeout(loadForm, 100);
       }
     }
@@ -95,12 +109,9 @@ const HubspotFormModal = ({ isOpen, onClose }: HubspotFormModalProps) => {
       if (scriptElement) {
         scriptElement.remove();
       }
-      // Clear the form container when modal closes
-      if (!isOpen) {
-        const formContainer = document.getElementById('hubspotFormContainer');
-        if (formContainer) {
-          formContainer.innerHTML = '';
-        }
+      const container = document.getElementById('hubspotFormContainer');
+      if (container) {
+        container.innerHTML = '';
       }
     };
   }, [isOpen, navigate, onClose]);
