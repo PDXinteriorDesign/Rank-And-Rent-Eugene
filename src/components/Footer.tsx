@@ -34,27 +34,27 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/roof-repair-eugene" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-repair-eugene-oregon" className="hover:text-secondary transition-colors">
                   Roof Repair Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/roof-installation-eugene" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-installation-eugene-oregon" className="hover:text-secondary transition-colors">
                   New Roof Installation
                 </Link>
               </li>
               <li>
-                <Link to="/services/emergency-roof-repair-eugene" className="hover:text-secondary transition-colors">
+                <Link to="/services/emergency-roof-repair-eugene-oregon" className="hover:text-secondary transition-colors">
                   24/7 Emergency Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/roof-cleaning-eugene" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-cleaning-eugene-oregon" className="hover:text-secondary transition-colors">
                   Professional Roof Cleaning
                 </Link>
               </li>
               <li>
-                <Link to="/services/roof-replacement-eugene" className="hover:text-secondary transition-colors">
+                <Link to="/services/roof-replacement-eugene-oregon" className="hover:text-secondary transition-colors">
                   Complete Roof Replacement
                 </Link>
               </li>
