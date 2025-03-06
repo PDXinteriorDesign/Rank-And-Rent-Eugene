@@ -1,4 +1,3 @@
-
 import { BlogPost } from "@/types/blog";
 
 export const metalRoofing: BlogPost = {
@@ -123,11 +122,5 @@ Online Information: eugeneroofingnw.com/metal-roofing
 
 Metal roofing represents a significant investment in your home's future. With proper installation and minimal maintenance, it can provide decades of reliable protection while enhancing your home's appearance and value. Our team of metal roofing specialists understands Eugene's unique climate challenges and can help you choose the perfect system for your home.
 
-Ready to explore metal roofing options? Contact Eugene Roofing NW today for a comprehensive consultation and estimate.`,
-  date: "2024-03-16",
-  readTime: "10 min read",
-  author: "Sarah Johnson",
-  excerpt: "Discover everything you need to know about metal roofing in Eugene, from material options and benefits to costs and installation processes. Learn why metal roofing might be the perfect choice for your Oregon home.",
-  category: "Materials",
-  image: "/images/metal-roof.jpg"
+Ready to explore metal roofing options? Contact Eugene Roofing NW today for a comprehensive consultation and estimate.`
 };
