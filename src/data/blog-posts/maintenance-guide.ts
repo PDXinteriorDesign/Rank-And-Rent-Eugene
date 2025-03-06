@@ -1,4 +1,3 @@
-
 import { BlogPost } from "@/types/blog";
 
 export const maintenanceGuide: BlogPost = {
@@ -48,6 +47,13 @@ Common Eugene Roofing Mistakes to Avoid:
 ● Using incorrect moss treatment products
 ● Neglecting gutter maintenance
 ● DIY repairs without proper safety equipment
+
+DIY Maintenance Tips:
+- Regular gutter cleaning
+- Trim overhanging branches
+- Monitor attic conditions
+- Document inspections
+- Remove debris regularly
 
 Seasonal Maintenance Protocol
 
