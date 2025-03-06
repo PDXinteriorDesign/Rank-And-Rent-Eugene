@@ -1,8 +1,7 @@
-
 import { BlogPost } from "@/types/blog";
 
 export const maintenanceTips: BlogPost = {
-  title: "Top Roof Maintenance Tips to Protect Your Eugene Home",
+  title: "Essential Roof Maintenance Tips for Eugene Homeowners",
   content: `Your roof is one of the most important parts of your home, and regular maintenance is key to keeping it in great shape. Here are some essential tips to help you protect your roof and extend its lifespan.
 
 Seasonal Maintenance Checklist
@@ -25,7 +24,7 @@ By following these tips, you can keep your roof in excellent condition and avoid
   date: "2024-03-14",
   readTime: "8 min read",
   author: "Mike Wilson",
-  excerpt: "Your roof is one of the most important parts of your home.",
-  category: "Roof Maintenance",
-  image: "essential-roof-maintenance-tips.jpg"
+  excerpt: "Your roof is one of the most important parts of your home, and regular maintenance is key to keeping it in great shape. Learn essential tips to help protect your roof and extend its lifespan.",
+  category: "Maintenance",
+  image: "/images/maintenance.jpg"
 };
