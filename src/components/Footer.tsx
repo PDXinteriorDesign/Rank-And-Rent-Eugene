@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -71,17 +70,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/roofing-tips/professional-roof-inspection-guide" className="hover:text-secondary transition-colors">
+                <Link to="/roofing-tips/roof-inspection-guide" className="hover:text-secondary transition-colors">
                   Inspection Guide
                 </Link>
               </li>
               <li>
-                <Link to="/roofing-tips/metal-roofing-benefits-considerations" className="hover:text-secondary transition-colors">
+                <Link to="/roofing-tips/metal-roofing" className="hover:text-secondary transition-colors">
                   Metal Roofing Guide
                 </Link>
               </li>
               <li>
-                <Link to="/roofing-tips/essential-roof-maintenance-tips" className="hover:text-secondary transition-colors">
+                <Link to="/roofing-tips/maintenance-guide" className="hover:text-secondary transition-colors">
                   Maintenance Tips
                 </Link>
               </li>
