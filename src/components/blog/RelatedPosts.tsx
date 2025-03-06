@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPosts } from '@/data/blog-posts';
+import { BlogPost } from '@/types/blog';
 
 interface RelatedPostsProps {
   currentSlug: string;

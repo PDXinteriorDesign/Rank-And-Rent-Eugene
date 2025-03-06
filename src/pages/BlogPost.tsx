@@ -8,7 +8,7 @@ import BlogContent from '@/components/blog/BlogContent';
 import TableOfContents from '@/components/blog/TableOfContents';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import HomeCTA from '@/components/home/HomeCTA';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPosts } from '@/data/blog-posts';
 import { getBlogPostSchema, getLocalBusinessSchema } from '@/utils/localSeoSchema';
 
 const BlogPost = () => {
