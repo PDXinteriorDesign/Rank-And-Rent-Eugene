@@ -3,6 +3,12 @@ import { BlogPost } from "@/types/blog";
 
 export const metalRoofing: BlogPost = {
   title: "Metal Roofing in Eugene: A Complete Guide for Oregon Homeowners (2024)",
+  excerpt: "Discover everything you need to know about metal roofing in Eugene, from material options and benefits to costs and installation processes. Learn why metal roofing might be the perfect choice for your Oregon home.",
+  date: "2024-03-16",
+  readTime: "10 min read",
+  author: "Sarah Johnson",
+  category: "Materials",
+  image: "/images/metal-roof.jpg",
   content: `Metal roofing has become increasingly popular among Eugene homeowners, offering durability, energy efficiency, and excellent protection against our unique Pacific Northwest weather conditions. This comprehensive guide will help you understand the benefits, considerations, and costs associated with metal roofing in our region.
 
 Why Consider Metal Roofing in Eugene?

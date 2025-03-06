@@ -1,8 +1,13 @@
-
 import { BlogPost } from "@/types/blog";
 
 export const inspectionGuide: BlogPost = {
   title: "Professional Roof Inspection Guide: What Eugene Homeowners Need to Know in 2024",
+  excerpt: "Learn what professional roof inspectors look for, when to schedule inspections, and how regular inspections can save Eugene homeowners thousands in potential repairs.",
+  date: "2024-03-18",
+  readTime: "9 min read",
+  author: "John Smith",
+  category: "Maintenance",
+  image: "/images/inspection.jpg",
   content: `Understanding the importance of professional roof inspections is crucial for Eugene homeowners. With our region's unique climate challenges and frequent weather changes, regular inspections can prevent costly repairs and extend your roof's lifespan significantly.
 
 Understanding the Value of Professional Roof Inspections
@@ -123,10 +128,4 @@ Online Scheduling: eugeneroofingnw.com/schedule
 A professional roof inspection is your first line of defense against potential roofing issues. Don't wait for problems to become visible from the ground – by then, repairs are often more extensive and expensive. Our experienced team uses state-of-the-art equipment and years of local expertise to protect your investment.
 
 Ready to schedule your professional roof inspection? Contact Eugene Roofing NW today for a thorough evaluation of your roof's condition.`,
-  date: "2024-03-18",
-  readTime: "9 min read",
-  author: "John Smith",
-  excerpt: "Learn what professional roof inspectors look for, when to schedule inspections, and how regular inspections can save Eugene homeowners thousands in potential repairs.",
-  category: "Maintenance",
-  image: "/images/inspection.jpg"
 };

@@ -6,10 +6,10 @@ import { metalRoofing } from "./metal-roofing";
 import { maintenanceTips } from "./maintenance-tips";
 
 export const blogPosts: BlogPosts = {
-  'eugene-roof-maintenance-guide': maintenanceGuide,
-  'professional-roof-inspection-guide': inspectionGuide,
-  'metal-roofing-benefits-considerations': metalRoofing,
-  'essential-roof-maintenance-tips': maintenanceTips
+  'eugene-roof-maintenance': maintenanceGuide,
+  'professional-inspection': inspectionGuide,
+  'metal-roofing-guide': metalRoofing,
+  'essential-maintenance-tips': maintenanceTips
 };
 
 export default blogPosts;
