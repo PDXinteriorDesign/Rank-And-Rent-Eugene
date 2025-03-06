@@ -14,6 +14,7 @@ export const metalRoofing: BlogPost = {
 ## Why Consider Metal Roofing in Eugene?
 
 ### Local Climate Compatibility
+
 - Superior rain resistance
 - Excellent snow load capacity
 - Wind resistance up to 140 mph
@@ -27,6 +28,7 @@ While the initial investment in metal roofing is higher than traditional materia
 ## Metal Roofing Options
 
 ### Material Types
+
 - Standing Seam Steel
 - Aluminum Panels
 - Zinc Roofing
@@ -34,6 +36,7 @@ While the initial investment in metal roofing is higher than traditional materia
 - Metal Tile Profiles
 
 ### Style Variations
+
 - Traditional Panel
 - Shake Profile
 - Tile Appearance
@@ -41,6 +44,7 @@ While the initial investment in metal roofing is higher than traditional materia
 - Custom Designs
 
 ## Key Benefits
+
 - Lifetime durability (40-70 years)
 - Minimal maintenance requirements
 - Superior weather protection
@@ -48,6 +52,7 @@ While the initial investment in metal roofing is higher than traditional materia
 - Eco-friendly material
 
 ## Important Considerations
+
 - Initial cost investment
 - Professional installation required
 - Color and finish options
@@ -57,29 +62,33 @@ While the initial investment in metal roofing is higher than traditional materia
 ## Installation Process Overview
 
 ### Preparation Phase
-1. Site evaluation and measurements
-2. Material selection and ordering
-3. Old roof removal (if necessary)
-4. Structural assessment
-5. Underlayment preparation
+
+○ Site evaluation and measurements
+○ Material selection and ordering
+○ Old roof removal (if necessary)
+○ Structural assessment
+○ Underlayment preparation
 
 ### Installation Steps
-1. Safety setup and equipment staging
-2. Panel or shingle placement
-3. Flashing and trim installation
-4. Ventilation system integration
-5. Final inspection and cleanup
+
+○ Safety setup and equipment staging
+○ Panel or shingle placement
+○ Flashing and trim installation
+○ Ventilation system integration
+○ Final inspection and cleanup
 
 ## Maintenance Requirements
-1. Annual visual inspection
-2. Gutter system cleaning
-3. Snow guard check (if installed)
-4. Sealant verification
-5. Panel alignment inspection
+
+○ Annual visual inspection
+○ Gutter system cleaning
+○ Snow guard check (if installed)
+○ Sealant verification
+○ Panel alignment inspection
 
 ## Cost Analysis and ROI
 
 ### Investment Breakdown
+
 - Materials: $8-12 per square foot
 - Professional Installation: $5-7 per square foot
 - Removal of Old Roof: $2-4 per square foot
@@ -87,6 +96,7 @@ While the initial investment in metal roofing is higher than traditional materia
 - Warranty Coverage: Included
 
 ### Long-Term Value Analysis
+
 - Traditional Roof Replacement: Every 20 years
 - Metal Roof Lifespan: 40-70 years
 - Energy Savings: $200-400 annually
@@ -100,20 +110,24 @@ Modern metal roofing systems incorporate cutting-edge technologies that enhance 
 ## Local Resources and Support
 
 ### Eugene Building Department
-- Address: 99 W 10th Avenue, Eugene, OR 97401
-- Phone: (541) 682-5086
-- Services: Permits, inspections, code compliance
+
+○ Address: 99 W 10th Avenue, Eugene, OR 97401
+○ Phone: (541) 682-5086
+○ Services: Permits, inspections, code compliance
 
 ### Weather Information
-- Local Weather Service: weather.gov/pqr
-- Emergency Updates: (541) 682-4000
+
+○ Local Weather Service: weather.gov/pqr
+○ Emergency Updates: (541) 682-4000
 
 ### Professional Installation
+
 Eugene Roofing NW
-- Consultation: (541) 555-0123
-- Online Information: eugeneroofingnw.com/metal-roofing
+○ Consultation: (541) 555-0123
+○ Online Information: eugeneroofingnw.com/metal-roofing
 
 Metal roofing represents a significant investment in your home's future. With proper installation and minimal maintenance, it can provide decades of reliable protection while enhancing your home's appearance and value. Our team of metal roofing specialists understands Eugene's unique climate challenges and can help you choose the perfect system for your home.
 
 Ready to explore metal roofing options? Contact Eugene Roofing NW today for a comprehensive consultation and estimate.`
 };
+
