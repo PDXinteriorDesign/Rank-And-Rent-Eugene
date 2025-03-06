@@ -1,27 +1,32 @@
 
 import React from 'react';
-import { Calendar, Clock, User } from 'lucide-react';
+import { Calendar, Clock, User, Tag } from 'lucide-react';
 
 type BlogPostMetaProps = {
   date: string;
   readTime: string;
   author: string;
+  category: string;
 };
 
-const BlogPostMeta = ({ date, readTime, author }: BlogPostMetaProps) => {
+const BlogPostMeta = ({ date, readTime, author, category }: BlogPostMetaProps) => {
   return (
-    <div className="flex items-center gap-6 text-gray-500 mb-8 border-b border-gray-200 pb-6">
-      <span className="flex items-center gap-1">
-        <Calendar className="w-4 h-4" />
+    <div className="flex flex-wrap items-center gap-6 text-gray-600 mt-4">
+      <span className="flex items-center gap-2">
+        <Calendar className="w-4 h-4 text-primary" />
         {date}
       </span>
-      <span className="flex items-center gap-1">
-        <Clock className="w-4 h-4" />
+      <span className="flex items-center gap-2">
+        <Clock className="w-4 h-4 text-primary" />
         {readTime}
       </span>
-      <span className="flex items-center gap-1">
-        <User className="w-4 h-4" />
+      <span className="flex items-center gap-2">
+        <User className="w-4 h-4 text-primary" />
         {author}
+      </span>
+      <span className="flex items-center gap-2">
+        <Tag className="w-4 h-4 text-primary" />
+        {category}
       </span>
     </div>
   );

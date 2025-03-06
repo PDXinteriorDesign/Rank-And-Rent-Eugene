@@ -17,9 +17,9 @@ const BlogContent = ({ content }: BlogContentProps) => {
           <h2 
             id={headingId}
             key={index} 
-            className="text-2xl font-semibold mt-8 mb-4 flex items-center gap-2 scroll-mt-24"
+            className="text-3xl font-semibold mt-12 mb-6 flex items-center gap-3 scroll-mt-24 text-gray-900"
           >
-            <Heading2 className="w-5 h-5" />
+            <Heading2 className="w-6 h-6 text-primary" />
             {section}
           </h2>
         );
@@ -32,12 +32,12 @@ const BlogContent = ({ content }: BlogContentProps) => {
         // Check if it's a numbered list
         if (lines.some(line => line.match(/^\d+\./))) {
           return (
-            <div key={index} className="my-6">
-              <ol className="list-decimal list-inside space-y-3">
+            <div key={index} className="my-8">
+              <ol className="list-decimal list-inside space-y-4">
                 {lines.map((line, lineIndex) => {
                   const content = line.replace(/^\d+\.\s*/, '');
                   return (
-                    <li key={lineIndex} className="flex items-start gap-2">
+                    <li key={lineIndex} className="flex items-start gap-3 text-lg text-gray-700">
                       <span className="text-primary mt-1">{content}</span>
                     </li>
                   );
@@ -51,17 +51,17 @@ const BlogContent = ({ content }: BlogContentProps) => {
         if (lines.some(line => line.trim().startsWith('●') || line.trim().startsWith('○'))) {
           const isSubList = lines.some(line => line.trim().startsWith('○'));
           return (
-            <div key={index} className="my-6">
-              <ul className={`space-y-${isSubList ? '2' : '3'}`}>
+            <div key={index} className="my-8">
+              <ul className={`space-y-${isSubList ? '3' : '4'}`}>
                 {lines.map((line, lineIndex) => {
                   const content = line.replace(/^[●○]\s*/, '');
                   const isSubItem = line.trim().startsWith('○');
                   return (
-                    <li key={lineIndex} className={`flex items-start gap-2 ${isSubItem ? 'ml-6' : ''}`}>
+                    <li key={lineIndex} className={`flex items-start gap-3 ${isSubItem ? 'ml-8' : ''} text-lg text-gray-700`}>
                       {isSubItem ? (
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       ) : (
-                        <ListCheck className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <ListCheck className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                       )}
                       <span>{content}</span>
                     </li>
@@ -75,7 +75,7 @@ const BlogContent = ({ content }: BlogContentProps) => {
       
       // Regular paragraphs
       return (
-        <p key={index} className="text-gray-700 leading-relaxed mb-6">
+        <p key={index} className="text-lg text-gray-700 leading-relaxed mb-8">
           {section}
         </p>
       );

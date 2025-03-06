@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ListCheck } from 'lucide-react';
 
 interface TableOfContentsProps {
   content: string;
@@ -18,14 +19,17 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
   if (headings.length === 0) return null;
 
   return (
-    <div className="bg-muted/30 p-4 rounded-lg mb-8">
-      <h2 className="text-lg font-semibold mb-2">Table of Contents</h2>
-      <ul className="space-y-2">
+    <div className="bg-gray-50 p-6 rounded-lg">
+      <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+        <ListCheck className="w-5 h-5 text-primary" />
+        Table of Contents
+      </h2>
+      <ul className="space-y-3">
         {headings.map((heading, index) => (
-          <li key={index}>
+          <li key={index} className="border-l-2 border-primary/20 hover:border-primary pl-4 transition-colors">
             <a 
               href={`#${heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-              className="text-primary hover:underline"
+              className="text-gray-600 hover:text-primary transition-colors"
             >
               {heading}
             </a>
