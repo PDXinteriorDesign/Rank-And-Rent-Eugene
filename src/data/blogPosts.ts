@@ -1,7 +1,128 @@
-
 import { BlogPosts } from "@/types/blog";
 
 export const blogPosts: BlogPosts = {
+  'eugene-roof-maintenance-guide': {
+    title: "Eugene Roof Maintenance Guide: Protect Your Home in Oregon's Climate",
+    content: `Living in Eugene means your roof faces unique challenges from our Pacific Northwest climate. With annual rainfall averaging 47 inches and high humidity levels year-round, proper maintenance isn't just recommended—it's essential for protecting your investment.
+
+The Impact of Eugene's Climate on Your Roof
+Our local weather patterns create specific challenges for homeowners:
+● Annual Rainfall (47+ inches): Creates persistent moisture exposure
+● High Humidity (70-80% average): Promotes moss and algae growth
+● Temperature Fluctuations: Can cause material expansion and contraction
+● UV Exposure: Despite cloud cover, can degrade roofing materials
+○ Summer highs reaching 85°F+
+○ Winter lows around 34°F
+○ Impact on different roofing materials
+
+Essential Maintenance Tasks
+Regular maintenance helps prevent costly repairs:
+
+Professional Inspection Schedule:
+● Bi-annual comprehensive inspections (Spring/Fall)
+● Post-storm damage assessments
+● Preventative maintenance visits
+● Documentation for insurance purposes
+○ Detailed inspection reports
+○ Photo documentation
+○ Professional recommendations
+
+Gutter Maintenance Protocol:
+● Monthly debris removal during fall
+● Downspout clearance checks
+● Alignment verification
+● Water flow testing
+○ Proper drainage assessment
+○ Leak detection
+○ Seal inspection
+
+Moss Prevention Strategies:
+● Zinc or copper strip installation
+● Professional soft-wash treatments
+● Regular debris removal
+● Preventative applications
+○ EPA-approved treatments
+○ Environmentally safe solutions
+○ Long-term prevention methods
+
+Seasonal Maintenance Checklist
+
+Spring Tasks (March-May):
+1. Complete winter damage assessment
+2. Clear accumulated debris
+3. Check for moss growth
+4. Inspect all flashing
+5. Clean gutters thoroughly
+
+Summer Preparations (June-August):
+1. UV damage inspection
+2. Ventilation assessment
+3. Attic temperature check
+4. Clear debris
+5. Check for pest activity
+
+Fall Readiness (September-November):
+1. Comprehensive gutter cleaning
+2. Downspout testing
+3. Leaf guard inspection
+4. Moss treatment application
+5. Storm preparation measures
+
+Winter Protection (December-February):
+1. Ice dam prevention
+2. Snow load monitoring
+3. Emergency repair kit check
+4. Ventilation verification
+5. Attic inspection
+
+Professional vs. DIY Maintenance
+Know when to call experts:
+
+Tasks for Professionals:
+● Complete roof inspections
+● Flashing repairs and replacement
+● Major leak repairs
+● Moss removal and treatment
+● Structural repairs
+
+Safe DIY Tasks:
+● Visual inspections from ground level
+● Gutter cleaning (single-story homes)
+● Debris removal
+● Basic maintenance documentation
+● Regular monitoring
+
+Cost-Benefit Analysis
+Investment in maintenance saves money:
+● Minor repairs: $200-500
+● Major water damage: $5,000+
+● Full roof replacement: $15,000+
+● Regular maintenance: $300-600 annually
+
+Emergency Preparedness
+Be ready for Eugene's weather:
+● Keep emergency contacts handy
+● Stock emergency repair supplies
+● Document previous repairs
+● Maintain insurance information
+● Know warning signs
+
+Local Resources and Support:
+● Eugene Building Department: Permits and regulations
+● Lane County Emergency Services: Storm response
+● Local weather alerts: NOAA notifications
+● Certified contractor listings
+
+Remember: Your roof is your home's first line of defense against Eugene's challenging weather. Regular maintenance isn't just about preventing problems—it's about protecting your investment and ensuring your family's comfort and safety.
+
+Contact us today for a professional inspection and customized maintenance plan tailored to your Eugene home's specific needs.`,
+    date: "2024-03-14",
+    readTime: "8 min read",
+    author: "Mike Wilson",
+    excerpt: "Discover expert strategies to maintain your roof in Eugene's unique climate. Learn about preventing moss, managing heavy rain, and implementing cost-effective maintenance with our comprehensive seasonal checklist.",
+    category: "Maintenance",
+    image: "/images/maintenance.jpg"
+  },
   'professional-roof-inspection-guide': {
     title: "Why Regular Roof Inspections Are Essential for Eugene Homeowners",
     content: `Regular roof inspections are crucial for maintaining your home's integrity and protecting your investment. Let's explore why these inspections are so vital for Eugene homeowners and what they entail.
@@ -261,4 +382,3 @@ Remember, consistent maintenance is key to protecting your investment and ensuri
     image: "/images/maintenance.jpg"
   }
 };
-
