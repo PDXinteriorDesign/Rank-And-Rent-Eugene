@@ -23,6 +23,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Import location pages
 import LocationPage from "./pages/locations/LocationPage";
+import Locations from "./pages/locations/Locations";
 import { CITIES, NEIGHBORHOODS } from "./pages/locations";
 
 const queryClient = new QueryClient({
@@ -44,16 +45,8 @@ const App = () => {
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/services/roof-installation-eugene-oregon" element={<Installation />} />
-                <Route path="/services/roof-repair-eugene-oregon" element={<Repair />} />
-                <Route path="/services/emergency-roof-repair-eugene-oregon" element={<Emergency />} />
-                <Route path="/services/roof-cleaning-eugene-oregon" element={<Cleaning />} />
-                <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
-                <Route path="/roofing-tips" element={<Blog />} />
-                <Route path="/roofing-tips/:slug" element={<BlogPost />} />
-
+                <Route path="/locations" element={<Locations />} />
+                
                 {/* City Routes */}
                 {CITIES.map(city => (
                   <Route 
@@ -71,7 +64,16 @@ const App = () => {
                     element={<LocationPage city={neighborhood} isNeighborhood={true} />}
                   />
                 ))}
-
+                
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/services/roof-installation-eugene-oregon" element={<Installation />} />
+                <Route path="/services/roof-repair-eugene-oregon" element={<Repair />} />
+                <Route path="/services/emergency-roof-repair-eugene-oregon" element={<Emergency />} />
+                <Route path="/services/roof-cleaning-eugene-oregon" element={<Cleaning />} />
+                <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
+                <Route path="/roofing-tips" element={<Blog />} />
+                <Route path="/roofing-tips/:slug" element={<BlogPost />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

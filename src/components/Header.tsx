@@ -30,6 +30,7 @@ const Header = () => {
   };
 
   const otherLinks = [
+    { to: '/locations', label: 'Locations' },
     { to: '/about', label: 'About Us' },
     { to: '/roofing-tips', label: 'Roofing Tips' },
     { to: '/contact', label: 'Contact' },
