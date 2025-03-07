@@ -15,8 +15,8 @@ const LocationHero: React.FC<LocationHeroProps> = ({ city, isNeighborhood }) => 
     <section className="relative py-20 bg-black/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Professional Roofing Services in {location}, OR
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+            Trusted {location}, OR Roofing Contractors
           </h1>
           <p className="text-lg mb-8 text-gray-700">
             Trusted local roofing contractors providing expert installation, repair, and maintenance 
