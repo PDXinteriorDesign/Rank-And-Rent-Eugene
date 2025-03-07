@@ -1,4 +1,3 @@
-
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -21,6 +20,10 @@ const Replacement = lazy(() => import("./pages/services/Replacement"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Import location pages
+import LocationPage from "./pages/locations/LocationPage";
+import { CITIES, NEIGHBORHOODS } from "./pages/locations";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -50,6 +53,25 @@ const App = () => {
                 <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
                 <Route path="/roofing-tips" element={<Blog />} />
                 <Route path="/roofing-tips/:slug" element={<BlogPost />} />
+
+                {/* City Routes */}
+                {CITIES.map(city => (
+                  <Route 
+                    key={city}
+                    path={`/locations/${city.toLowerCase().replace(/ /g, '-')}`}
+                    element={<LocationPage city={city} />}
+                  />
+                ))}
+
+                {/* Neighborhood Routes */}
+                {NEIGHBORHOODS.map(neighborhood => (
+                  <Route 
+                    key={neighborhood}
+                    path={`/locations/${neighborhood.toLowerCase().replace(/ /g, '-')}`}
+                    element={<LocationPage city={neighborhood} isNeighborhood={true} />}
+                  />
+                ))}
+
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
