@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Tool, Clock, CheckCircle } from 'lucide-react';
+import { Shield, Wrench, Clock, CheckCircle } from 'lucide-react';
 
 interface LocationContentProps {
   city: string;
@@ -18,7 +17,7 @@ const LocationContent: React.FC<LocationContentProps> = ({ city, isNeighborhood 
       description: `Fully licensed and insured roofing services in ${location}, protecting your investment`
     },
     {
-      icon: Tool,
+      icon: Wrench,
       title: "Expert Craftsmanship",
       description: `Professional roofing installations and repairs by ${location}'s most experienced roofers`
     },
