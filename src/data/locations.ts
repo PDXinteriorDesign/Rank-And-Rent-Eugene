@@ -15,6 +15,30 @@ export const locations: Location[] = [
     }
   },
   {
+    name: "Coburg",
+    slug: "coburg",
+    type: "city",
+    region: "OR",
+    weatherDesc: "moderate rainfall and seasonal temperature changes",
+    neighborhoods: ["Downtown Coburg", "Industrial District"],
+    meta: {
+      title: "Roofing Services in Coburg, OR | Eugene Roofing NW",
+      description: "Need reliable roofing services in Coburg, OR? Eugene Roofing NW delivers expert roof repair, installation, and maintenance. Contact us for a free estimate!"
+    }
+  },
+  {
+    name: "Creswell",
+    slug: "creswell",
+    type: "city",
+    region: "OR",
+    weatherDesc: "wet winters and mild summers with occasional wind",
+    neighborhoods: ["Downtown Creswell", "Garden Lake Park Area"],
+    meta: {
+      title: "Roofing Services in Creswell, OR | Eugene Roofing NW",
+      description: "Trusted roofing services in Creswell, OR. Eugene Roofing NW provides professional roof repairs, installations, and maintenance. Schedule your free estimate today!"
+    }
+  },
+  {
     name: "Downtown Eugene",
     slug: "downtown-eugene",
     type: "neighborhood",
@@ -26,5 +50,16 @@ export const locations: Location[] = [
       description: "Need expert roofing services in Downtown Eugene, OR? Eugene Roofing NW provides roof repair, installation, and maintenance. Get a free estimate today!"
     }
   },
-  // ... Additional locations will be added similarly
+  {
+    name: "South Eugene",
+    slug: "south-eugene",
+    type: "neighborhood",
+    region: "OR",
+    weatherDesc: "significant rainfall and seasonal storms",
+    neighborhoods: ["Amazon", "College Hill", "Friendly Area"],
+    meta: {
+      title: "South Eugene, OR Roofing Services | Eugene Roofing NW",
+      description: "Professional roofing services in South Eugene, OR. Expert roof repairs, installations, and maintenance by Eugene Roofing NW. Schedule your free estimate!"
+    }
+  }
 ];
