@@ -1,4 +1,3 @@
-
 export const getSchemaMarkup = () => ({
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
@@ -53,7 +52,15 @@ export const getSchemaMarkup = () => ({
     },
     {
       "@type": "City",
-      "name": "Lane County"
+      "name": "Coburg"
+    },
+    {
+      "@type": "City",
+      "name": "Creswell"
+    },
+    {
+      "@type": "City",
+      "name": "Veneta"
     },
     {
       "@type": "City",
@@ -61,7 +68,23 @@ export const getSchemaMarkup = () => ({
     },
     {
       "@type": "City",
+      "name": "Harrisburg"
+    },
+    {
+      "@type": "City",
+      "name": "Elmira"
+    },
+    {
+      "@type": "City",
+      "name": "Lowell"
+    },
+    {
+      "@type": "City",
       "name": "Cottage Grove"
+    },
+    {
+      "@type": "City",
+      "name": "Pleasant Hill"
     }
   ],
   "hasOfferCatalog": {
