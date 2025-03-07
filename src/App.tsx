@@ -21,6 +21,8 @@ const Replacement = lazy(() => import("./pages/services/Replacement"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Locations = lazy(() => import("./pages/locations/Locations"));
+const LocationPage = lazy(() => import("./pages/locations/LocationPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -50,6 +52,8 @@ const App = () => {
                 <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
                 <Route path="/roofing-tips" element={<Blog />} />
                 <Route path="/roofing-tips/:slug" element={<BlogPost />} />
+                <Route path="/locations" element={<Locations />} />
+                <Route path="/locations/:slug" element={<LocationPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
