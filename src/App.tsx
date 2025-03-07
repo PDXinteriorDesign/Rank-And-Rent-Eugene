@@ -1,3 +1,4 @@
+
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -20,17 +21,6 @@ const Replacement = lazy(() => import("./pages/services/Replacement"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Locations = lazy(() => import("./pages/Locations"));
-const DowntownEugene = lazy(() => import("./pages/locations/DowntownEugene"));
-const SouthEugene = lazy(() => import("./pages/locations/SouthEugene"));
-const NorthEugene = lazy(() => import("./pages/locations/NorthEugene"));
-const WestEugene = lazy(() => import("./pages/locations/WestEugene"));
-const EastEugene = lazy(() => import("./pages/locations/EastEugene"));
-const Springfield = lazy(() => import("./pages/locations/Springfield"));
-const CottageGrove = lazy(() => import("./pages/locations/CottageGrove"));
-const JunctionCity = lazy(() => import("./pages/locations/JunctionCity"));
-const Veneta = lazy(() => import("./pages/locations/Veneta"));
-const Lowell = lazy(() => import("./pages/locations/Lowell"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,17 +50,6 @@ const App = () => {
                 <Route path="/services/roof-replacement-eugene-oregon" element={<Replacement />} />
                 <Route path="/roofing-tips" element={<Blog />} />
                 <Route path="/roofing-tips/:slug" element={<BlogPost />} />
-                <Route path="/locations" element={<Locations />} />
-                <Route path="/locations/downtown-eugene" element={<DowntownEugene />} />
-                <Route path="/locations/south-eugene" element={<SouthEugene />} />
-                <Route path="/locations/north-eugene" element={<NorthEugene />} />
-                <Route path="/locations/west-eugene" element={<WestEugene />} />
-                <Route path="/locations/east-eugene" element={<EastEugene />} />
-                <Route path="/locations/springfield" element={<Springfield />} />
-                <Route path="/locations/cottage-grove" element={<CottageGrove />} />
-                <Route path="/locations/junction-city" element={<JunctionCity />} />
-                <Route path="/locations/veneta" element={<Veneta />} />
-                <Route path="/locations/lowell" element={<Lowell />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
