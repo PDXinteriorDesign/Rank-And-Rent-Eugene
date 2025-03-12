@@ -5,10 +5,10 @@ export const getFAQSchema = () => ({
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the average cost of roof repair in Eugene, OR?",
+      "name": "How much does a new roof cost in Eugene, Oregon?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most homeowners in Eugene pay between $5,000 - $12,000 for a roof replacement. The cost depends on materials, roof size, and labor. Minor repairs typically range from $300 to $1,500. We provide detailed, upfront pricing and free estimates for all roofing projects."
+        "text": "The cost of a new roof in Eugene varies depending on factors like size, materials, and complexity. Our residential roofing projects typically range from $8,000 to $20,000. Contact us for a free, detailed estimate specific to your home."
       }
     },
     {
@@ -21,7 +21,7 @@ export const getFAQSchema = () => ({
     },
     {
       "@type": "Question",
-      "name": "Do you offer emergency roofing services in Eugene?",
+      "name": "Do you offer emergency roof repair services in Eugene?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes, we provide 24/7 emergency roof repair services throughout Eugene and Lane County. Our team can typically respond within 2 hours for urgent situations like storm damage or active leaks."
@@ -29,7 +29,7 @@ export const getFAQSchema = () => ({
     },
     {
       "@type": "Question",
-      "name": "What roofing materials work best in Eugene's climate?",
+      "name": "What types of roofing materials do you recommend for Eugene's climate?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "For Eugene's wet climate, we recommend architectural shingles, metal roofing, or slate tiles. These materials offer excellent water resistance and longevity, with warranties ranging from 30-50 years."
