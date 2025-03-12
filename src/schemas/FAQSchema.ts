@@ -5,10 +5,10 @@ export const getFAQSchema = () => ({
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's the average cost to replace a roof in Eugene?",
+      "name": "What is the average cost of roof repair in Eugene, OR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The average cost for roof replacement in Eugene ranges from $8,200 to $14,500, depending on your home's size, roof complexity, and chosen materials. Call us at 541-555-0123 for a free, personalized estimate."
+        "text": "Most homeowners in Eugene pay between $5,000 - $12,000 for a roof replacement. The cost depends on materials, roof size, and labor. Minor repairs typically range from $300 to $1,500. We provide detailed, upfront pricing and free estimates for all roofing projects."
       }
     },
     {
@@ -16,15 +16,15 @@ export const getFAQSchema = () => ({
       "name": "How long does a roof replacement take in Eugene?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most residential roof replacements in Eugene are completed in 2-3 days, weather permitting. Larger or more complex projects may take 4-5 days. We work efficiently while maintaining our high-quality standards."
+        "text": "Typically, a new roof installation takes 1-3 days, depending on size and weather conditions. Larger or more complex projects may take 4-5 days. We work efficiently while maintaining our high-quality standards."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you offer emergency roofing services in Eugene?",
+      "name": "Does EugeneRoofingNW.com offer emergency roofing services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we provide 24/7 emergency roof repair services throughout Eugene and Lane County. Our team typically responds within 2 hours for urgent situations like storm damage or active leaks."
+        "text": "Yes! We provide 24/7 emergency roof repair services in Eugene and surrounding areas. Our emergency response team typically arrives within 2 hours for urgent situations like storm damage or active leaks."
       }
     },
     {

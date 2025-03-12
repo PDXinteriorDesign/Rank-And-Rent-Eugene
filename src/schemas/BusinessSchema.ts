@@ -3,7 +3,7 @@ export const getSchemaMarkup = () => ({
   "@type": "RoofingContractor",
   "name": "Eugene Roofing NW",
   "image": "https://eugeneroofingnw.com/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png",
-  "description": "Eugene's trusted roofing experts specializing in residential & commercial roofing. Professional repairs, installations & moss removal with 24/7 emergency service. Licensed & insured local roofers serving Eugene, Oregon.",
+  "description": "Eugene's premier roofing contractor specializing in residential & commercial roofing. Expert repairs, installations & 24/7 emergency service. GAF certified, fully licensed & insured local roofers serving Eugene and Lane County since 2003. Specializing in roof repair, replacement, and maintenance with a focus on quality materials and superior craftsmanship.",
   "@id": "https://eugeneroofingnw.com",
   "url": "https://eugeneroofingnw.com",
   "telephone": "+1-541-555-0123",
@@ -136,7 +136,7 @@ export const getSchemaMarkup = () => ({
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "87",
+    "reviewCount": "200",
     "bestRating": "5",
     "worstRating": "1"
   }
