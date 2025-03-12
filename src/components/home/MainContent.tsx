@@ -81,14 +81,18 @@ const MainContent = () => {
 
           <div className="space-y-8">
             <img 
-              src="/lovable-uploads/5997350c-7571-42cc-b7c1-6b57b007c504.png" 
-              alt="Professional roofing services in Eugene"
+              src="/lovable-uploads/2d103f99-a3cc-4a1c-a537-ef291d77ec26.png" 
+              alt="Elegant two-story home with premium architectural shingles and professional roofing installation in Eugene"
               className="rounded-lg shadow-lg w-full object-cover h-[400px]"
+              width="800"
+              height="400"
             />
             <img 
-              src="/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png" 
-              alt="Quality roofing installation"
+              src="/lovable-uploads/d51d454d-e055-4fd2-a201-c8ad96c1dac4.png" 
+              alt="Modern ranch-style home showcasing expert roofing craftsmanship with durable materials in Eugene, Oregon"
               className="rounded-lg shadow-lg w-full object-cover h-[400px]"
+              width="800"
+              height="400"
             />
           </div>
         </div>
