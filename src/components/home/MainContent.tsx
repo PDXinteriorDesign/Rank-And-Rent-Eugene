@@ -56,26 +56,7 @@ const MainContent = () => {
                 All of our services come backed by industry-leading warranties and are performed using the highest-quality roofing materials available today.
               </p>
 
-              <h2 className="text-2xl font-semibold text-primary mb-4">
-                Why Lane County Homeowners Trust Eugene Roofing NW
-              </h2>
-
-              <div className="grid gap-4 mb-8">
-                {[
-                  ['🏠 Locally Owned & Operated', 'Deep roots in Eugene & surrounding areas'],
-                  ['🔨 Certified & Experienced Contractors', 'Over 25 years of hands-on roofing expertise'],
-                  ['🛡 Durable & Long-Lasting Materials', 'Premium roofing products built for the PNW climate'],
-                  ['⭐ Customer-First Approach', 'Transparent pricing, honest assessments & top-tier service'],
-                  ['✅ Fully Licensed & Insured', 'Your home\'s protection is our top priority']
-                ].map(([title, desc], index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900">{title}</h3>
-                      <p className="text-gray-700">{desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+             
             </div>
           </div>
 
