@@ -16,15 +16,15 @@ export const getFAQSchema = () => ({
       "name": "How long does a roof replacement take in Eugene?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Typically, a new roof installation takes 1-3 days, depending on size and weather conditions. Larger or more complex projects may take 4-5 days. We work efficiently while maintaining our high-quality standards."
+        "text": "Most residential roof replacements in Eugene can be completed in 2-3 days, weather permitting. Larger or more complex projects may take 4-5 days. We work efficiently while maintaining our high-quality standards."
       }
     },
     {
       "@type": "Question",
-      "name": "Does EugeneRoofingNW.com offer emergency roofing services?",
+      "name": "Do you offer emergency roofing services in Eugene?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! We provide 24/7 emergency roof repair services in Eugene and surrounding areas. Our emergency response team typically arrives within 2 hours for urgent situations like storm damage or active leaks."
+        "text": "Yes, we provide 24/7 emergency roof repair services throughout Eugene and Lane County. Our team can typically respond within 2 hours for urgent situations like storm damage or active leaks."
       }
     },
     {

@@ -1,16 +1,16 @@
+
 export const getSchemaMarkup = () => ({
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
   "name": "Eugene Roofing NW",
-  "image": "https://eugeneroofingnw.com/lovable-uploads/b161862e-e6ae-4e2d-ac94-f4d465c5d06d.png",
-  "description": "Eugene's premier roofing contractor specializing in residential & commercial roofing. Expert repairs, installations & 24/7 emergency service. GAF certified, fully licensed & insured local roofers serving Eugene and Lane County since 2003. Specializing in roof repair, replacement, and maintenance with a focus on quality materials and superior craftsmanship.",
-  "@id": "https://eugeneroofingnw.com",
-  "url": "https://eugeneroofingnw.com",
+  "image": "/lovable-uploads/2d103f99-a3cc-4a1c-a537-ef291d77ec26.png",
+  "description": "Eugene's premier roofing contractor offering expert installation, repair & maintenance. 25+ years of experience, lifetime warranties & eco-friendly solutions.",
+  "@id": "https://www.eugeneroofingnw.com/#organization",
+  "url": "https://www.eugeneroofingnw.com",
   "telephone": "+1-541-555-0123",
-  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Main Street",
+    "streetAddress": "1234 Oak Street",
     "addressLocality": "Eugene",
     "addressRegion": "OR",
     "postalCode": "97401",
@@ -21,72 +21,24 @@ export const getSchemaMarkup = () => ({
     "latitude": 44.0521,
     "longitude": -123.0868
   },
+  "areaServed": ["Eugene", "Springfield", "Lane County"],
+  "priceRange": "$$",
   "sameAs": [
     "https://www.facebook.com/eugeneroofingnw",
-    "https://www.instagram.com/eugeneroofingnw",
-    "https://www.linkedin.com/company/eugene-roofing-nw"
+    "https://www.instagram.com/eugeneroofingnw"
   ],
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "07:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "16:00"
-    }
-  ],
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Eugene",
-      "sameAs": "https://en.wikipedia.org/wiki/Eugene,_Oregon"
-    },
-    {
-      "@type": "City",
-      "name": "Springfield"
-    },
-    {
-      "@type": "City",
-      "name": "Coburg"
-    },
-    {
-      "@type": "City",
-      "name": "Creswell"
-    },
-    {
-      "@type": "City",
-      "name": "Veneta"
-    },
-    {
-      "@type": "City",
-      "name": "Junction City"
-    },
-    {
-      "@type": "City",
-      "name": "Harrisburg"
-    },
-    {
-      "@type": "City",
-      "name": "Elmira"
-    },
-    {
-      "@type": "City",
-      "name": "Lowell"
-    },
-    {
-      "@type": "City",
-      "name": "Cottage Grove"
-    },
-    {
-      "@type": "City",
-      "name": "Pleasant Hill"
-    }
-  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Roofing Services",
@@ -95,49 +47,26 @@ export const getSchemaMarkup = () => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "name": "Roof Installation",
+          "description": "Professional roof installation services with premium materials"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
           "name": "Roof Repair",
-          "description": "Expert repair services for leaks, storm damage, and moss removal in Eugene's wet climate."
+          "description": "Expert roof repair and maintenance services"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "New Roof Installation",
-          "description": "Premium roof installations using weather-resistant materials designed for Oregon weather."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Emergency Roofing Services",
-          "description": "24/7 emergency roofing repair services in Eugene and surrounding areas."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Roof Cleaning",
-          "description": "Professional roof cleaning and moss removal services."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Roof Replacement",
-          "description": "Complete roof replacement services with premium materials and expert installation."
+          "name": "Emergency Roofing",
+          "description": "24/7 emergency roofing services in Eugene"
         }
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "200",
-    "bestRating": "5",
-    "worstRating": "1"
   }
 });
