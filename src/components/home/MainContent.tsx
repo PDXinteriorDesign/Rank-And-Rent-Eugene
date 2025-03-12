@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Shield, Award } from 'lucide-react';
+import { Star, Shield, Award, Wrench } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 
