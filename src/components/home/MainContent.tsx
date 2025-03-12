@@ -15,7 +15,7 @@ const MainContent = () => {
       </div>
       
       <h1 id="main-content-title" className="text-4xl md:text-5xl font-bold text-center mb-12">
-        Eugene's Premier Roofing Experts
+        Eugene&apos;s Premier Roofing Experts
       </h1>
 
       <div className="max-w-7xl mx-auto">
@@ -25,7 +25,7 @@ const MainContent = () => {
               <h2 className="text-3xl font-semibold text-primary mb-6">Your Trusted Local Roofing Partner</h2>
               
               <h3 className="text-2xl font-medium text-primary mb-4">
-                Eugene Roofing NW | Trusted Roofing Experts in Eugene & Lane County
+                Eugene Roofing NW | Trusted Roofing Experts in Eugene &amp; Lane County
               </h3>
               
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -37,7 +37,7 @@ const MainContent = () => {
               </p>
 
               <h2 className="text-2xl font-semibold text-primary mb-4">
-                Comprehensive Roofing & Exterior Services in Eugene
+                Comprehensive Roofing &amp; Exterior Services in Eugene
               </h2>
               
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -46,12 +46,12 @@ const MainContent = () => {
 
               <ul className="space-y-2 mb-8">
                 {[
-                  'Roof Replacement & Installation – Asphalt, metal, tile & flat roofing solutions.',
-                  'Roof Repairs – Storm damage, leak repairs & general maintenance.',
-                  'Siding Installation & Repair – Durable materials built to withstand Oregon's climate.',
-                  'Gutter Installation & Maintenance – Protect your home from water damage.',
-                  'Windows & Doors – Energy-efficient upgrades to enhance your property.',
-                  'Exterior Painting – A fresh coat to improve curb appeal & longevity.'
+                  'Roof Replacement & Installation – Asphalt, metal, tile & flat roofing solutions',
+                  'Roof Repairs – Storm damage, leak repairs & general maintenance',
+                  'Siding Installation & Repair – Durable materials built to withstand Oregon\'s climate',
+                  'Gutter Installation & Maintenance – Protect your home from water damage',
+                  'Windows & Doors – Energy-efficient upgrades to enhance your property',
+                  'Exterior Painting – A fresh coat to improve curb appeal & longevity'
                 ].map((service, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -74,7 +74,7 @@ const MainContent = () => {
                   ['🔨 Certified & Experienced Contractors', 'Over 25 years of hands-on roofing expertise'],
                   ['🛡 Durable & Long-Lasting Materials', 'Premium roofing products built for the PNW climate'],
                   ['⭐ Customer-First Approach', 'Transparent pricing, honest assessments & top-tier service'],
-                  ['✅ Fully Licensed & Insured', 'Your home's protection is our top priority']
+                  ['✅ Fully Licensed & Insured', 'Your home\'s protection is our top priority']
                 ].map(([title, desc], index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="flex-1">
@@ -107,7 +107,7 @@ const MainContent = () => {
           </h2>
           
           <p className="text-gray-700 mb-4">
-            Founded in 1996, Eugene Roofing NW started as a small, family-run business and has grown into one of Lane County's most trusted roofing companies. Over the years, we've built our reputation on quality work, reliability, and customer referrals, earning us the trust of homeowners and businesses across Oregon.
+            Founded in 1996, Eugene Roofing NW started as a small, family-run business and has grown into one of Lane County&apos;s most trusted roofing companies. Over the years, we&apos;ve built our reputation on quality work, reliability, and customer referrals, earning us the trust of homeowners and businesses across Oregon.
           </p>
           
           <p className="text-gray-700 mb-8">
@@ -118,7 +118,7 @@ const MainContent = () => {
             <Card className="p-6">
               <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                Serving Eugene, Springfield & Surrounding Areas
+                Serving Eugene, Springfield &amp; Surrounding Areas
               </h3>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
                 <li>Eugene, OR</li>
