@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Shield, Award, Wrench, Phone, CheckCircle2, MapPin } from 'lucide-react';
+import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 import { Button } from "@/components/ui/button";
@@ -7,13 +7,6 @@ import { Button } from "@/components/ui/button";
 const MainContent = () => {
   return (
     <section className="container mx-auto px-4 py-16 space-y-12" aria-labelledby="main-content-title">
-      <div className="flex items-center justify-center gap-2 mb-8">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-        ))}
-        <span className="text-gray-600 ml-2">(200+ Reviews)</span>
-      </div>
-      
       <h1 id="main-content-title" className="text-4xl md:text-5xl font-bold text-center mb-12">
         Eugene&apos;s Premier Roofing Experts
       </h1>
@@ -22,11 +15,9 @@ const MainContent = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="prose prose-lg">
-              <h2 className="text-3xl font-semibold text-primary mb-6">Your Trusted Local Roofing Partner</h2>
-              
-              <h3 className="text-2xl font-medium text-primary mb-4">
+              <h2 className="text-3xl font-medium text-primary mb-6">
                 Eugene Roofing NW | Trusted Roofing Experts in Eugene &amp; Lane County
-              </h3>
+              </h2>
               
               <p className="text-gray-700 leading-relaxed mb-4">
                 For over 25 years, Eugene Roofing NW has been the go-to roofing company for homeowners and businesses in Eugene, Springfield, and throughout Lane County. We are committed to delivering exceptional craftsmanship, superior materials, and customer-first service, making us a trusted name in the local roofing industry.
