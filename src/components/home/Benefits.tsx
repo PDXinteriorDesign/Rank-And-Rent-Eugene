@@ -26,27 +26,7 @@ const Benefits = () => {
     }
   ];
 
-  return (
-    <section className="py-16 bg-white" aria-labelledby="benefits-title">
-      <div className="container mx-auto px-4">
-        <h2 id="benefits-title" className="text-3xl font-bold text-center mb-12">
-          Why Choose Eugene Roofing NW?
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={benefit.title}
-              className="text-center p-6 rounded-lg border border-gray-100 hover:border-secondary/20 transition-all duration-300"
-            >
-              <benefit.icon className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 };
 
 export default Benefits;

@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/home/Hero';
 import MainContent from '@/components/home/MainContent';
 import Services from '@/components/home/Services';
-import Benefits from '@/components/home/Benefits';
 import HomeCTA from '@/components/home/HomeCTA';
 import FAQ from '@/components/home/FAQ';
 import Testimonials from '@/components/home/Testimonials';
@@ -44,7 +42,6 @@ const Index = () => {
           <article className="space-y-16">
             <MainContent />
             <Services />
-            <Benefits />
             <HomeCTA />
             <FAQ />
             <Testimonials />
