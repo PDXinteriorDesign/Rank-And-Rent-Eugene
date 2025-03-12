@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Star, Shield, Award, Wrench, Phone, CheckCircle2, MapPin } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
+import { Button } from "@/components/ui/button";
 
 const MainContent = () => {
   return (
@@ -138,9 +138,13 @@ const MainContent = () => {
               <p className="text-gray-700 mb-4">
                 Looking for expert roofing services near you? Contact Eugene Roofing NW today!
               </p>
-              <p className="text-primary font-semibold">
+              <p className="text-primary font-semibold mb-4">
                 Get a Free Quote Today! Call or request an estimate online.
               </p>
+              <Button className="w-full" size="lg">
+                <Phone className="mr-2 h-4 w-4" />
+                Get a Free Quote Today
+              </Button>
             </Card>
           </div>
         </div>
