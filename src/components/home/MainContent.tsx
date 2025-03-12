@@ -1,9 +1,9 @@
-
 import React from 'react';
-import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check } from 'lucide-react';
+import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check, ArrowRight } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const MainContent = () => {
   return (
@@ -136,7 +136,7 @@ const MainContent = () => {
                 <MapPin className="w-5 h-5 text-primary" />
                 Serving Eugene, Springfield &amp; Surrounding Areas
               </h3>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
                 <li>Eugene, OR</li>
                 <li>Springfield, OR</li>
                 <li>Cottage Grove, OR</li>
@@ -144,6 +144,16 @@ const MainContent = () => {
                 <li>Veneta, OR</li>
                 <li>Other Lane County Communities</li>
               </ul>
+              <Button 
+                variant="outline" 
+                className="w-full"
+                asChild
+              >
+                <Link to="/locations" className="flex items-center justify-center">
+                  View More Locations
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </Card>
 
             <Card className="p-6">
