@@ -1,6 +1,7 @@
 import React from 'react';
-import { Star, Shield, Award, Wrench } from 'lucide-react';
+import { Star, Shield, Award } from 'lucide-react';
 import { Card } from "@/components/ui/card";
+import RoofingProcess from './RoofingProcess';
 
 const MainContent = () => {
   return (
@@ -59,14 +60,6 @@ const MainContent = () => {
             </Card>
           </div>
 
-          {/* Process Section */}
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-            <h2 className="text-3xl font-semibold mb-4 text-primary">Our Roofing Process – What to Expect</h2>
-            <p className="text-gray-700 leading-relaxed">
-              When you choose Eugene Roofing NW, you're partnering with a company that values transparency and communication. Our process begins with a thorough inspection and detailed consultation, followed by a comprehensive proposal that outlines every aspect of your roofing project. We maintain clear communication throughout the installation or repair process, ensuring you're informed and comfortable every step of the way.
-            </p>
-          </div>
-
           {/* Warning Signs Section */}
           <div className="bg-muted rounded-lg p-6">
             <h3 className="flex items-center gap-2 text-xl font-semibold mb-3">
@@ -95,6 +88,8 @@ const MainContent = () => {
           </div>
         </div>
       </div>
+
+      <RoofingProcess />
     </section>
   );
 };
