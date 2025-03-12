@@ -145,7 +145,7 @@ const MainContent = () => {
                 <li>Other Lane County Communities</li>
               </ul>
               <Button 
-                variant="outline" 
+                variant="default"
                 className="w-full"
                 asChild
               >
