@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Wrench, Clock } from 'lucide-react';
@@ -72,15 +71,6 @@ const Services = () => {
               </Link>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <h3 className="text-2xl font-semibold mb-6">Ready to Get Started?</h3>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary/90 transition-colors"
-          >
-            Get Your Free Estimate Today
-          </Link>
         </div>
       </div>
     </section>
