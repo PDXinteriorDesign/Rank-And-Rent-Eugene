@@ -141,9 +141,19 @@ const MainContent = () => {
               <p className="text-primary font-semibold mb-4">
                 Get a Free Quote Today! Call or request an estimate online.
               </p>
-              <Button className="w-full" size="lg">
-                <Phone className="mr-2 h-4 w-4" />
-                Get a Free Quote Today
+              <Button 
+                className="w-full" 
+                size="lg"
+                asChild
+              >
+                <a 
+                  href="https://share-na2.hsforms.com/2kBv8I8IESvG_YdjJ25NKlA401s19"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Get a Free Quote Today
+                </a>
               </Button>
             </Card>
           </div>
