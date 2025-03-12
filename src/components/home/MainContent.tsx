@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Star, Shield, Award, Tool } from 'lucide-react';
+import { Star, Shield, Award, Wrench } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 
 const MainContent = () => {
@@ -71,7 +70,7 @@ const MainContent = () => {
           {/* Warning Signs Section */}
           <div className="bg-muted rounded-lg p-6">
             <h3 className="flex items-center gap-2 text-xl font-semibold mb-3">
-              <Tool className="w-5 h-5 text-primary" />
+              <Wrench className="w-5 h-5 text-primary" />
               Signs You Need a Roof Replacement or Repair
             </h3>
             <p className="text-gray-700">
