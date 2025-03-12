@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin } from 'lucide-react';
+import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 import { Button } from "@/components/ui/button";
@@ -89,6 +90,30 @@ const MainContent = () => {
               alt="Quality roofing installation"
               className="rounded-lg shadow-lg w-full object-cover h-[400px]"
             />
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold text-primary mb-6">
+            Why Lane County Homeowners Trust Eugene Roofing NW
+          </h2>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              ['Locally Owned & Operated', 'Deep roots in Eugene & surrounding areas'],
+              ['Certified & Experienced Contractors', 'Over 25 years of hands-on roofing expertise'],
+              ['Durable & Long-Lasting Materials', 'Premium roofing products built for the PNW climate'],
+              ['Customer-First Approach', 'Transparent pricing, honest assessments & top-tier service'],
+              ['Fully Licensed & Insured', 'Your home\'s protection is our top priority']
+            ].map(([title, desc], index) => (
+              <div key={index} className="flex items-start gap-3 p-4">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-gray-900">{title}</h3>
+                  <p className="text-gray-700">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
