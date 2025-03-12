@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Star, Shield, Award, Wrench } from 'lucide-react';
+import { Star, Shield, Award, Wrench, Phone, CheckCircle2, MapPin } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 
@@ -23,49 +24,66 @@ const MainContent = () => {
             <div className="prose prose-lg">
               <h2 className="text-3xl font-semibold text-primary mb-6">Your Trusted Local Roofing Partner</h2>
               
+              <h3 className="text-2xl font-medium text-primary mb-4">
+                Eugene Roofing NW | Trusted Roofing Experts in Eugene & Lane County
+              </h3>
+              
               <p className="text-gray-700 leading-relaxed mb-4">
-                Welcome to Eugene Roofing NW – where quality craftsmanship meets unmatched customer service. For over 20 years, we've been protecting Eugene homes and businesses with expert roofing solutions.
+                For over 25 years, Eugene Roofing NW has been the go-to roofing company for homeowners and businesses in Eugene, Springfield, and throughout Lane County. We are committed to delivering exceptional craftsmanship, superior materials, and customer-first service, making us a trusted name in the local roofing industry.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-8">
-                From routine maintenance to complete roof replacements, our team brings the expertise, dedication, and attention to detail your property deserves.
+                As a locally owned and operated roofing contractor, we take pride in helping our fellow Oregonians protect their homes with high-quality roofing, siding, and gutter services. Whether you need a full roof replacement, emergency roof repair, or preventative maintenance, our experienced team ensures a seamless, stress-free experience.
               </p>
 
-              <h2 className="text-3xl font-semibold text-primary mb-6">Complete Roofing Solutions</h2>
+              <h2 className="text-2xl font-semibold text-primary mb-4">
+                Comprehensive Roofing & Exterior Services in Eugene
+              </h2>
               
               <p className="text-gray-700 leading-relaxed mb-4">
-                Whether you need repairs for a leaky roof or it's time for a full replacement, we've got you covered. Our comprehensive services include:
+                At Eugene Roofing NW, we go beyond just roofing. Our team specializes in:
               </p>
 
-              <ul className="list-disc pl-6 mb-8 text-gray-700 space-y-2">
-                <li>Residential roof repairs and replacements</li>
-                <li>Commercial roofing solutions</li>
-                <li>Emergency roof repairs</li>
-                <li>Preventive maintenance</li>
-                <li>Roof inspections and assessments</li>
+              <ul className="space-y-2 mb-8">
+                {[
+                  'Roof Replacement & Installation – Asphalt, metal, tile & flat roofing solutions.',
+                  'Roof Repairs – Storm damage, leak repairs & general maintenance.',
+                  'Siding Installation & Repair – Durable materials built to withstand Oregon's climate.',
+                  'Gutter Installation & Maintenance – Protect your home from water damage.',
+                  'Windows & Doors – Energy-efficient upgrades to enhance your property.',
+                  'Exterior Painting – A fresh coat to improve curb appeal & longevity.'
+                ].map((service, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{service}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
 
-            <div className="space-y-6">
-              <Card className="p-6">
-                <h3 className="flex items-center gap-2 text-xl font-semibold mb-3">
-                  <Shield className="w-5 h-5 text-primary" />
-                  Licensed & Factory-Certified
-                </h3>
-                <p className="text-gray-700">
-                  Our team holds certifications from leading manufacturers like GAF and CertainTeed, ensuring you receive the highest quality materials and installation.
-                </p>
-              </Card>
+              <p className="text-gray-700 italic mb-8">
+                All of our services come backed by industry-leading warranties and are performed using the highest-quality roofing materials available today.
+              </p>
 
-              <Card className="p-6">
-                <h3 className="flex items-center gap-2 text-xl font-semibold mb-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  Local Climate Expertise
-                </h3>
-                <p className="text-gray-700">
-                  We understand Eugene's unique weather challenges and design our roofing solutions specifically for our local climate.
-                </p>
-              </Card>
+              <h2 className="text-2xl font-semibold text-primary mb-4">
+                Why Lane County Homeowners Trust Eugene Roofing NW
+              </h2>
+
+              <div className="grid gap-4 mb-8">
+                {[
+                  ['🏠 Locally Owned & Operated', 'Deep roots in Eugene & surrounding areas'],
+                  ['🔨 Certified & Experienced Contractors', 'Over 25 years of hands-on roofing expertise'],
+                  ['🛡 Durable & Long-Lasting Materials', 'Premium roofing products built for the PNW climate'],
+                  ['⭐ Customer-First Approach', 'Transparent pricing, honest assessments & top-tier service'],
+                  ['✅ Fully Licensed & Insured', 'Your home's protection is our top priority']
+                ].map(([title, desc], index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900">{title}</h3>
+                      <p className="text-gray-700">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -83,23 +101,48 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="mt-12 bg-muted rounded-lg p-6">
-          <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
-            <Wrench className="w-5 h-5 text-primary" />
-            Know When It's Time for Roofing Service
-          </h3>
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-primary mb-6">
+            Trusted Roofing Experts Since 1996
+          </h2>
           
           <p className="text-gray-700 mb-4">
-            Don't wait for a leak to appear before addressing roofing issues. Watch for these common warning signs:
+            Founded in 1996, Eugene Roofing NW started as a small, family-run business and has grown into one of Lane County's most trusted roofing companies. Over the years, we've built our reputation on quality work, reliability, and customer referrals, earning us the trust of homeowners and businesses across Oregon.
+          </p>
+          
+          <p className="text-gray-700 mb-8">
+            As a third-generation roofing company, we remain committed to providing top-notch roofing solutions that stand the test of time. Whether you need a new roof or a quick repair, our team is ready to deliver excellence.
           </p>
 
-          <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-            <li>Missing or curling shingles</li>
-            <li>Water stains on your ceiling</li>
-            <li>Excessive granules in gutters</li>
-            <li>Visible daylight through roof boards</li>
-            <li>Sagging roof deck</li>
-          </ul>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
+                <MapPin className="w-5 h-5 text-primary" />
+                Serving Eugene, Springfield & Surrounding Areas
+              </h3>
+              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                <li>Eugene, OR</li>
+                <li>Springfield, OR</li>
+                <li>Cottage Grove, OR</li>
+                <li>Junction City, OR</li>
+                <li>Veneta, OR</li>
+                <li>Other Lane County Communities</li>
+              </ul>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
+                <Phone className="w-5 h-5 text-primary" />
+                Contact Us
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Looking for expert roofing services near you? Contact Eugene Roofing NW today!
+              </p>
+              <p className="text-primary font-semibold">
+                Get a Free Quote Today! Call or request an estimate online.
+              </p>
+            </Card>
+          </div>
         </div>
       </div>
 
