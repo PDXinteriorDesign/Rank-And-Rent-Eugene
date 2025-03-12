@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -24,8 +25,7 @@ const Hero = () => {
             Expert Roofing Services in Eugene, Oregon
           </h1>
           <p className="text-lg text-gray-100 mb-8">
-            Specializing in expert roof repairs, installations, and maintenance. 
-            GAF & CertainTeed certified contractors with over 20 years of experience serving Eugene homeowners.
+            Residential & Commercial Roofing, Siding, & Gutters
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="flex items-center justify-center gap-2 text-white">
