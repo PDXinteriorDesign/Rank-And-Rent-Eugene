@@ -1,11 +1,12 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Shield, Clock, MapPin, Star, Trophy } from 'lucide-react';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 const Hero = () => {
   const navigate = useNavigate();
+  const scrollToTopAndNavigate = useScrollTop();
 
   return (
     <section 
@@ -59,7 +60,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white"
-              onClick={() => navigate('/services/roof-installation-eugene-oregon')}
+              onClick={() => scrollToTopAndNavigate('/services/roof-installation-eugene-oregon')}
             >
               View Roofing Services
             </Button>

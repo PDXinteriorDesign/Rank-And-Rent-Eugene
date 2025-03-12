@@ -2,6 +2,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ServiceNavigation } from './ServiceNavigation';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 export const otherLinks = [
   { to: '/locations', label: 'Locations' },
@@ -13,6 +14,7 @@ export const otherLinks = [
 export const NavigationLinks = () => {
   const isMobile = useIsMobile();
   const location = useLocation();
+  const scrollToTopAndNavigate = useScrollTop();
 
   if (isMobile) {
     return (
@@ -22,15 +24,15 @@ export const NavigationLinks = () => {
           <ServiceNavigation />
         </div>
         {otherLinks.map((link) => (
-          <Link
+          <button
             key={link.to}
-            to={link.to}
+            onClick={() => scrollToTopAndNavigate(link.to)}
             className={`block py-2 text-gray-600 hover:text-primary transition-colors ${
               location.pathname === link.to ? 'text-primary font-semibold' : ''
             }`}
           >
             {link.label}
-          </Link>
+          </button>
         ))}
       </>
     );
@@ -40,15 +42,15 @@ export const NavigationLinks = () => {
     <>
       <ServiceNavigation />
       {otherLinks.map((link) => (
-        <Link
+        <button
           key={link.to}
-          to={link.to}
+          onClick={() => scrollToTopAndNavigate(link.to)}
           className={`text-white hover:text-white/80 transition-colors ${
             location.pathname === link.to ? 'font-semibold' : ''
           }`}
         >
           {link.label}
-        </Link>
+        </button>
       ))}
     </>
   );

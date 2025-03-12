@@ -1,6 +1,6 @@
-
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,6 +24,7 @@ export const serviceCategories = {
 
 export const ServiceNavigation = () => {
   const location = useLocation();
+  const scrollToTopAndNavigate = useScrollTop();
   
   return (
     <DropdownMenu>
@@ -36,14 +37,14 @@ export const ServiceNavigation = () => {
             <span className="px-2 text-sm font-semibold text-gray-500">Repair</span>
             {serviceCategories.repair.map((link) => (
               <DropdownMenuItem key={link.to}>
-                <Link
-                  to={link.to}
-                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 ${
+                <button
+                  onClick={() => scrollToTopAndNavigate(link.to)}
+                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 text-left ${
                     location.pathname === link.to ? 'text-primary font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {link.label}
-                </Link>
+                </button>
               </DropdownMenuItem>
             ))}
           </div>
@@ -51,14 +52,14 @@ export const ServiceNavigation = () => {
             <span className="px-2 text-sm font-semibold text-gray-500">Installation</span>
             {serviceCategories.installation.map((link) => (
               <DropdownMenuItem key={link.to}>
-                <Link
-                  to={link.to}
-                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 ${
+                <button
+                  onClick={() => scrollToTopAndNavigate(link.to)}
+                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 text-left ${
                     location.pathname === link.to ? 'text-primary font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {link.label}
-                </Link>
+                </button>
               </DropdownMenuItem>
             ))}
           </div>
@@ -66,14 +67,14 @@ export const ServiceNavigation = () => {
             <span className="px-2 text-sm font-semibold text-gray-500">Maintenance</span>
             {serviceCategories.maintenance.map((link) => (
               <DropdownMenuItem key={link.to}>
-                <Link
-                  to={link.to}
-                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 ${
+                <button
+                  onClick={() => scrollToTopAndNavigate(link.to)}
+                  className={`w-full px-2 py-1 rounded hover:bg-gray-100 text-left ${
                     location.pathname === link.to ? 'text-primary font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {link.label}
-                </Link>
+                </button>
               </DropdownMenuItem>
             ))}
           </div>
