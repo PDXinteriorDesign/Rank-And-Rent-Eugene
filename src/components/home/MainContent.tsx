@@ -1,11 +1,15 @@
+
 import React from 'react';
 import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check, ArrowRight } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 const MainContent = () => {
+  const scrollToTopAndNavigate = useScrollTop();
+
   return (
     <section className="container mx-auto px-4 py-16 space-y-12" aria-labelledby="main-content-title">
       <h1 id="main-content-title" className="text-4xl md:text-5xl font-bold text-center mb-12">
@@ -25,7 +29,7 @@ const MainContent = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-8">
-                As a locally owned and operated roofing contractor, we take pride in helping our fellow Oregonians protect their homes with high-quality roofing, siding, and gutter services. Whether you need a full roof replacement, emergency roof repair, or preventative maintenance, our experienced team ensures a seamless, stress-free experience.
+                As a locally owned and operated roofing contractor, we take pride in helping our fellow Oregonians protect their homes with high-quality roofing, siding, and gutter services. Whether you need a full <button onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')} className="text-primary font-medium hover:underline">roof replacement</button>, emergency <button onClick={() => scrollToTopAndNavigate('/services/roof-repair-eugene-oregon')} className="text-primary font-medium hover:underline">roof repair</button>, or preventative maintenance, our experienced team ensures a seamless, stress-free experience.
               </p>
 
               <h2 className="text-2xl font-semibold text-primary mb-4">
@@ -38,8 +42,8 @@ const MainContent = () => {
 
               <ul className="space-y-2 mb-8">
                 {[
-                  'Roof Replacement & Installation – Asphalt, metal, tile & flat roofing solutions',
-                  'Roof Repairs – Storm damage, leak repairs & general maintenance',
+                  <>Roof Replacement & Installation – <button onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')} className="text-primary font-medium hover:underline">Premium roof replacement in Eugene</button> with asphalt, metal, tile & flat roofing solutions</>,
+                  <>Roof Repairs – <button onClick={() => scrollToTopAndNavigate('/services/roof-repair-eugene-oregon')} className="text-primary font-medium hover:underline">Roof repair</button> for storm damage, leak repairs & general maintenance</>,
                   'Siding Installation & Repair – Durable materials built to withstand Oregon\'s climate',
                   'Gutter Installation & Maintenance – Protect your home from water damage',
                   'Windows & Doors – Energy-efficient upgrades to enhance your property',
@@ -112,7 +116,7 @@ const MainContent = () => {
           </p>
           
           <p className="text-gray-700 mb-8">
-            As a third-generation roofing company, we remain committed to providing top-notch roofing solutions that stand the test of time. Whether you need a new roof or a quick repair, our team is ready to deliver excellence.
+            As a third-generation roofing company, we remain committed to providing top-notch roofing solutions that stand the test of time. With an <button onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')} className="text-primary font-medium hover:underline">average roof replacement cost in Eugene</button> that's competitive and fair, whether you need a <button onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')} className="text-primary font-medium hover:underline">new roof</button> or a quick <button onClick={() => scrollToTopAndNavigate('/services/roof-repair-eugene-oregon')} className="text-primary font-medium hover:underline">repair</button>, our team is ready to deliver excellence.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">

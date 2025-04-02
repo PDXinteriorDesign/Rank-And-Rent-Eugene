@@ -1,8 +1,12 @@
+
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 const RepairHero = () => {
+  const scrollToTopAndNavigate = useScrollTop();
+  
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-muted to-white">
       <div className="container mx-auto px-4">
@@ -13,7 +17,7 @@ const RepairHero = () => {
           <p className="text-lg text-gray-600 mb-8">
             Whether it's minor leaks, storm damage, or aging shingles, our professional roof repair services 
             are designed to keep your home safe and secure. We understand Oregon's unique weather conditions 
-            and provide tailored solutions to ensure your roof withstands the test of time.
+            and provide tailored solutions to ensure your roof withstands the test of time. For major damage, consider our <button onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')} className="text-primary font-medium hover:underline">premium roof replacement in Eugene</button> services.
           </p>
           <div className="flex gap-4 justify-center">
             <Button 

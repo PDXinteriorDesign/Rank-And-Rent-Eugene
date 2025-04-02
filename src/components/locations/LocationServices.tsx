@@ -2,12 +2,15 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 interface LocationServicesProps {
   city: string;
 }
 
 const LocationServices: React.FC<LocationServicesProps> = ({ city }) => {
+  const scrollToTopAndNavigate = useScrollTop();
+  
   const services = [
     {
       title: 'Roof Installation',
@@ -26,7 +29,7 @@ const LocationServices: React.FC<LocationServicesProps> = ({ city }) => {
     },
     {
       title: 'Roof Replacement',
-      description: `Complete roof replacement services in ${city}, OR with quality materials and installation.`,
+      description: `Complete ${city === 'Eugene' ? 'premium roof replacement in Eugene' : 'roof replacement services'} in ${city}, OR with quality materials and installation.`,
       link: '/services/roof-replacement-eugene-oregon'
     },
     {
@@ -50,12 +53,12 @@ const LocationServices: React.FC<LocationServicesProps> = ({ city }) => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link 
-                  to={service.link}
+                <button 
+                  onClick={() => scrollToTopAndNavigate(service.link)}
                   className="text-primary hover:underline"
                 >
                   Learn More →
-                </Link>
+                </button>
               </CardContent>
             </Card>
           ))}

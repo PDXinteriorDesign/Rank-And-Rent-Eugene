@@ -2,8 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useScrollTop } from '@/hooks/use-scroll-top';
 
 const InstallationHero = () => {
+  const scrollToTopAndNavigate = useScrollTop();
+  
   return (
     <section className="pt-32 pb-20 bg-gradient-to-b from-muted to-white">
       <div className="container mx-auto px-4">
@@ -14,7 +17,7 @@ const InstallationHero = () => {
           <p className="text-lg text-gray-600 mb-8">
             Eugene's weather demands roofing solutions that can withstand everything from heavy winter rains 
             to summer heat. Our expert installation team specializes in durable, energy-efficient roofing 
-            systems designed specifically for the Pacific Northwest climate.
+            systems designed specifically for the Pacific Northwest climate. When you need <button className="text-primary font-medium hover:underline" onClick={() => scrollToTopAndNavigate('/services/roof-repair-eugene-oregon')}>roof repair</button> or quality installation, we're your local experts.
           </p>
           <div className="grid md:grid-cols-3 gap-4 mb-8 text-left">
             <div className="bg-white/50 p-4 rounded-lg">

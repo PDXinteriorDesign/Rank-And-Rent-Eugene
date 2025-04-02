@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -26,7 +27,7 @@ const Hero = () => {
             Expert Roofing Services in Eugene, Oregon
           </h1>
           <p className="text-lg text-gray-100 mb-8">
-            Residential & Commercial Roofing, Siding, & Gutters
+            <span className="underline cursor-pointer" onClick={() => scrollToTopAndNavigate('/services/roof-repair-eugene-oregon')}>Roof Repair</span>, <span className="underline cursor-pointer" onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')}>Roof Replacement</span>, Siding, & Gutters
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="flex items-center justify-center gap-2 text-white">
@@ -60,9 +61,9 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white"
-              onClick={() => scrollToTopAndNavigate('/services/roof-installation-eugene-oregon')}
+              onClick={() => scrollToTopAndNavigate('/services/roof-replacement-eugene-oregon')}
             >
-              View Roofing Services
+              <span className="hidden sm:inline">Premium</span> Roof Replacement
             </Button>
           </div>
         </div>
