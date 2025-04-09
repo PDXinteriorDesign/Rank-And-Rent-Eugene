@@ -16,7 +16,7 @@ const Index = () => {
         <title>Eugene Roofing Experts | Professional Roof Installation & Repair Services 2025</title>
         <meta 
           name="description" 
-          content="Eugene's premier roofing contractor offering expert installation, repair & maintenance. 25+ years of experience, lifetime warranties & eco-friendly solutions. Free consultation!" 
+          content="Eugene's top-rated roofing contractor with 25+ years experience. Expert roof repair, replacement & emergency services. Free estimates, lifetime warranties & eco-friendly solutions. Serving Lane County since 1996!" 
         />
         <link rel="canonical" href="https://www.eugeneroofingnw.com/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -30,7 +30,7 @@ const Index = () => {
         <meta property="og:image:alt" content="Professional roofing services in Eugene - showcasing expert craftsmanship" />
         
         {/* Additional SEO Tags */}
-        <meta name="keywords" content="eugene roofing 2025, roof repair eugene, emergency roofing eugene, sustainable roofing eugene, eco-friendly roofing, residential roofing eugene, commercial roofing eugene, roofing contractor eugene, metal roofing eugene" />
+        <meta name="keywords" content="eugene roofing 2025, roof repair eugene, emergency roofing eugene, sustainable roofing eugene, eco-friendly roofing, residential roofing eugene, commercial roofing eugene, roofing contractor eugene, metal roofing eugene, roof replacement cost eugene, asphalt shingles eugene, roof inspection lane county" />
         <meta name="geo.region" content="US-OR" />
         <meta name="geo.placename" content="Eugene" />
         <meta name="geo.position" content="44.0521;-123.0868" />

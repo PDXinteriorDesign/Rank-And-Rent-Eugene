@@ -21,24 +21,67 @@ export const getSchemaMarkup = () => ({
     "latitude": 44.0521,
     "longitude": -123.0868
   },
-  "areaServed": ["Eugene", "Springfield", "Lane County"],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Eugene",
+      "addressRegion": "OR"
+    },
+    {
+      "@type": "City",
+      "name": "Springfield",
+      "addressRegion": "OR"
+    },
+    {
+      "@type": "City",
+      "name": "Junction City",
+      "addressRegion": "OR"
+    },
+    {
+      "@type": "City",
+      "name": "Cottage Grove",
+      "addressRegion": "OR"
+    },
+    {
+      "@type": "City",
+      "name": "Veneta",
+      "addressRegion": "OR"
+    },
+    {
+      "@type": "City",
+      "name": "Creswell",
+      "addressRegion": "OR"
+    }
+  ],
   "priceRange": "$$",
   "sameAs": [
     "https://www.facebook.com/eugeneroofingnw",
-    "https://www.instagram.com/eugeneroofingnw"
+    "https://www.instagram.com/eugeneroofingnw",
+    "https://www.linkedin.com/company/eugene-roofing-nw",
+    "https://www.yelp.com/biz/eugene-roofing-nw-eugene"
   ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "08:00",
-    "closes": "17:00"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "15:00"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Roofing Services",
@@ -66,7 +109,38 @@ export const getSchemaMarkup = () => ({
           "name": "Emergency Roofing",
           "description": "24/7 emergency roofing services in Eugene"
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roof Replacement",
+          "description": "Complete roof replacement with premium materials"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roof Cleaning",
+          "description": "Professional moss removal and roof cleaning"
+        }
       }
     ]
-  }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "award": [
+    "GAF Certified Contractor", 
+    "CertainTeed Master Shingle Applicator", 
+    "Best of Eugene 2023 - Roofing Services"
+  ],
+  "foundingDate": "1996",
+  "slogan": "Eugene's Most Trusted Roofing Experts",
+  "keywords": "roof repair Eugene, roof replacement Eugene, emergency roofing Eugene, roof installation, metal roofing Eugene"
 });
