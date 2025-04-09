@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Award, Clock, CheckCircle, Star, Tool, Calendar, Receipt } from 'lucide-react';
+import { Shield, Award, Clock, CheckCircle, Star, Settings, Calendar, Receipt } from 'lucide-react';
 import { useScrollTop } from '@/hooks/use-scroll-top';
 
 const ReplacementContent = () => {
@@ -56,7 +55,7 @@ const ReplacementContent = () => {
                   desc: "Transparent estimates with financing options and flexible payment plans"
                 },
                 {
-                  icon: Tool,
+                  icon: Settings,
                   title: "Certified Expertise",
                   desc: "GAF Master Elite® certified contractors (top 2% in the country)"
                 },

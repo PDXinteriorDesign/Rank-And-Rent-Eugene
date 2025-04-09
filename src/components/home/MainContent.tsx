@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check, ArrowRight, Star, Clock, Tool } from 'lucide-react';
+import { Shield, Award, Wrench, Phone, CheckCircle2, MapPin, Check, ArrowRight, Star, Clock, Settings } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import RoofingProcess from './RoofingProcess';
 import { Button } from "@/components/ui/button";
@@ -98,7 +97,7 @@ const MainContent = () => {
               [<Shield className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, 'GAF Certified & Factory-Trained', 'Exclusive access to premium materials & enhanced warranties'],
               [<Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, 'Award-Winning Service', 'Recognized as Best of Eugene for 5 consecutive years'],
               [<Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, '25+ Years Local Experience', 'Deep understanding of Eugene\'s climate challenges'],
-              [<Tool className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, 'Advanced Roofing Technology', 'Precision installation techniques for longer-lasting roofs'],
+              [<Settings className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, 'Advanced Roofing Technology', 'Precision installation techniques for longer-lasting roofs'],
               [<Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, 'Transparent, No-Pressure Estimates', 'Detailed pricing with no hidden costs or surprises']
             ].map(([icon, title, desc], index) => (
               <div key={index} className="flex items-start gap-3 p-4">

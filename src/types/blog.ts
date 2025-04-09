@@ -8,6 +8,7 @@ export type BlogPost = {
   excerpt: string;
   category: string;
   image?: string;
+  url?: string;
 };
 
 export type BlogPosts = {

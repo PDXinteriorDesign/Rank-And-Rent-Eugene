@@ -22,6 +22,12 @@ const BlogPost = () => {
   const metaDescription = `${post.excerpt.slice(0, 155)}... Learn more about ${post.title.toLowerCase()} from Eugene's trusted roofing experts serving Lane County and surrounding areas.`;
   const canonicalUrl = `https://www.eugeneroofingnw.com/roofing-tips/${slug}`;
 
+  // Create blog post with url for schema
+  const blogPostWithUrl = {
+    ...post,
+    url: canonicalUrl
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -35,7 +41,7 @@ const BlogPost = () => {
         <meta property="og:image" content={post.image || "https://eugeneroofingnw.com/og-image.png"} />
         <script type="application/ld+json">
           {JSON.stringify([
-            getBlogPostSchema(post),
+            getBlogPostSchema(blogPostWithUrl),
             getLocalBusinessSchema()
           ])}
         </script>
